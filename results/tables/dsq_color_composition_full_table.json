@@ -1,0 +1,46 @@
+{
+  "method": "D-SEG area+color composition readout (standalone, Maha)",
+  "per_cat": {
+    "breakfast_box": {
+      "logical": 0.9991,
+      "structural": 0.6452,
+      "LS": 0.8222
+    },
+    "juice_bottle": {
+      "logical": 0.9205,
+      "structural": 0.7175,
+      "LS": 0.819
+    },
+    "pushpins": {
+      "logical": 1.0,
+      "structural": 0.9274,
+      "LS": 0.9637
+    },
+    "screw_bag": {
+      "logical": 0.9922,
+      "structural": 0.8418,
+      "LS": 0.917
+    },
+    "splicing_connectors": {
+      "logical": 0.8524,
+      "structural": 0.6155,
+      "LS": 0.734
+    }
+  },
+  "mean": {
+    "logical": 0.9528,
+    "structural": 0.7495,
+    "LS": 0.8512
+  },
+  "area_only_mean": {
+    "logical": 0.9379,
+    "structural": 0.7169,
+    "LS": 0.8274
+  },
+  "color_net_effect_pp": {
+    "LS": 2.4,
+    "logical": 1.5,
+    "structural": 3.3
+  },
+  "verdict": "logical 0.953 SOTA급이나 structural 0.750 약 → L+S 0.851<시스템 0.978. fusion-delta 음수(PSAD 중복/신호부족). 단독 logical 전문 소스."
+}

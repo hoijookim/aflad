@@ -1,0 +1,24 @@
+{
+  "variants": {
+    "official": {
+      "val_znorm": 0.9786,
+      "test_good_znorm": 0.9734
+    },
+    "seed0": {
+      "val_znorm": 0.9718,
+      "test_good_znorm": 0.9645
+    },
+    "seed42": {
+      "val_znorm": 0.9788,
+      "test_good_znorm": 0.9733
+    },
+    "seed1234": {
+      "val_znorm": 0.9748,
+      "test_good_znorm": 0.967
+    }
+  },
+  "multiseed_val_znorm": {
+    "mean": 0.9751,
+    "std": 0.0035
+  }
+}

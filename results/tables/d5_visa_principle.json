@@ -1,0 +1,146 @@
+{
+  "per_cat": {
+    "candle": {
+      "full_fusion_auc": 0.8194,
+      "spearman_pred_vs_loo": 0.876,
+      "spearman_p": 0.0,
+      "axis_auroc": {
+        "blob": 0.429,
+        "btcas": 0.697,
+        "ccv": 0.416,
+        "color_hist": 0.719,
+        "colormoments": 0.729,
+        "fft": 0.534,
+        "fisher_K32": 0.789,
+        "glcm": 0.637,
+        "hog": 0.734,
+        "hue": 0.58,
+        "icas": 0.603,
+        "lbp": 0.616,
+        "spp": 0.851,
+        "steerable": 0.716,
+        "svgm": 0.555,
+        "tcetd": 0.593,
+        "v8": 0.543,
+        "ws": 0.904
+      },
+      "best_axes_by_pred": [
+        "ws",
+        "spp",
+        "fisher_K32",
+        "color_hist",
+        "colormoments"
+      ],
+      "fusion_top6_pred": 0.8993,
+      "fusion_bot6_pred": 0.5389
+    },
+    "macaroni1": {
+      "full_fusion_auc": 0.6616,
+      "spearman_pred_vs_loo": 0.977,
+      "spearman_p": 0.0,
+      "axis_auroc": {
+        "blob": 0.606,
+        "btcas": 0.503,
+        "ccv": 0.345,
+        "color_hist": 0.651,
+        "colormoments": 0.645,
+        "fft": 0.475,
+        "fisher_K32": 0.649,
+        "glcm": 0.607,
+        "hog": 0.523,
+        "hue": 0.562,
+        "icas": 0.653,
+        "lbp": 0.452,
+        "spp": 0.731,
+        "steerable": 0.679,
+        "svgm": 0.4,
+        "tcetd": 0.583,
+        "v8": 0.616,
+        "ws": 0.825
+      },
+      "best_axes_by_pred": [
+        "ws",
+        "spp",
+        "fisher_K32",
+        "steerable",
+        "icas"
+      ],
+      "fusion_top6_pred": 0.8095,
+      "fusion_bot6_pred": 0.4573
+    },
+    "macaroni2": {
+      "full_fusion_auc": 0.4857,
+      "spearman_pred_vs_loo": 0.895,
+      "spearman_p": 0.0,
+      "axis_auroc": {
+        "blob": 0.547,
+        "btcas": 0.403,
+        "ccv": 0.608,
+        "color_hist": 0.563,
+        "colormoments": 0.431,
+        "fft": 0.423,
+        "fisher_K32": 0.594,
+        "glcm": 0.395,
+        "hog": 0.397,
+        "hue": 0.465,
+        "icas": 0.522,
+        "lbp": 0.466,
+        "spp": 0.708,
+        "steerable": 0.405,
+        "svgm": 0.471,
+        "tcetd": 0.383,
+        "v8": 0.418,
+        "ws": 0.529
+      },
+      "best_axes_by_pred": [
+        "spp",
+        "ccv",
+        "fisher_K32",
+        "color_hist",
+        "blob"
+      ],
+      "fusion_top6_pred": 0.6934,
+      "fusion_bot6_pred": 0.3456
+    },
+    "capsules": {
+      "full_fusion_auc": 0.8147,
+      "spearman_pred_vs_loo": 0.69,
+      "spearman_p": 0.0015,
+      "axis_auroc": {
+        "blob": 0.646,
+        "btcas": 0.699,
+        "ccv": 0.681,
+        "color_hist": 0.695,
+        "colormoments": 0.676,
+        "fft": 0.763,
+        "fisher_K32": 0.379,
+        "glcm": 0.824,
+        "hog": 0.681,
+        "hue": 0.675,
+        "icas": 0.633,
+        "lbp": 0.691,
+        "spp": 0.718,
+        "steerable": 0.795,
+        "svgm": 0.696,
+        "tcetd": 0.777,
+        "v8": 0.553,
+        "ws": 0.839
+      },
+      "best_axes_by_pred": [
+        "ws",
+        "glcm",
+        "steerable",
+        "tcetd",
+        "fft"
+      ],
+      "fusion_top6_pred": 0.8427,
+      "fusion_bot6_pred": 0.6715
+    }
+  },
+  "pooled": {
+    "spearman_pred_vs_loo": 0.767,
+    "spearman_p": 0.0,
+    "n_points": 72,
+    "mean_full_fusion_auc": 0.6953
+  }
+}

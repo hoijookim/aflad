@@ -1,0 +1,501 @@
+{
+ "seeds": [
+  42,
+  43,
+  44,
+  45,
+  46
+ ],
+ "table6_screw_bag": {
+  "DINOv3-S/16": {
+   "params_M": 21,
+   "best_struct_layer": "L3",
+   "structural": [
+    0.8601,
+    0.0142
+   ],
+   "cardinality": [
+    0.5795,
+    0.0132
+   ],
+   "per_layer": {
+    "L11": {
+     "structural": [
+      0.782,
+      0.0035
+     ],
+     "cardinality": [
+      0.4976,
+      0.0049
+     ]
+    },
+    "L3": {
+     "structural": [
+      0.8601,
+      0.0142
+     ],
+     "cardinality": [
+      0.5795,
+      0.0132
+     ]
+    },
+    "L6": {
+     "structural": [
+      0.8368,
+      0.0167
+     ],
+     "cardinality": [
+      0.5381,
+      0.0194
+     ]
+    },
+    "L9": {
+     "structural": [
+      0.7344,
+      0.0171
+     ],
+     "cardinality": [
+      0.4788,
+      0.0189
+     ]
+    }
+   }
+  },
+  "DINOv3-B/16": {
+   "params_M": 86,
+   "best_struct_layer": "L3",
+   "structural": [
+    0.8843,
+    0.0139
+   ],
+   "cardinality": [
+    0.5786,
+    0.0287
+   ],
+   "per_layer": {
+    "L11": {
+     "structural": [
+      0.8565,
+      0.0041
+     ],
+     "cardinality": [
+      0.4983,
+      0.0043
+     ]
+    },
+    "L3": {
+     "structural": [
+      0.8843,
+      0.0139
+     ],
+     "cardinality": [
+      0.5786,
+      0.0287
+     ]
+    },
+    "L6": {
+     "structural": [
+      0.8384,
+      0.0157
+     ],
+     "cardinality": [
+      0.5141,
+      0.0175
+     ]
+    },
+    "L9": {
+     "structural": [
+      0.8323,
+      0.0055
+     ],
+     "cardinality": [
+      0.4585,
+      0.0034
+     ]
+    }
+   }
+  },
+  "DINOv3-L/16": {
+   "params_M": 300,
+   "best_struct_layer": "L8",
+   "structural": [
+    0.9067,
+    0.0088
+   ],
+   "cardinality": [
+    0.562,
+    0.02
+   ],
+   "per_layer": {
+    "L17": {
+     "structural": [
+      0.899,
+      0.0063
+     ],
+     "cardinality": [
+      0.4852,
+      0.0115
+     ]
+    },
+    "L23": {
+     "structural": [
+      0.8731,
+      0.0085
+     ],
+     "cardinality": [
+      0.5631,
+      0.0262
+     ]
+    },
+    "L8": {
+     "structural": [
+      0.9067,
+      0.0088
+     ],
+     "cardinality": [
+      0.562,
+      0.02
+     ]
+    }
+   }
+  },
+  "DINOv2-B/14": {
+   "params_M": 86,
+   "best_struct_layer": "L11",
+   "structural": [
+    0.8697,
+    0.011
+   ],
+   "cardinality": [
+    0.4681,
+    0.0136
+   ],
+   "per_layer": {
+    "L11": {
+     "structural": [
+      0.8697,
+      0.011
+     ],
+     "cardinality": [
+      0.4681,
+      0.0136
+     ]
+    },
+    "L3": {
+     "structural": [
+      0.8469,
+      0.0139
+     ],
+     "cardinality": [
+      0.5426,
+      0.0085
+     ]
+    },
+    "L6": {
+     "structural": [
+      0.8691,
+      0.0074
+     ],
+     "cardinality": [
+      0.5811,
+      0.0318
+     ]
+    },
+    "L9": {
+     "structural": [
+      0.8537,
+      0.0182
+     ],
+     "cardinality": [
+      0.4759,
+      0.0194
+     ]
+    }
+   }
+  },
+  "DINOv2-L/14": {
+   "params_M": 300,
+   "best_struct_layer": "L17",
+   "structural": [
+    0.888,
+    0.0128
+   ],
+   "cardinality": [
+    0.5082,
+    0.0318
+   ],
+   "per_layer": {
+    "L17": {
+     "structural": [
+      0.888,
+      0.0128
+     ],
+     "cardinality": [
+      0.5082,
+      0.0318
+     ]
+    },
+    "L23": {
+     "structural": [
+      0.8587,
+      0.0079
+     ],
+     "cardinality": [
+      0.4915,
+      0.014
+     ]
+    },
+    "L8": {
+     "structural": [
+      0.8643,
+      0.0171
+     ],
+     "cardinality": [
+      0.5695,
+      0.0207
+     ]
+    }
+   }
+  }
+ },
+ "table6_pushpins": {
+  "DINOv3-S/16": {
+   "params_M": 21,
+   "best_struct_layer": "L11",
+   "structural": [
+    0.7874,
+    0.0079
+   ],
+   "cardinality": [
+    0.5942,
+    0.0134
+   ],
+   "per_layer": {
+    "L11": {
+     "structural": [
+      0.7874,
+      0.0079
+     ],
+     "cardinality": [
+      0.5942,
+      0.0134
+     ]
+    },
+    "L3": {
+     "structural": [
+      0.7605,
+      0.0183
+     ],
+     "cardinality": [
+      0.6028,
+      0.026
+     ]
+    },
+    "L6": {
+     "structural": [
+      0.6499,
+      0.0061
+     ],
+     "cardinality": [
+      0.5201,
+      0.0159
+     ]
+    },
+    "L9": {
+     "structural": [
+      0.6599,
+      0.0185
+     ],
+     "cardinality": [
+      0.5042,
+      0.0141
+     ]
+    }
+   }
+  },
+  "DINOv3-B/16": {
+   "params_M": 86,
+   "best_struct_layer": "L6",
+   "structural": [
+    0.8217,
+    0.0191
+   ],
+   "cardinality": [
+    0.5377,
+    0.0177
+   ],
+   "per_layer": {
+    "L11": {
+     "structural": [
+      0.7603,
+      0.0206
+     ],
+     "cardinality": [
+      0.5872,
+      0.033
+     ]
+    },
+    "L3": {
+     "structural": [
+      0.8035,
+      0.0209
+     ],
+     "cardinality": [
+      0.5729,
+      0.0224
+     ]
+    },
+    "L6": {
+     "structural": [
+      0.8217,
+      0.0191
+     ],
+     "cardinality": [
+      0.5377,
+      0.0177
+     ]
+    },
+    "L9": {
+     "structural": [
+      0.808,
+      0.0088
+     ],
+     "cardinality": [
+      0.5088,
+      0.0197
+     ]
+    }
+   }
+  },
+  "DINOv3-L/16": {
+   "params_M": 300,
+   "best_struct_layer": "L17",
+   "structural": [
+    0.8443,
+    0.0127
+   ],
+   "cardinality": [
+    0.5128,
+    0.0155
+   ],
+   "per_layer": {
+    "L17": {
+     "structural": [
+      0.8443,
+      0.0127
+     ],
+     "cardinality": [
+      0.5128,
+      0.0155
+     ]
+    },
+    "L23": {
+     "structural": [
+      0.7441,
+      0.0225
+     ],
+     "cardinality": [
+      0.6057,
+      0.0105
+     ]
+    },
+    "L8": {
+     "structural": [
+      0.8141,
+      0.0155
+     ],
+     "cardinality": [
+      0.5705,
+      0.0251
+     ]
+    }
+   }
+  }
+ },
+ "table7": {
+  "screw_bag": {
+   "patch_memory_NN": {
+    "cardinality": [
+     0.4852,
+     0.0115
+    ],
+    "structural": [
+     0.899,
+     0.0063
+    ]
+   },
+   "area_histogram": {
+    "cardinality": [
+     0.7251,
+     0.0146
+    ],
+    "structural": [
+     0.7465,
+     0.0082
+    ]
+   },
+   "instance_count": {
+    "cardinality": [
+     0.6344,
+     0.0272
+    ],
+    "structural": [
+     0.6218,
+     0.0103
+    ]
+   },
+   "set_distance": {
+    "cardinality": [
+     0.6376,
+     0.0036
+    ],
+    "structural": [
+     0.7496,
+     0.0072
+    ]
+   }
+  },
+  "pushpins": {
+   "patch_memory_NN": {
+    "cardinality": [
+     0.5128,
+     0.0155
+    ],
+    "structural": [
+     0.8443,
+     0.0127
+    ]
+   },
+   "area_histogram": {
+    "cardinality": [
+     0.6333,
+     0.013
+    ],
+    "structural": [
+     0.5517,
+     0.023
+    ]
+   },
+   "instance_count": {
+    "cardinality": [
+     0.7434,
+     0.0109
+    ],
+    "structural": [
+     0.5091,
+     0.0269
+    ]
+   },
+   "set_distance": {
+    "cardinality": [
+     0.5495,
+     0.0056
+    ],
+    "structural": [
+     0.6964,
+     0.004
+    ]
+   }
+  }
+ }
+}

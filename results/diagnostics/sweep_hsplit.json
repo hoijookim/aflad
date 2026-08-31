@@ -1,0 +1,45 @@
+{
+  "results": {
+    "0.0": {
+      "breakfast_box": 0.7282124424769775,
+      "juice_bottle": 0.989542288557214,
+      "pushpins": 1.0,
+      "screw_bag": 0.8753396228861915,
+      "splicing_connectors": 0.9936550925925925
+    },
+    "0.25": {
+      "breakfast_box": 0.7318683260875791,
+      "juice_bottle": 0.9944402985074627,
+      "pushpins": 0.9999985065710871,
+      "screw_bag": 0.9304946182176573,
+      "splicing_connectors": 0.9936550925925925
+    },
+    "0.5": {
+      "breakfast_box": 0.7341372628677566,
+      "juice_bottle": 0.9934875621890549,
+      "pushpins": 0.9999985065710871,
+      "screw_bag": 0.9397184614586576,
+      "splicing_connectors": 0.9936550925925925
+    },
+    "1.0": {
+      "breakfast_box": 0.7351159299277047,
+      "juice_bottle": 0.9934999999999999,
+      "pushpins": 0.9999761051373954,
+      "screw_bag": 0.9440057837949997,
+      "splicing_connectors": 0.9936550925925925
+    },
+    "2.0": {
+      "breakfast_box": 0.7341681139738826,
+      "juice_bottle": 0.9921268656716418,
+      "pushpins": 0.9996998207885305,
+      "screw_bag": 0.9436861837327525,
+      "splicing_connectors": 0.9936550925925925
+    }
+  },
+  "accepted": [
+    1.0,
+    2.0,
+    0.5,
+    0.25
+  ]
+}

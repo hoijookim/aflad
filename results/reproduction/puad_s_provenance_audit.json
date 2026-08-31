@@ -1,0 +1,172 @@
+{
+  "checkpoint_provenance": {
+    "old_seed_roots": {
+      "0": "reports/phase0/efficient_ad_official_small_seeds/{cat}_seed0",
+      "42": "reports/phase0/efficient_ad_official_small/{cat}_seed42_v1",
+      "1234": "reports/phase0/efficient_ad_official_small_seeds/{cat}_seed1234",
+      "44": "reports/phase0/efficient_ad_official_small_seeds_std/{cat}_seed44"
+    },
+    "five_seed_artifact_roots": {
+      "script": "scripts/path_Y/PY_puad_5seed_all_cats.py",
+      "seed0": "efficient_ad_official_small_seeds",
+      "seed1234": "efficient_ad_official_small_seeds",
+      "seed42": "efficient_ad_official_small",
+      "seed43": "efficient_ad_official_small_seeds_std",
+      "seed44": "efficient_ad_official_small_seeds_std",
+      "also": "pooled AUROC 만 담아 논리/구조 분리가 없다 → L+S 재집계 불가"
+    },
+    "teacher_final_pth_count_per_root": {
+      "efficient_ad_official_small": 0,
+      "efficient_ad_official_small_seeds": 0,
+      "efficient_ad_official_small_seeds_std": 25
+    },
+    "verdict": "seed 0·42·1234 의 체크포인트 루트에는 가중치가 남아 있지 않다 → 재현 불가. seed42 가 본 경로는 EAD-S 가 오류로 판정해 폐기한 그 경로다."
+  },
+  "code_equivalence": {
+    "compared": [
+      "scripts/path_Y/PY_real_puad_FULL.py (6월 seed44 산출)",
+      "scripts/path_Y/PY_real_puad_M_MULTISEED.py (오늘 재채점이 재사용)"
+    ],
+    "category_tested": "pushpins/seed44",
+    "val_quantiles_identical": true,
+    "ead_max_abs_diff": 0.0,
+    "puad_max_abs_diff": 0.0,
+    "verdict": "동일 프로세스에서 두 구현이 비트 단위로 같다. 차이의 원인이 코드가 아님이 확정된다."
+  },
+  "run_to_run_determinism": {
+    "category_tested": "pushpins/seed44",
+    "repeats": 2,
+    "ead_max_abs_diff": 0.0,
+    "LS_diff": 0.0,
+    "note": "같은 프로세스 안에서는 완전 결정적이다 (cudnn.benchmark=False, TF32 conv 허용)."
+  },
+  "environment_drift_measured_on_EADS": {
+    "what": "6월 EAD-S 정본 npz vs 오늘 재채점의 ead 열. 같은 체크포인트(_seeds_std), 같은 코드, 다른 환경 — 환경 효과만 남는 비교다.",
+    "per_seed": {
+      "42": {
+        "LS_2606": 0.8983992837316673,
+        "LS_2608": 0.8976573772234735,
+        "delta": -0.0007419065081938347,
+        "spearman_min": 0.9996803323620208,
+        "max_abs_diff": 0.20419740676879883
+      },
+      "43": {
+        "LS_2606": 0.8950406923957785,
+        "LS_2608": 0.8945278599359572,
+        "delta": -0.0005128324598213663,
+        "spearman_min": 0.9997037184992843,
+        "max_abs_diff": 0.20934724807739258
+      },
+      "44": {
+        "LS_2606": 0.8901484041716886,
+        "LS_2608": 0.889596691904319,
+        "delta": -0.0005517122673696084,
+        "spearman_min": 0.9994637274573358,
+        "max_abs_diff": 0.2037210464477539
+      }
+    },
+    "mean_delta": -0.0006021504117949364,
+    "verdict": "Spearman 1.000 (순위 보존), L+S 차이 -0.0006, 시드 표준편차 불변(0.0041). 환경 드리프트는 부동소수 수준이며 표에 영향이 없다. → 다른 기준선을 재산출할 이유가 되지 않는다."
+  },
+  "june_puad_artifact_anomaly": {
+    "observation": "6월 PUAD npz 의 ead 열은 **같은 6월의** EAD-S 정본 npz 와도 어긋난다 (seed44 Spearman 0.81~0.99, 최대차 1.63). 오늘 재채점은 그 EAD-S 정본과 Spearman 1.000 이다.",
+    "not_ordering": "정렬 후에도 값이 다르다 → 배열 순서 문제가 아니라 값 자체가 다르다.",
+    "not_seed_mixup": "저장된 EAD-S 시드 7개(0·42·43·44·45·46·1234) 어느 것과도 0.92~0.95 로 고르게 걸릴 뿐 일치하는 것이 없다.",
+    "verdict": "6월 PUAD-S 실행은 스크립트가 현재 선언한 체크포인트(_seeds_std)를 보지 않았다. 그 값과 가까우면서(L+S 0.8948 vs 0.8901) 순위가 다르므로 같은 설정의 **다른 학습본**(가중치가 삭제된 `_seeds` 계열로 추정)일 가능성이 높다. PY_real_puad_FULL.py 는 260614 에야 커밋됐고 6월 실행(260602)보다 나중이라 CKPT_BASE 가 사후 수정됐을 수 있다.",
+    "consequence": "시드 44 를 '같은 체크포인트' 대조군으로 삼은 것이 무효였다. 유효한 대조군은 3-b 의 EAD-S 교차검증이며, 그쪽이 통과한다."
+  },
+  "puad_m_crosscheck": {
+    "per_seed": {
+      "42": {
+        "EADM_inside_PUADM": 0.8920483878602996,
+        "EADM_imagenette_npz": 0.7723102314281983
+      },
+      "43": {
+        "EADM_inside_PUADM": 0.9012722972953368,
+        "EADM_imagenette_npz": 0.7904167104621437
+      },
+      "44": {
+        "EADM_inside_PUADM": 0.8979589437471448,
+        "EADM_imagenette_npz": 0.7909770782586486
+      }
+    },
+    "mean_inside": 0.8970932096342604,
+    "mean_imagenette": 0.7845680067163302,
+    "verdict": "PUAD-M 내부의 EAD-M 은 L+S 0.8971 로 표의 'EAD-M (full ImageNet)' 값과 일치한다. imagenette 폴백본(0.7846)과 다른 것은 결함이 아니라 260817 에 이미 규명된 두 학습본 차이이며, 표가 full ImageNet 행으로 교체된 이유다. PUAD-M 우위 +3.1pp 가 독립적으로 재확인된다."
+  },
+  "environment_drift_seed44": {
+    "per_category": {
+      "breakfast_box": {
+        "LS_2606": 0.8681851589363991,
+        "LS_2608": 0.8578615114050975,
+        "delta": -0.01032364753130166,
+        "ead_max_abs_diff": 0.35441339015960693,
+        "ead_linear_fit": {
+          "slope": 1.1649480033176,
+          "intercept": -0.012597943305496542
+        }
+      },
+      "juice_bottle": {
+        "LS_2606": 0.997518155560798,
+        "LS_2608": 0.9972910118019116,
+        "delta": -0.0002271437588864389,
+        "ead_max_abs_diff": 0.9817628860473633,
+        "ead_linear_fit": {
+          "slope": 0.9410815694201977,
+          "intercept": 0.05163170502045537
+        }
+      },
+      "pushpins": {
+        "LS_2606": 0.9828548620819153,
+        "LS_2608": 0.9727619401532445,
+        "delta": -0.01009292192867084,
+        "ead_max_abs_diff": 1.6899645328521729,
+        "ead_linear_fit": {
+          "slope": 1.1820826332492973,
+          "intercept": -0.0477992646696004
+        }
+      },
+      "screw_bag": {
+        "LS_2606": 0.8306385475007076,
+        "LS_2608": 0.8397057235499961,
+        "delta": 0.009067176049288417,
+        "ead_max_abs_diff": 0.3281746506690979,
+        "ead_linear_fit": {
+          "slope": 1.0516657787734358,
+          "intercept": -0.004649551656374155
+        }
+      },
+      "splicing_connectors": {
+        "LS_2606": 0.9590272056535032,
+        "LS_2608": 0.9664973178814009,
+        "delta": 0.0074701122278977294,
+        "ead_max_abs_diff": 0.5886552333831787,
+        "ead_linear_fit": {
+          "slope": 0.9685621012878397,
+          "intercept": 0.0025597175303420272
+        }
+      }
+    },
+    "mean_LS_2606": 0.9276447859466647,
+    "mean_LS_2608": 0.92682350095833,
+    "mean_delta": -0.0008212849883346696,
+    "env_now": {
+      "torch": "2.6.0+cu124",
+      "cudnn": 90100,
+      "cuda": "12.4"
+    },
+    "note": "워크스페이스가 2026-08-15 백업에서 복원됐다 (scripts/path_Y 전체 mtime 동일). 6월 실행 환경은 남아 있지 않다.",
+    "verdict": "구 산출물과의 차이. 260821 최초 판단은 이를 환경 탓으로 돌렸으나 **틀렸다** — 3-b 가 환경 효과를 -0.0006·Spearman 1.000 으로 분리했고, 여기 남은 차이는 3-c 의 산출물 이상(6월 PUAD 실행의 체크포인트 불일치)에서 온다."
+  },
+  "why_table3_used_seed44_only": {
+    "aggregator": "scripts/path_Y/PY_ls_canonical_unify.py",
+    "artifact": "reports/path_y/metric_unify/ls_canonical_scores.json",
+    "artifact_committed": "2026-06-05",
+    "puad_s_npz_created": {
+      "seed44": "2026-06-02",
+      "seed0/42/1234": "2026-06-12"
+    },
+    "recorded_n_seed_per_category": 1.0,
+    "verdict": "집계 산출물이 시드 0·42·1234 점수보다 8일 먼저 만들어졌다. 글롭이 시드 44 하나만 잡은 상태로 굳었고, 이후 재집계되지 않았다. hcp stale 과 같은 계열의 결함이다."
+  }
+}

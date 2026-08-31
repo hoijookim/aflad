@@ -1,0 +1,624 @@
+{
+  "question": "PSAD 재구축 차이의 원인이 기계인가 시드인가 학습 비결정성인가",
+  "verdict": "**시드 고정이 듣지 않는다** — 재구축 차이가 시드 차이와 같은 크기다. 기계 문제가 아니라 학습 비결정성이며, 정확한 조건은 '다시 학습하면' 이다",
+  "verdict_3f": "(A) 비결정적 — 학습이 애초에 비결정적이다. 시드 고정이 재현을 보장하지 않는다. 재현성 주장의 조건은 '다른 기계에서' 가 아니라 '다시 학습하면' 이다",
+  "prereg": "docs/PREREG_psad_replicate_260823.md",
+  "mean": {
+    "cross_seed": {
+      "n": 30,
+      "spearman": 0.9380723190927824,
+      "kendall": 0.8172230336429299,
+      "abs_d_ls": 0.010666020803987642
+    },
+    "cross_rebuild": {
+      "n": 15,
+      "spearman": 0.9377850128476394,
+      "kendall": 0.8169396796050201,
+      "abs_d_ls": 0.008179248952619308
+    },
+    "cross_both": {
+      "n": 30,
+      "spearman": 0.9373943568350895,
+      "kendall": 0.8144031089029251,
+      "abs_d_ls": 0.011490595976111455
+    },
+    "cross_replicate": {
+      "n": 5,
+      "spearman": 0.9388318674238431,
+      "kendall": 0.824601615226397,
+      "abs_d_ls": 0.00786758467276254
+    }
+  },
+  "per_cat": {
+    "breakfast_box": {
+      "cross_seed": 0.9342418472250271,
+      "cross_rebuild": 0.9368910302645626
+    },
+    "juice_bottle": {
+      "cross_seed": 0.9334066845926458,
+      "cross_rebuild": 0.9186255153858163
+    },
+    "pushpins": {
+      "cross_seed": 0.8997600918679972,
+      "cross_rebuild": 0.8969565201337201
+    },
+    "screw_bag": {
+      "cross_seed": 0.9272002457411426,
+      "cross_rebuild": 0.9404522605461385
+    },
+    "splicing_connectors": {
+      "cross_seed": 0.9957527260370994,
+      "cross_rebuild": 0.9959997379079591
+    }
+  },
+  "pairs": {
+    "cross_seed": [
+      {
+        "cat": "breakfast_box",
+        "a": "pkg_260816/s42",
+        "b": "pkg_260816/s43",
+        "spearman": 0.9355910100689537,
+        "kendall": 0.7908958195089582
+      },
+      {
+        "cat": "breakfast_box",
+        "a": "pkg_260816/s42",
+        "b": "pkg_260816/s44",
+        "spearman": 0.9327261186924787,
+        "kendall": 0.788029197080292
+      },
+      {
+        "cat": "breakfast_box",
+        "a": "pkg_260816/s43",
+        "b": "pkg_260816/s44",
+        "spearman": 0.9572020426415857,
+        "kendall": 0.8406370272063702
+      },
+      {
+        "cat": "breakfast_box",
+        "a": "rebuild_5090/s42",
+        "b": "rebuild_5090/s43",
+        "spearman": 0.9228914341767404,
+        "kendall": 0.7957266091572661
+      },
+      {
+        "cat": "breakfast_box",
+        "a": "rebuild_5090/s42",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.928253079830357,
+        "kendall": 0.7874983410749834
+      },
+      {
+        "cat": "breakfast_box",
+        "a": "rebuild_5090/s43",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.9287873979400479,
+        "kendall": 0.7871798274717983
+      },
+      {
+        "cat": "juice_bottle",
+        "a": "pkg_260816/s42",
+        "b": "pkg_260816/s43",
+        "spearman": 0.9348680887795113,
+        "kendall": 0.7769181173436494
+      },
+      {
+        "cat": "juice_bottle",
+        "a": "pkg_260816/s42",
+        "b": "pkg_260816/s44",
+        "spearman": 0.9586465857854943,
+        "kendall": 0.8359767891682786
+      },
+      {
+        "cat": "juice_bottle",
+        "a": "pkg_260816/s43",
+        "b": "pkg_260816/s44",
+        "spearman": 0.9433002556998185,
+        "kendall": 0.7999078935249149
+      },
+      {
+        "cat": "juice_bottle",
+        "a": "rebuild_5090/s42",
+        "b": "rebuild_5090/s43",
+        "spearman": 0.9411748500904508,
+        "kendall": 0.799060513954131
+      },
+      {
+        "cat": "juice_bottle",
+        "a": "rebuild_5090/s42",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.9030871808656727,
+        "kendall": 0.7414018605507968
+      },
+      {
+        "cat": "juice_bottle",
+        "a": "rebuild_5090/s43",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.9193631463349274,
+        "kendall": 0.758644192686746
+      },
+      {
+        "cat": "pushpins",
+        "a": "pkg_260816/s42",
+        "b": "pkg_260816/s43",
+        "spearman": 0.9086901660491895,
+        "kendall": 0.7802234520204657
+      },
+      {
+        "cat": "pushpins",
+        "a": "pkg_260816/s42",
+        "b": "pkg_260816/s44",
+        "spearman": 0.9254000175223233,
+        "kendall": 0.7901639344262293
+      },
+      {
+        "cat": "pushpins",
+        "a": "pkg_260816/s43",
+        "b": "pkg_260816/s44",
+        "spearman": 0.9025694372413822,
+        "kendall": 0.7728725070481361
+      },
+      {
+        "cat": "pushpins",
+        "a": "rebuild_5090/s42",
+        "b": "rebuild_5090/s43",
+        "spearman": 0.8797513441333952,
+        "kendall": 0.7293933382061187
+      },
+      {
+        "cat": "pushpins",
+        "a": "rebuild_5090/s42",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.871216562825082,
+        "kendall": 0.7150673488566356
+      },
+      {
+        "cat": "pushpins",
+        "a": "rebuild_5090/s43",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.910933023436611,
+        "kendall": 0.7712436044690404
+      },
+      {
+        "cat": "screw_bag",
+        "a": "pkg_260816/s42",
+        "b": "pkg_260816/s43",
+        "spearman": 0.8984632099482792,
+        "kendall": 0.7439710194928412
+      },
+      {
+        "cat": "screw_bag",
+        "a": "pkg_260816/s42",
+        "b": "pkg_260816/s44",
+        "spearman": 0.9391957122407536,
+        "kendall": 0.8237019147835087
+      },
+      {
+        "cat": "screw_bag",
+        "a": "pkg_260816/s43",
+        "b": "pkg_260816/s44",
+        "spearman": 0.8912813342654549,
+        "kendall": 0.7269277212351216
+      },
+      {
+        "cat": "screw_bag",
+        "a": "rebuild_5090/s42",
+        "b": "rebuild_5090/s43",
+        "spearman": 0.9419439577034703,
+        "kendall": 0.8106951871657755
+      },
+      {
+        "cat": "screw_bag",
+        "a": "rebuild_5090/s42",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.9502225894216306,
+        "kendall": 0.8097981714680008
+      },
+      {
+        "cat": "screw_bag",
+        "a": "rebuild_5090/s43",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.9420946708672665,
+        "kendall": 0.7990684836984647
+      },
+      {
+        "cat": "splicing_connectors",
+        "a": "pkg_260816/s42",
+        "b": "pkg_260816/s43",
+        "spearman": 0.9968671440297838,
+        "kendall": 0.9618674636710296
+      },
+      {
+        "cat": "splicing_connectors",
+        "a": "pkg_260816/s42",
+        "b": "pkg_260816/s44",
+        "spearman": 0.9948702397450728,
+        "kendall": 0.9535813665876532
+      },
+      {
+        "cat": "splicing_connectors",
+        "a": "pkg_260816/s43",
+        "b": "pkg_260816/s44",
+        "spearman": 0.9944044007756082,
+        "kendall": 0.9524683087704834
+      },
+      {
+        "cat": "splicing_connectors",
+        "a": "rebuild_5090/s42",
+        "b": "rebuild_5090/s43",
+        "spearman": 0.9963554718792693,
+        "kendall": 0.9597650211274863
+      },
+      {
+        "cat": "splicing_connectors",
+        "a": "rebuild_5090/s42",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.9965269511945769,
+        "kendall": 0.9585282902195197
+      },
+      {
+        "cat": "splicing_connectors",
+        "a": "rebuild_5090/s43",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.9954921485982852,
+        "kendall": 0.955477687313202
+      }
+    ],
+    "cross_rebuild": [
+      {
+        "cat": "breakfast_box",
+        "a": "pkg_260816/s42",
+        "b": "rebuild_5090/s42",
+        "spearman": 0.926209861227316,
+        "kendall": 0.7927538155275382
+      },
+      {
+        "cat": "breakfast_box",
+        "a": "pkg_260816/s43",
+        "b": "rebuild_5090/s43",
+        "spearman": 0.9320521623726956,
+        "kendall": 0.7827206370272064
+      },
+      {
+        "cat": "breakfast_box",
+        "a": "pkg_260816/s44",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.952411067193676,
+        "kendall": 0.8356469807564698
+      },
+      {
+        "cat": "juice_bottle",
+        "a": "pkg_260816/s42",
+        "b": "rebuild_5090/s42",
+        "spearman": 0.931696175522106,
+        "kendall": 0.773049645390071
+      },
+      {
+        "cat": "juice_bottle",
+        "a": "pkg_260816/s43",
+        "b": "rebuild_5090/s43",
+        "spearman": 0.929102279092637,
+        "kendall": 0.771170673298333
+      },
+      {
+        "cat": "juice_bottle",
+        "a": "pkg_260816/s44",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.8950780915427055,
+        "kendall": 0.7274753615179147
+      },
+      {
+        "cat": "pushpins",
+        "a": "pkg_260816/s42",
+        "b": "rebuild_5090/s42",
+        "spearman": 0.8556104163163042,
+        "kendall": 0.6897149420486582
+      },
+      {
+        "cat": "pushpins",
+        "a": "pkg_260816/s43",
+        "b": "rebuild_5090/s43",
+        "spearman": 0.9304371819673137,
+        "kendall": 0.8046987574396992
+      },
+      {
+        "cat": "pushpins",
+        "a": "pkg_260816/s44",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.9048219621175425,
+        "kendall": 0.7665657303957397
+      },
+      {
+        "cat": "screw_bag",
+        "a": "pkg_260816/s42",
+        "b": "rebuild_5090/s42",
+        "spearman": 0.9533869605875998,
+        "kendall": 0.84633431085044
+      },
+      {
+        "cat": "screw_bag",
+        "a": "pkg_260816/s43",
+        "b": "rebuild_5090/s43",
+        "spearman": 0.9264801212968596,
+        "kendall": 0.7809901673279284
+      },
+      {
+        "cat": "screw_bag",
+        "a": "pkg_260816/s44",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.9414896997539561,
+        "kendall": 0.808832154562705
+      },
+      {
+        "cat": "splicing_connectors",
+        "a": "pkg_260816/s42",
+        "b": "rebuild_5090/s42",
+        "spearman": 0.9965154928993144,
+        "kendall": 0.9578687004019375
+      },
+      {
+        "cat": "splicing_connectors",
+        "a": "pkg_260816/s43",
+        "b": "rebuild_5090/s43",
+        "spearman": 0.9960306884756222,
+        "kendall": 0.960960527671854
+      },
+      {
+        "cat": "splicing_connectors",
+        "a": "pkg_260816/s44",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.9954530323489409,
+        "kendall": 0.9553127898588065
+      }
+    ],
+    "cross_both": [
+      {
+        "cat": "breakfast_box",
+        "a": "pkg_260816/s42",
+        "b": "rebuild_5090/s43",
+        "spearman": 0.9435469259398173,
+        "kendall": 0.8177040477770405
+      },
+      {
+        "cat": "breakfast_box",
+        "a": "pkg_260816/s42",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.9227379475491185,
+        "kendall": 0.776244193762442
+      },
+      {
+        "cat": "breakfast_box",
+        "a": "pkg_260816/s43",
+        "b": "rebuild_5090/s42",
+        "spearman": 0.9355944721733359,
+        "kendall": 0.7911081619110817
+      },
+      {
+        "cat": "breakfast_box",
+        "a": "pkg_260816/s43",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.9429906811690372,
+        "kendall": 0.8093165228931651
+      },
+      {
+        "cat": "breakfast_box",
+        "a": "pkg_260816/s44",
+        "b": "rebuild_5090/s42",
+        "spearman": 0.9359176019156977,
+        "kendall": 0.7962043795620437
+      },
+      {
+        "cat": "breakfast_box",
+        "a": "pkg_260816/s44",
+        "b": "rebuild_5090/s43",
+        "spearman": 0.9418666512795361,
+        "kendall": 0.8077770404777704
+      },
+      {
+        "cat": "juice_bottle",
+        "a": "pkg_260816/s42",
+        "b": "rebuild_5090/s43",
+        "spearman": 0.9459322190954254,
+        "kendall": 0.8095238095238096
+      },
+      {
+        "cat": "juice_bottle",
+        "a": "pkg_260816/s42",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.9012536219966958,
+        "kendall": 0.7314543612415954
+      },
+      {
+        "cat": "juice_bottle",
+        "a": "pkg_260816/s43",
+        "b": "rebuild_5090/s42",
+        "spearman": 0.9115961495597672,
+        "kendall": 0.7371281201068436
+      },
+      {
+        "cat": "juice_bottle",
+        "a": "pkg_260816/s43",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.8801872293676626,
+        "kendall": 0.7009118541033434
+      },
+      {
+        "cat": "juice_bottle",
+        "a": "pkg_260816/s44",
+        "b": "rebuild_5090/s42",
+        "spearman": 0.9331053211107206,
+        "kendall": 0.7822602928985909
+      },
+      {
+        "cat": "juice_bottle",
+        "a": "pkg_260816/s44",
+        "b": "rebuild_5090/s43",
+        "spearman": 0.9531709532352329,
+        "kendall": 0.8233029381965553
+      },
+      {
+        "cat": "pushpins",
+        "a": "pkg_260816/s42",
+        "b": "rebuild_5090/s43",
+        "spearman": 0.9266934469531802,
+        "kendall": 0.7909157356165814
+      },
+      {
+        "cat": "pushpins",
+        "a": "pkg_260816/s42",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.9010069293739597,
+        "kendall": 0.7599665866137622
+      },
+      {
+        "cat": "pushpins",
+        "a": "pkg_260816/s43",
+        "b": "rebuild_5090/s42",
+        "spearman": 0.8585928365922505,
+        "kendall": 0.7038320977341547
+      },
+      {
+        "cat": "pushpins",
+        "a": "pkg_260816/s43",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.9096621514794784,
+        "kendall": 0.769405868225958
+      },
+      {
+        "cat": "pushpins",
+        "a": "pkg_260816/s44",
+        "b": "rebuild_5090/s42",
+        "spearman": 0.8969808231262444,
+        "kendall": 0.7401691552678291
+      },
+      {
+        "cat": "pushpins",
+        "a": "pkg_260816/s44",
+        "b": "rebuild_5090/s43",
+        "spearman": 0.9235998505567367,
+        "kendall": 0.7874908635272004
+      },
+      {
+        "cat": "screw_bag",
+        "a": "pkg_260816/s42",
+        "b": "rebuild_5090/s43",
+        "spearman": 0.9387465991181162,
+        "kendall": 0.8145592547869588
+      },
+      {
+        "cat": "screw_bag",
+        "a": "pkg_260816/s42",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.9380199679810186,
+        "kendall": 0.8063481110919443
+      },
+      {
+        "cat": "screw_bag",
+        "a": "pkg_260816/s43",
+        "b": "rebuild_5090/s42",
+        "spearman": 0.9005420226432909,
+        "kendall": 0.7383129204761084
+      },
+      {
+        "cat": "screw_bag",
+        "a": "pkg_260816/s43",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.9132167576090475,
+        "kendall": 0.762980852164913
+      },
+      {
+        "cat": "screw_bag",
+        "a": "pkg_260816/s44",
+        "b": "rebuild_5090/s42",
+        "spearman": 0.953237457971304,
+        "kendall": 0.8343971019492842
+      },
+      {
+        "cat": "screw_bag",
+        "a": "pkg_260816/s44",
+        "b": "rebuild_5090/s43",
+        "spearman": 0.939206607168257,
+        "kendall": 0.8059341038468174
+      },
+      {
+        "cat": "splicing_connectors",
+        "a": "pkg_260816/s42",
+        "b": "rebuild_5090/s43",
+        "spearman": 0.996227850176863,
+        "kendall": 0.9577862516747397
+      },
+      {
+        "cat": "splicing_connectors",
+        "a": "pkg_260816/s42",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.9957880887069612,
+        "kendall": 0.9546532000412243
+      },
+      {
+        "cat": "splicing_connectors",
+        "a": "pkg_260816/s43",
+        "b": "rebuild_5090/s42",
+        "spearman": 0.9955190163251076,
+        "kendall": 0.9555189116768009
+      },
+      {
+        "cat": "splicing_connectors",
+        "a": "pkg_260816/s43",
+        "b": "rebuild_5090/s44",
+        "spearman": 0.9949670425843594,
+        "kendall": 0.9537874884056476
+      },
+      {
+        "cat": "splicing_connectors",
+        "a": "pkg_260816/s44",
+        "b": "rebuild_5090/s42",
+        "spearman": 0.996090350633713,
+        "kendall": 0.9556425847675976
+      },
+      {
+        "cat": "splicing_connectors",
+        "a": "pkg_260816/s44",
+        "b": "rebuild_5090/s43",
+        "spearman": 0.9958331316607516,
+        "kendall": 0.9574564567659486
+      }
+    ],
+    "cross_replicate": [
+      {
+        "cat": "breakfast_box",
+        "a": "rebuild_5090/s42",
+        "b": "rep2/s42",
+        "spearman": 0.9364732696690805,
+        "kendall": 0.815686794956868
+      },
+      {
+        "cat": "juice_bottle",
+        "a": "rebuild_5090/s42",
+        "b": "rep2/s42",
+        "spearman": 0.9420433779757557,
+        "kendall": 0.7996868379847104
+      },
+      {
+        "cat": "pushpins",
+        "a": "rebuild_5090/s42",
+        "b": "rep2/s42",
+        "spearman": 0.8589432830590351,
+        "kendall": 0.6943510493891615
+      },
+      {
+        "cat": "screw_bag",
+        "a": "rebuild_5090/s42",
+        "b": "rep2/s42",
+        "spearman": 0.9603893726034943,
+        "kendall": 0.8553734690357083
+      },
+      {
+        "cat": "splicing_connectors",
+        "a": "rebuild_5090/s42",
+        "b": "rep2/s42",
+        "spearman": 0.996310033811849,
+        "kendall": 0.9579099247655364
+      }
+    ]
+  }
+}

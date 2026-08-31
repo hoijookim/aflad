@@ -1,0 +1,228 @@
+{
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "per_cat": {
+    "screw_bag": {
+      "patch_memory_NN": {
+        "cardinality": [
+          0.5064,
+          0.0212
+        ],
+        "logical": [
+          0.4852,
+          0.0115
+        ],
+        "structural": [
+          0.899,
+          0.0063
+        ]
+      },
+      "area_histogram": {
+        "cardinality": [
+          0.7928,
+          0.0098
+        ],
+        "logical": [
+          0.7277,
+          0.0084
+        ],
+        "structural": [
+          0.7469,
+          0.007
+        ]
+      },
+      "instance_count": {
+        "cardinality": [
+          0.6683,
+          0.0297
+        ],
+        "logical": [
+          0.637,
+          0.0221
+        ],
+        "structural": [
+          0.6176,
+          0.0124
+        ]
+      },
+      "set_distance": {
+        "cardinality": [
+          0.6888,
+          0.0069
+        ],
+        "logical": [
+          0.6376,
+          0.0036
+        ],
+        "structural": [
+          0.7496,
+          0.0072
+        ]
+      }
+    },
+    "pushpins": {
+      "patch_memory_NN": {
+        "cardinality": [
+          0.5213,
+          0.0141
+        ],
+        "logical": [
+          0.5664,
+          0.0158
+        ],
+        "structural": [
+          0.8443,
+          0.0127
+        ]
+      },
+      "area_histogram": {
+        "cardinality": [
+          0.6605,
+          0.0249
+        ],
+        "logical": [
+          0.6442,
+          0.0244
+        ],
+        "structural": [
+          0.546,
+          0.0178
+        ]
+      },
+      "instance_count": {
+        "cardinality": [
+          0.7617,
+          0.0162
+        ],
+        "logical": [
+          0.7025,
+          0.0224
+        ],
+        "structural": [
+          0.5077,
+          0.0165
+        ]
+      },
+      "set_distance": {
+        "cardinality": [
+          0.5684,
+          0.0058
+        ],
+        "logical": [
+          0.5588,
+          0.0054
+        ],
+        "structural": [
+          0.6964,
+          0.004
+        ]
+      }
+    }
+  },
+  "axis_image_counts": {
+    "screw_bag": {
+      "good": 122,
+      "structural": 82,
+      "logical": 137,
+      "cardinality": 48
+    },
+    "pushpins": {
+      "good": 138,
+      "structural": 81,
+      "logical": 91,
+      "cardinality": 67
+    }
+  },
+  "previous_table7": {
+    "screw_bag": {
+      "patch_memory_NN": {
+        "cardinality": [
+          0.4852,
+          0.0115
+        ],
+        "structural": [
+          0.899,
+          0.0063
+        ]
+      },
+      "area_histogram": {
+        "cardinality": [
+          0.7251,
+          0.0146
+        ],
+        "structural": [
+          0.7465,
+          0.0082
+        ]
+      },
+      "instance_count": {
+        "cardinality": [
+          0.6344,
+          0.0272
+        ],
+        "structural": [
+          0.6218,
+          0.0103
+        ]
+      },
+      "set_distance": {
+        "cardinality": [
+          0.6376,
+          0.0036
+        ],
+        "structural": [
+          0.7496,
+          0.0072
+        ]
+      }
+    },
+    "pushpins": {
+      "patch_memory_NN": {
+        "cardinality": [
+          0.5128,
+          0.0155
+        ],
+        "structural": [
+          0.8443,
+          0.0127
+        ]
+      },
+      "area_histogram": {
+        "cardinality": [
+          0.6333,
+          0.013
+        ],
+        "structural": [
+          0.5517,
+          0.023
+        ]
+      },
+      "instance_count": {
+        "cardinality": [
+          0.7434,
+          0.0109
+        ],
+        "structural": [
+          0.5091,
+          0.0269
+        ]
+      },
+      "set_distance": {
+        "cardinality": [
+          0.5495,
+          0.0056
+        ],
+        "structural": [
+          0.6964,
+          0.004
+        ]
+      }
+    }
+  },
+  "note": "기존 표 C2 의 'cardinality' 열은 screw_bag 에서 logical 이었다. 여기서는 부록 C 의 사전등록 STRAND 로 정의한 진짜 개수축과 logical 을 모두 낸다. readout 계산부는 d2d3_multidraw_tables67.py 에서 그대로 옮겼다."
+}

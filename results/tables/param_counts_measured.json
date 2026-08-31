@@ -1,0 +1,55 @@
+{
+  "backbones_table_C1": {
+    "DINOv3-S/16": {
+      "params": 21596544,
+      "M": 21.6,
+      "rounded_M": 22,
+      "paper_now": "21M"
+    },
+    "DINOv3-B/16": {
+      "params": 85660416,
+      "M": 85.66,
+      "rounded_M": 86,
+      "paper_now": "86M"
+    },
+    "DINOv3-L/16": {
+      "params": 303129600,
+      "M": 303.13,
+      "rounded_M": 303,
+      "paper_now": "300M (표 C1) / 303M (§4.5)"
+    },
+    "DINOv2-B/14": {
+      "params": 86580480,
+      "M": 86.58,
+      "rounded_M": 87,
+      "paper_now": "86M"
+    },
+    "DINOv2-L/14": {
+      "params": 304368640,
+      "M": 304.37,
+      "rounded_M": 304,
+      "paper_now": "300M"
+    }
+  },
+  "aflad_branches_sec4_5": {
+    "reconstruction_detail": {
+      "teacher": 2694144,
+      "student": 4267392,
+      "autoencoder": 1096320
+    },
+    "composition_detail": {
+      "segmenter_encoder_WRN101_2": 126886696,
+      "embedding_ResNet101": 44549160
+    },
+    "per_branch": {
+      "reconstruction_EADS": 8057856,
+      "patch_memory_DINOv3L": 303129600,
+      "composition": 171435856
+    },
+    "total": 482623312,
+    "total_M": 482.62,
+    "paper_now": "약 482M (재구성 8.1M, 패치 메모리 303M, 구성 약 171M)",
+    "verdict": "네 값 모두 실측과 일치한다. §4.5 는 고칠 것이 없다."
+  },
+  "note": "구성 분기 실측은 분할 인코더 + 임베딩 backbone 만이다. 합성곱 디코더와 좌표 채널은 제외돼 있어 논문의 '약 171M' 이 그만큼 보수적이다."
+}

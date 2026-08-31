@@ -1,0 +1,108 @@
+{
+ "hardware": "RTX 5090, batch=1, median latency (GPU unless noted)",
+ "date": "2026-06-21",
+ "ours_v4free": {
+  "ms": 29,
+  "fps": 34,
+  "scope": "GPU full, 3-branch sum",
+  "branches": {
+   "EAD_S": {
+    "ms": 3.45,
+    "fps": 290,
+    "src": "real_ead_only_5cat.json"
+   },
+   "DINOv3L_PatchCore": {
+    "ms": 14,
+    "fps": 70,
+    "src": "real_dinov3l_pc.json/track_b"
+   },
+   "PSAD": {
+    "ms": 11.2,
+    "fps": 90,
+    "src": "direct measure resnet101+segCNN forward"
+   }
+  },
+  "note": "Track B(EAD+DINOv3)=17.9ms + PSAD 11.2ms = 29.1ms; consistent w/ Track A(+SALAD)=28.7ms"
+ },
+ "baselines": {
+  "PUAD_S": {
+   "ms": 2.26,
+   "fps": 442,
+   "src": "real_puad_full_5cat.json"
+  },
+  "PaDiM": {
+   "ms": 2.38,
+   "fps": 419,
+   "venue": "ICPR21",
+   "src": "fps_results.json"
+  },
+  "EfficientAD_S": {
+   "ms": 3.45,
+   "fps": 368,
+   "venue": "WACV24"
+  },
+  "EfficientAD_M": {
+   "ms": 3.9,
+   "fps": 230
+  },
+  "PUAD_M": {
+   "ms": 3.95,
+   "fps": 225
+  },
+  "SuperSimpleNet": {
+   "ms": 4.83,
+   "fps": 207
+  },
+  "STFPM": {
+   "ms": 5.1,
+   "fps": 196,
+   "venue": "ICCV21"
+  },
+  "PatchCore_WRN50": {
+   "ms": 6.36,
+   "fps": 157,
+   "venue": "CVPR22"
+  },
+  "DINOv3L_PatchCore": {
+   "ms": 13.4,
+   "fps": 70
+  },
+  "ComAD": {
+   "ms": 57,
+   "fps": 17.5,
+   "scope": "full DINO seg+CRF+KNN",
+   "src": "comad_eadtrain_net_hwinfo.json"
+  },
+  "SALAD": {
+   "ms": 57,
+   "fps": 17,
+   "venue": "ICCV25",
+   "scope": "full SAM-HQ+flow",
+   "src": "salad_official_net_hwinfo.json"
+  },
+  "CSAD": {
+   "ms": 5.7,
+   "fps": 175,
+   "venue": "BMVC24",
+   "note": "feat-only estimate, not fully re-measured"
+  }
+ },
+ "caveat_v4_dlfree": {
+  "cpu_ms": [
+   632,
+   1336
+  ],
+  "fps": [
+   0.75,
+   1.5
+  ],
+  "note": "old DL-free track, NOT headline",
+  "src": "final_fps_bench.json"
+ },
+ "caveats": [
+  "scope differs: light AD = anomalib forward(bottle); LOCO methods = full pipeline our harness",
+  "SALAD/ComAD full wall-clock incl segmentation; forward-only lighter ~15ms",
+  "V4-free branches run sequentially on 1 GPU; sum reported",
+  "PSAD measured via backbone forwards +-3ms"
+ ]
+}

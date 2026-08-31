@@ -1,0 +1,33 @@
+{
+  "results": {
+    "euclid_abs": {
+      "breakfast_box": 0.673110126473083,
+      "juice_bottle": 0.9880597014925374,
+      "pushpins": 1.0,
+      "screw_bag": 0.8023056917211329,
+      "splicing_connectors": 1.0
+    },
+    "euclid_frac": {
+      "breakfast_box": 0.6641124399695277,
+      "juice_bottle": 0.9827363184079602,
+      "pushpins": 0.9999977598566308,
+      "screw_bag": 0.7315007391845627,
+      "splicing_connectors": 1.0
+    },
+    "maha_abs": {
+      "breakfast_box": 0.6737274963170887,
+      "juice_bottle": 0.9882885572139303,
+      "pushpins": 1.0,
+      "screw_bag": 0.8226712573918457,
+      "splicing_connectors": 1.0
+    },
+    "maha_frac": {
+      "breakfast_box": 0.6644180963818282,
+      "juice_bottle": 0.9827562189054726,
+      "pushpins": 1.0,
+      "screw_bag": 0.7269418962029257,
+      "splicing_connectors": 1.0
+    }
+  },
+  "accepted": []
+}

@@ -1,0 +1,160 @@
+{
+  "grid": [
+    "w0.25_k1",
+    "w0.25_k3",
+    "w0.25_k5",
+    "w0.5_k1",
+    "w0.5_k3",
+    "w0.5_k5",
+    "w1.0_k1",
+    "w1.0_k3",
+    "w1.0_k5",
+    "w2.0_k1",
+    "w2.0_k3",
+    "w2.0_k5",
+    "w4.0_k1",
+    "w4.0_k3",
+    "w4.0_k5"
+  ],
+  "results": {
+    "w0.25_k1": {
+      "breakfast_box": 0.6818930508596304,
+      "juice_bottle": 0.9907910447761195,
+      "pushpins": 1.0,
+      "screw_bag": 0.8406207983193277,
+      "splicing_connectors": 1.0
+    },
+    "w0.25_k3": {
+      "breakfast_box": 0.6781931232905939,
+      "juice_bottle": 0.9914278606965174,
+      "pushpins": 1.0,
+      "screw_bag": 0.861354302832244,
+      "splicing_connectors": 1.0
+    },
+    "w0.25_k5": {
+      "breakfast_box": 0.6779252069265378,
+      "juice_bottle": 0.9925273631840795,
+      "pushpins": 1.0,
+      "screw_bag": 0.8678183551198257,
+      "splicing_connectors": 1.0
+    },
+    "w0.5_k1": {
+      "breakfast_box": 0.6777957416169427,
+      "juice_bottle": 0.9897562189054726,
+      "pushpins": 1.0,
+      "screw_bag": 0.8254680788982259,
+      "splicing_connectors": 1.0
+    },
+    "w0.5_k3": {
+      "breakfast_box": 0.6738386937685129,
+      "juice_bottle": 0.9905373134328357,
+      "pushpins": 1.0,
+      "screw_bag": 0.8525314347961407,
+      "splicing_connectors": 1.0
+    },
+    "w0.5_k5": {
+      "breakfast_box": 0.6743945026900908,
+      "juice_bottle": 0.9918955223880597,
+      "pushpins": 1.0,
+      "screw_bag": 0.8596762955182072,
+      "splicing_connectors": 1.0
+    },
+    "w1.0_k1": {
+      "breakfast_box": 0.673110126473083,
+      "juice_bottle": 0.9880597014925374,
+      "pushpins": 1.0,
+      "screw_bag": 0.8023056917211329,
+      "splicing_connectors": 1.0
+    },
+    "w1.0_k3": {
+      "breakfast_box": 0.6702765647038466,
+      "juice_bottle": 0.9893681592039801,
+      "pushpins": 1.0,
+      "screw_bag": 0.8343005952380953,
+      "splicing_connectors": 1.0
+    },
+    "w1.0_k5": {
+      "breakfast_box": 0.67181771404785,
+      "juice_bottle": 0.9908308457711443,
+      "pushpins": 1.0,
+      "screw_bag": 0.8432339713663244,
+      "splicing_connectors": 1.0
+    },
+    "w2.0_k1": {
+      "breakfast_box": 0.6690847640687237,
+      "juice_bottle": 0.9860646766169154,
+      "pushpins": 1.0,
+      "screw_bag": 0.7743250272331156,
+      "splicing_connectors": 1.0
+    },
+    "w2.0_k3": {
+      "breakfast_box": 0.6691977969876759,
+      "juice_bottle": 0.9874477611940298,
+      "pushpins": 1.0,
+      "screw_bag": 0.8081974789915967,
+      "splicing_connectors": 1.0
+    },
+    "w2.0_k5": {
+      "breakfast_box": 0.6707817961444154,
+      "juice_bottle": 0.9891492537313432,
+      "pushpins": 1.0,
+      "screw_bag": 0.8163059446000622,
+      "splicing_connectors": 1.0
+    },
+    "w4.0_k1": {
+      "breakfast_box": 0.6671373534375771,
+      "juice_bottle": 0.9845771144278608,
+      "pushpins": 1.0,
+      "screw_bag": 0.745202322595705,
+      "splicing_connectors": 1.0
+    },
+    "w4.0_k3": {
+      "breakfast_box": 0.6671826132813171,
+      "juice_bottle": 0.9855074626865671,
+      "pushpins": 1.0,
+      "screw_bag": 0.7783935379707438,
+      "splicing_connectors": 1.0
+    },
+    "w4.0_k5": {
+      "breakfast_box": 0.6687769425619154,
+      "juice_bottle": 0.9870746268656717,
+      "pushpins": 1.0,
+      "screw_bag": 0.7844559018051664,
+      "splicing_connectors": 1.0
+    }
+  },
+  "accepted": [
+    {
+      "config": "w0.25_k5",
+      "gain": 0.014959081108737959
+    },
+    {
+      "config": "w0.25_k3",
+      "gain": 0.013499953426520417
+    },
+    {
+      "config": "w0.5_k5",
+      "gain": 0.012498160181920893
+    },
+    {
+      "config": "w0.5_k3",
+      "gain": 0.010686384462147203
+    },
+    {
+      "config": "w0.25_k1",
+      "gain": 0.009965874853664847
+    },
+    {
+      "config": "w1.0_k5",
+      "gain": 0.008481402299713081
+    },
+    {
+      "config": "w1.0_k3",
+      "gain": 0.006093959891833744
+    },
+    {
+      "config": "w0.5_k1",
+      "gain": 0.005908903946777589
+    }
+  ]
+}

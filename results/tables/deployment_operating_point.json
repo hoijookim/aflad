@@ -1,0 +1,390 @@
+{
+ "note": "저장된 per-image 점수만 사용. 임계값은 전부 검증 정상 분위수 — test 는 결과 확인 전용.",
+ "val_normals_per_category": {
+  "breakfast_box": 62,
+  "juice_bottle": 54,
+  "pushpins": 69,
+  "screw_bag": 60,
+  "splicing_connectors": 60
+ },
+ "deployment": {
+  "declared_10pct": {
+   "fusion": {
+    "fpr": [
+     0.1153,
+     0.0085
+    ],
+    "logical": [
+     0.9169,
+     0.0116
+    ],
+    "structural": [
+     0.933,
+     0.0067
+    ],
+    "mean_recall": 0.9249
+   },
+   "or_two": {
+    "fpr": [
+     0.109,
+     0.0045
+    ],
+    "logical": [
+     0.9391,
+     0.0103
+    ],
+    "structural": [
+     0.8578,
+     0.0136
+    ],
+    "mean_recall": 0.8984
+   },
+   "재구성": {
+    "fpr": [
+     0.0928,
+     0.0125
+    ],
+    "logical": [
+     0.7039,
+     0.0031
+    ],
+    "structural": [
+     0.8407,
+     0.0141
+    ],
+    "mean_recall": 0.7723
+   },
+   "패치 메모리": {
+    "fpr": [
+     0.1005,
+     0.0236
+    ],
+    "logical": [
+     0.3301,
+     0.04
+    ],
+    "structural": [
+     0.7564,
+     0.0298
+    ],
+    "mean_recall": 0.5432
+   },
+   "구성": {
+    "fpr": [
+     0.1153,
+     0.0199
+    ],
+    "logical": [
+     0.8847,
+     0.0153
+    ],
+    "structural": [
+     0.606,
+     0.0296
+    ],
+    "mean_recall": 0.7454
+   }
+  },
+  "declared_5pct": {
+   "fusion": {
+    "fpr": [
+     0.062,
+     0.0236
+    ],
+    "logical": [
+     0.8867,
+     0.0251
+    ],
+    "structural": [
+     0.9086,
+     0.0068
+    ],
+    "mean_recall": 0.8976
+   },
+   "or_two": {
+    "fpr": [
+     0.056,
+     0.0073
+    ],
+    "logical": [
+     0.9065,
+     0.0179
+    ],
+    "structural": [
+     0.7871,
+     0.0191
+    ],
+    "mean_recall": 0.8468
+   },
+   "재구성": {
+    "fpr": [
+     0.0405,
+     0.0058
+    ],
+    "logical": [
+     0.6691,
+     0.0034
+    ],
+    "structural": [
+     0.7972,
+     0.0137
+    ],
+    "mean_recall": 0.7331
+   },
+   "패치 메모리": {
+    "fpr": [
+     0.0674,
+     0.0131
+    ],
+    "logical": [
+     0.2755,
+     0.0277
+    ],
+    "structural": [
+     0.7046,
+     0.0313
+    ],
+    "mean_recall": 0.4901
+   },
+   "구성": {
+    "fpr": [
+     0.068,
+     0.0058
+    ],
+    "logical": [
+     0.8517,
+     0.0199
+    ],
+    "structural": [
+     0.5268,
+     0.0502
+    ],
+    "mean_recall": 0.6893
+   }
+  },
+  "declared_2pct": {
+   "fusion": {
+    "fpr": [
+     0.0358,
+     0.0199
+    ],
+    "logical": [
+     0.8266,
+     0.0424
+    ],
+    "structural": [
+     0.8529,
+     0.0184
+    ],
+    "mean_recall": 0.8398
+   },
+   "or_two": {
+    "fpr": [
+     0.019,
+     0.004
+    ],
+    "logical": [
+     0.8446,
+     0.0174
+    ],
+    "structural": [
+     0.7205,
+     0.0293
+    ],
+    "mean_recall": 0.7825
+   },
+   "재구성": {
+    "fpr": [
+     0.0245,
+     0.0044
+    ],
+    "logical": [
+     0.6082,
+     0.011
+    ],
+    "structural": [
+     0.7084,
+     0.0098
+    ],
+    "mean_recall": 0.6583
+   },
+   "패치 메모리": {
+    "fpr": [
+     0.0478,
+     0.0143
+    ],
+    "logical": [
+     0.2316,
+     0.0116
+    ],
+    "structural": [
+     0.6653,
+     0.0366
+    ],
+    "mean_recall": 0.4484
+   },
+   "구성": {
+    "fpr": [
+     0.0358,
+     0.0076
+    ],
+    "logical": [
+     0.7806,
+     0.023
+    ],
+    "structural": [
+     0.454,
+     0.0595
+    ],
+    "mean_recall": 0.6173
+   }
+  }
+ },
+ "fpr_needed_for_both_axes": {
+  "target_90pct": {
+   "fusion": {
+    "fpr_needed": 0.1174,
+    "unreachable_cells": 0,
+    "cells": 15
+   },
+   "or_two": {
+    "fpr_needed": 0.2192,
+    "unreachable_cells": 0,
+    "cells": 15
+   },
+   "재구성": {
+    "fpr_needed": 0.3731,
+    "unreachable_cells": 0,
+    "cells": 15
+   },
+   "패치 메모리": {
+    "fpr_needed": 0.734,
+    "unreachable_cells": 0,
+    "cells": 15
+   },
+   "구성": {
+    "fpr_needed": 0.5287,
+    "unreachable_cells": 0,
+    "cells": 15
+   }
+  },
+  "target_95pct": {
+   "fusion": {
+    "fpr_needed": 0.2489,
+    "unreachable_cells": 0,
+    "cells": 15
+   },
+   "or_two": {
+    "fpr_needed": 0.3308,
+    "unreachable_cells": 0,
+    "cells": 15
+   },
+   "재구성": {
+    "fpr_needed": 0.5015,
+    "unreachable_cells": 0,
+    "cells": 15
+   },
+   "패치 메모리": {
+    "fpr_needed": 0.8347,
+    "unreachable_cells": 0,
+    "cells": 15
+   },
+   "구성": {
+    "fpr_needed": 0.69,
+    "unreachable_cells": 0,
+    "cells": 15
+   }
+  }
+ },
+ "calibration_sweep": {
+  "declared_5pct": {
+   "5": {
+    "LS_AUROC": [
+     0.9682,
+     0.0029
+    ],
+    "actual_fpr": 0.2288
+   },
+   "10": {
+    "LS_AUROC": [
+     0.9707,
+     0.0016
+    ],
+    "actual_fpr": 0.1404
+   },
+   "20": {
+    "LS_AUROC": [
+     0.9715,
+     0.001
+    ],
+    "actual_fpr": 0.096
+   },
+   "30": {
+    "LS_AUROC": [
+     0.9719,
+     0.0007
+    ],
+    "actual_fpr": 0.0799
+   },
+   "50": {
+    "LS_AUROC": [
+     0.9722,
+     0.0003
+    ],
+    "actual_fpr": 0.0653
+   },
+   "all": {
+    "LS_AUROC": [
+     0.9723,
+     0.0
+    ],
+    "actual_fpr": 0.062
+   }
+  },
+  "declared_2pct": {
+   "5": {
+    "LS_AUROC": [
+     0.9682,
+     0.0029
+    ],
+    "actual_fpr": 0.2175
+   },
+   "10": {
+    "LS_AUROC": [
+     0.9707,
+     0.0016
+    ],
+    "actual_fpr": 0.1222
+   },
+   "20": {
+    "LS_AUROC": [
+     0.9715,
+     0.001
+    ],
+    "actual_fpr": 0.0638
+   },
+   "30": {
+    "LS_AUROC": [
+     0.9719,
+     0.0007
+    ],
+    "actual_fpr": 0.0483
+   },
+   "50": {
+    "LS_AUROC": [
+     0.9722,
+     0.0003
+    ],
+    "actual_fpr": 0.04
+   },
+   "all": {
+    "LS_AUROC": [
+     0.9723,
+     0.0
+    ],
+    "actual_fpr": 0.0358
+   }
+  }
+ },
+ "omitted": "품목별 최적 분기(오라클)는 제외 — test 라벨이 있어야 고를 수 있고, 검증셋에 이상이 없어 라벨 없이는 선택 자체가 불가능하다."
+}

@@ -1,0 +1,90 @@
+{
+  "config": {
+    "branches": [
+      "ead",
+      "pcL17",
+      "psad_hc"
+    ],
+    "scale": "raw",
+    "norm": "z",
+    "clip": null,
+    "agg": "sum",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "decision_rule": "D2: min mean abs-skew of val ; D3: T>4 -> robust, no clip ; D4: sum",
+    "psad_variant": "_tta_merge",
+    "psad_kind": "hc",
+    "branch_avg": true
+  },
+  "val_tail_stat": {
+    "breakfast_box|ead": 5.057292846730757,
+    "breakfast_box|pcL17": 2.4457956259636027,
+    "breakfast_box|psad_hc": 3.382558951786135,
+    "juice_bottle|ead": 4.060402135084549,
+    "juice_bottle|pcL17": 2.4988623781263146,
+    "juice_bottle|psad_hc": 1.564769336161731,
+    "pushpins|ead": 4.130600859636776,
+    "pushpins|pcL17": 1.910317504433146,
+    "pushpins|psad_hc": 1.7716048240908586,
+    "screw_bag|ead": 5.133216132530413,
+    "screw_bag|pcL17": 3.490957664089842,
+    "screw_bag|psad_hc": 3.469940333881937,
+    "splicing_connectors|ead": 4.8936410606260425,
+    "splicing_connectors|pcL17": 2.092138891779792,
+    "splicing_connectors|psad_hc": 6.292226117830623
+  },
+  "per_seed": {
+    "42": {
+      "logical": 0.9679227224358616,
+      "structural": 0.9790225973566253,
+      "LS": 0.9734726598962433
+    },
+    "43": {
+      "logical": 0.9705821195431762,
+      "structural": 0.9771134277120666,
+      "LS": 0.9738477736276214
+    },
+    "44": {
+      "logical": 0.9672504464235766,
+      "structural": 0.9776861328342449,
+      "LS": 0.9724682896289106
+    }
+  },
+  "per_cat": {
+    "breakfast_box": {
+      "mean": 0.977351235005381,
+      "std": 0.004775550347455339
+    },
+    "juice_bottle": {
+      "mean": 0.9761584066037997,
+      "std": 0.0008003067927776132
+    },
+    "pushpins": {
+      "mean": 0.9818027889686505,
+      "std": 0.0025630621079006655
+    },
+    "screw_bag": {
+      "mean": 0.9635204312435611,
+      "std": 0.00457781388357244
+    },
+    "splicing_connectors": {
+      "mean": 0.9674816767665672,
+      "std": 0.00012945883324823153
+    }
+  },
+  "logical": {
+    "mean": 0.9685850961342047,
+    "std": 0.001761835869528777
+  },
+  "structural": {
+    "mean": 0.9779407193009789,
+    "std": 0.0009797157162714449
+  },
+  "LS": {
+    "mean": 0.9732629077175918,
+    "std": 0.0007132608274758807
+  }
+}

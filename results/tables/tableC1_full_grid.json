@@ -1,0 +1,1697 @@
+{
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "grid": {
+    "breakfast_box": {
+      "DINOv3-S/16": {
+        "params_M": 22,
+        "best_struct_layer": "L6",
+        "structural": [
+          0.8841,
+          0.013
+        ],
+        "logical": [
+          0.7753,
+          0.0173
+        ],
+        "cardinality": [
+          0.7171,
+          0.0179
+        ],
+        "per_layer": {
+          "L11": {
+            "structural": [
+              0.8275,
+              0.0108
+            ],
+            "logical": [
+              0.7831,
+              0.0107
+            ],
+            "cardinality": [
+              0.8018,
+              0.0245
+            ]
+          },
+          "L3": {
+            "structural": [
+              0.7283,
+              0.0136
+            ],
+            "logical": [
+              0.73,
+              0.0159
+            ],
+            "cardinality": [
+              0.6584,
+              0.0256
+            ]
+          },
+          "L6": {
+            "structural": [
+              0.8841,
+              0.013
+            ],
+            "logical": [
+              0.7753,
+              0.0173
+            ],
+            "cardinality": [
+              0.7171,
+              0.0179
+            ]
+          },
+          "L9": {
+            "structural": [
+              0.8764,
+              0.008
+            ],
+            "logical": [
+              0.7616,
+              0.0218
+            ],
+            "cardinality": [
+              0.7362,
+              0.0259
+            ]
+          }
+        }
+      },
+      "DINOv3-B/16": {
+        "params_M": 86,
+        "best_struct_layer": "L9",
+        "structural": [
+          0.9125,
+          0.0091
+        ],
+        "logical": [
+          0.7543,
+          0.0188
+        ],
+        "cardinality": [
+          0.8066,
+          0.0287
+        ],
+        "per_layer": {
+          "L11": {
+            "structural": [
+              0.8705,
+              0.0035
+            ],
+            "logical": [
+              0.7901,
+              0.0036
+            ],
+            "cardinality": [
+              0.7738,
+              0.0048
+            ]
+          },
+          "L3": {
+            "structural": [
+              0.7424,
+              0.0163
+            ],
+            "logical": [
+              0.68,
+              0.0041
+            ],
+            "cardinality": [
+              0.596,
+              0.0114
+            ]
+          },
+          "L6": {
+            "structural": [
+              0.8821,
+              0.0124
+            ],
+            "logical": [
+              0.8018,
+              0.0147
+            ],
+            "cardinality": [
+              0.7521,
+              0.0396
+            ]
+          },
+          "L9": {
+            "structural": [
+              0.9125,
+              0.0091
+            ],
+            "logical": [
+              0.7543,
+              0.0188
+            ],
+            "cardinality": [
+              0.8066,
+              0.0287
+            ]
+          }
+        }
+      },
+      "DINOv3-L/16": {
+        "params_M": 303,
+        "best_struct_layer": "L23",
+        "structural": [
+          0.9292,
+          0.0007
+        ],
+        "logical": [
+          0.8301,
+          0.0087
+        ],
+        "cardinality": [
+          0.8227,
+          0.0112
+        ],
+        "per_layer": {
+          "L17": {
+            "structural": [
+              0.928,
+              0.0066
+            ],
+            "logical": [
+              0.8065,
+              0.0132
+            ],
+            "cardinality": [
+              0.779,
+              0.0191
+            ]
+          },
+          "L23": {
+            "structural": [
+              0.9292,
+              0.0007
+            ],
+            "logical": [
+              0.8301,
+              0.0087
+            ],
+            "cardinality": [
+              0.8227,
+              0.0112
+            ]
+          },
+          "L8": {
+            "structural": [
+              0.8496,
+              0.0075
+            ],
+            "logical": [
+              0.7702,
+              0.0205
+            ],
+            "cardinality": [
+              0.7378,
+              0.0252
+            ]
+          }
+        }
+      },
+      "DINOv2-B/14": {
+        "params_M": 87,
+        "best_struct_layer": "L11",
+        "structural": [
+          0.9156,
+          0.0093
+        ],
+        "logical": [
+          0.7912,
+          0.0194
+        ],
+        "cardinality": [
+          0.7646,
+          0.0246
+        ],
+        "per_layer": {
+          "L11": {
+            "structural": [
+              0.9156,
+              0.0093
+            ],
+            "logical": [
+              0.7912,
+              0.0194
+            ],
+            "cardinality": [
+              0.7646,
+              0.0246
+            ]
+          },
+          "L3": {
+            "structural": [
+              0.8116,
+              0.0148
+            ],
+            "logical": [
+              0.8379,
+              0.0172
+            ],
+            "cardinality": [
+              0.8559,
+              0.0221
+            ]
+          },
+          "L6": {
+            "structural": [
+              0.9085,
+              0.0169
+            ],
+            "logical": [
+              0.8269,
+              0.0139
+            ],
+            "cardinality": [
+              0.857,
+              0.0191
+            ]
+          },
+          "L9": {
+            "structural": [
+              0.8875,
+              0.0135
+            ],
+            "logical": [
+              0.7766,
+              0.016
+            ],
+            "cardinality": [
+              0.7638,
+              0.0179
+            ]
+          }
+        }
+      },
+      "DINOv2-L/14": {
+        "params_M": 304,
+        "best_struct_layer": "L17",
+        "structural": [
+          0.9211,
+          0.013
+        ],
+        "logical": [
+          0.8038,
+          0.0109
+        ],
+        "cardinality": [
+          0.8211,
+          0.0216
+        ],
+        "per_layer": {
+          "L17": {
+            "structural": [
+              0.9211,
+              0.013
+            ],
+            "logical": [
+              0.8038,
+              0.0109
+            ],
+            "cardinality": [
+              0.8211,
+              0.0216
+            ]
+          },
+          "L23": {
+            "structural": [
+              0.9131,
+              0.0042
+            ],
+            "logical": [
+              0.7544,
+              0.0186
+            ],
+            "cardinality": [
+              0.7502,
+              0.0169
+            ]
+          },
+          "L8": {
+            "structural": [
+              0.8138,
+              0.0172
+            ],
+            "logical": [
+              0.7835,
+              0.0215
+            ],
+            "cardinality": [
+              0.7365,
+              0.0295
+            ]
+          }
+        }
+      }
+    },
+    "juice_bottle": {
+      "DINOv3-S/16": {
+        "params_M": 22,
+        "best_struct_layer": "L11",
+        "structural": [
+          0.9433,
+          0.0057
+        ],
+        "logical": [
+          0.9234,
+          0.006
+        ],
+        "cardinality": null,
+        "per_layer": {
+          "L11": {
+            "structural": [
+              0.9433,
+              0.0057
+            ],
+            "logical": [
+              0.9234,
+              0.006
+            ],
+            "cardinality": null
+          },
+          "L3": {
+            "structural": [
+              0.9206,
+              0.0086
+            ],
+            "logical": [
+              0.7409,
+              0.005
+            ],
+            "cardinality": null
+          },
+          "L6": {
+            "structural": [
+              0.9041,
+              0.0067
+            ],
+            "logical": [
+              0.7936,
+              0.0083
+            ],
+            "cardinality": null
+          },
+          "L9": {
+            "structural": [
+              0.9097,
+              0.0087
+            ],
+            "logical": [
+              0.8294,
+              0.0098
+            ],
+            "cardinality": null
+          }
+        }
+      },
+      "DINOv3-B/16": {
+        "params_M": 86,
+        "best_struct_layer": "L11",
+        "structural": [
+          0.9649,
+          0.0026
+        ],
+        "logical": [
+          0.9096,
+          0.0064
+        ],
+        "cardinality": null,
+        "per_layer": {
+          "L11": {
+            "structural": [
+              0.9649,
+              0.0026
+            ],
+            "logical": [
+              0.9096,
+              0.0064
+            ],
+            "cardinality": null
+          },
+          "L3": {
+            "structural": [
+              0.9312,
+              0.0049
+            ],
+            "logical": [
+              0.7437,
+              0.0113
+            ],
+            "cardinality": null
+          },
+          "L6": {
+            "structural": [
+              0.8982,
+              0.008
+            ],
+            "logical": [
+              0.754,
+              0.0157
+            ],
+            "cardinality": null
+          },
+          "L9": {
+            "structural": [
+              0.9429,
+              0.0029
+            ],
+            "logical": [
+              0.8039,
+              0.0047
+            ],
+            "cardinality": null
+          }
+        }
+      },
+      "DINOv3-L/16": {
+        "params_M": 303,
+        "best_struct_layer": "L23",
+        "structural": [
+          0.9688,
+          0.0043
+        ],
+        "logical": [
+          0.9109,
+          0.0076
+        ],
+        "cardinality": null,
+        "per_layer": {
+          "L17": {
+            "structural": [
+              0.9316,
+              0.0026
+            ],
+            "logical": [
+              0.7958,
+              0.0092
+            ],
+            "cardinality": null
+          },
+          "L23": {
+            "structural": [
+              0.9688,
+              0.0043
+            ],
+            "logical": [
+              0.9109,
+              0.0076
+            ],
+            "cardinality": null
+          },
+          "L8": {
+            "structural": [
+              0.9325,
+              0.0063
+            ],
+            "logical": [
+              0.7971,
+              0.0062
+            ],
+            "cardinality": null
+          }
+        }
+      },
+      "DINOv2-B/14": {
+        "params_M": 87,
+        "best_struct_layer": "L11",
+        "structural": [
+          0.9053,
+          0.0074
+        ],
+        "logical": [
+          0.7671,
+          0.0143
+        ],
+        "cardinality": null,
+        "per_layer": {
+          "L11": {
+            "structural": [
+              0.9053,
+              0.0074
+            ],
+            "logical": [
+              0.7671,
+              0.0143
+            ],
+            "cardinality": null
+          },
+          "L3": {
+            "structural": [
+              0.8682,
+              0.0096
+            ],
+            "logical": [
+              0.8598,
+              0.0045
+            ],
+            "cardinality": null
+          },
+          "L6": {
+            "structural": [
+              0.8756,
+              0.0066
+            ],
+            "logical": [
+              0.8275,
+              0.0081
+            ],
+            "cardinality": null
+          },
+          "L9": {
+            "structural": [
+              0.8578,
+              0.0043
+            ],
+            "logical": [
+              0.772,
+              0.0093
+            ],
+            "cardinality": null
+          }
+        }
+      },
+      "DINOv2-L/14": {
+        "params_M": 304,
+        "best_struct_layer": "L8",
+        "structural": [
+          0.8958,
+          0.0074
+        ],
+        "logical": [
+          0.8013,
+          0.0125
+        ],
+        "cardinality": null,
+        "per_layer": {
+          "L17": {
+            "structural": [
+              0.8566,
+              0.0095
+            ],
+            "logical": [
+              0.7896,
+              0.008
+            ],
+            "cardinality": null
+          },
+          "L23": {
+            "structural": [
+              0.8869,
+              0.0064
+            ],
+            "logical": [
+              0.8055,
+              0.0094
+            ],
+            "cardinality": null
+          },
+          "L8": {
+            "structural": [
+              0.8958,
+              0.0074
+            ],
+            "logical": [
+              0.8013,
+              0.0125
+            ],
+            "cardinality": null
+          }
+        }
+      }
+    },
+    "pushpins": {
+      "DINOv3-S/16": {
+        "params_M": 22,
+        "best_struct_layer": "L11",
+        "structural": [
+          0.7874,
+          0.0079
+        ],
+        "logical": [
+          0.6075,
+          0.0129
+        ],
+        "cardinality": [
+          0.6016,
+          0.0117
+        ],
+        "per_layer": {
+          "L11": {
+            "structural": [
+              0.7874,
+              0.0079
+            ],
+            "logical": [
+              0.6075,
+              0.0129
+            ],
+            "cardinality": [
+              0.6016,
+              0.0117
+            ]
+          },
+          "L3": {
+            "structural": [
+              0.7605,
+              0.0183
+            ],
+            "logical": [
+              0.6168,
+              0.026
+            ],
+            "cardinality": [
+              0.6154,
+              0.0225
+            ]
+          },
+          "L6": {
+            "structural": [
+              0.6499,
+              0.0061
+            ],
+            "logical": [
+              0.5416,
+              0.0138
+            ],
+            "cardinality": [
+              0.5285,
+              0.0138
+            ]
+          },
+          "L9": {
+            "structural": [
+              0.66,
+              0.0185
+            ],
+            "logical": [
+              0.5642,
+              0.0107
+            ],
+            "cardinality": [
+              0.5163,
+              0.0149
+            ]
+          }
+        }
+      },
+      "DINOv3-B/16": {
+        "params_M": 86,
+        "best_struct_layer": "L6",
+        "structural": [
+          0.8217,
+          0.0191
+        ],
+        "logical": [
+          0.5922,
+          0.0166
+        ],
+        "cardinality": [
+          0.545,
+          0.0168
+        ],
+        "per_layer": {
+          "L11": {
+            "structural": [
+              0.7603,
+              0.0206
+            ],
+            "logical": [
+              0.6019,
+              0.03
+            ],
+            "cardinality": [
+              0.5888,
+              0.0353
+            ]
+          },
+          "L3": {
+            "structural": [
+              0.8035,
+              0.0209
+            ],
+            "logical": [
+              0.5957,
+              0.0222
+            ],
+            "cardinality": [
+              0.5818,
+              0.0183
+            ]
+          },
+          "L6": {
+            "structural": [
+              0.8217,
+              0.0191
+            ],
+            "logical": [
+              0.5922,
+              0.0166
+            ],
+            "cardinality": [
+              0.545,
+              0.0168
+            ]
+          },
+          "L9": {
+            "structural": [
+              0.808,
+              0.0088
+            ],
+            "logical": [
+              0.5489,
+              0.0166
+            ],
+            "cardinality": [
+              0.5017,
+              0.0241
+            ]
+          }
+        }
+      },
+      "DINOv3-L/16": {
+        "params_M": 303,
+        "best_struct_layer": "L17",
+        "structural": [
+          0.8443,
+          0.0127
+        ],
+        "logical": [
+          0.5664,
+          0.0158
+        ],
+        "cardinality": [
+          0.5213,
+          0.0141
+        ],
+        "per_layer": {
+          "L17": {
+            "structural": [
+              0.8443,
+              0.0127
+            ],
+            "logical": [
+              0.5664,
+              0.0158
+            ],
+            "cardinality": [
+              0.5213,
+              0.0141
+            ]
+          },
+          "L23": {
+            "structural": [
+              0.7442,
+              0.0225
+            ],
+            "logical": [
+              0.6335,
+              0.0114
+            ],
+            "cardinality": [
+              0.6156,
+              0.0119
+            ]
+          },
+          "L8": {
+            "structural": [
+              0.8141,
+              0.0155
+            ],
+            "logical": [
+              0.5896,
+              0.0229
+            ],
+            "cardinality": [
+              0.5795,
+              0.0217
+            ]
+          }
+        }
+      },
+      "DINOv2-B/14": {
+        "params_M": 87,
+        "best_struct_layer": "L9",
+        "structural": [
+          0.7238,
+          0.0154
+        ],
+        "logical": [
+          0.5389,
+          0.0111
+        ],
+        "cardinality": [
+          0.5075,
+          0.012
+        ],
+        "per_layer": {
+          "L11": {
+            "structural": [
+              0.7017,
+              0.0113
+            ],
+            "logical": [
+              0.5113,
+              0.0095
+            ],
+            "cardinality": [
+              0.4925,
+              0.0139
+            ]
+          },
+          "L3": {
+            "structural": [
+              0.7086,
+              0.0373
+            ],
+            "logical": [
+              0.5211,
+              0.0212
+            ],
+            "cardinality": [
+              0.4721,
+              0.026
+            ]
+          },
+          "L6": {
+            "structural": [
+              0.6472,
+              0.0192
+            ],
+            "logical": [
+              0.5225,
+              0.0085
+            ],
+            "cardinality": [
+              0.5013,
+              0.0138
+            ]
+          },
+          "L9": {
+            "structural": [
+              0.7238,
+              0.0154
+            ],
+            "logical": [
+              0.5389,
+              0.0111
+            ],
+            "cardinality": [
+              0.5075,
+              0.012
+            ]
+          }
+        }
+      },
+      "DINOv2-L/14": {
+        "params_M": 304,
+        "best_struct_layer": "L23",
+        "structural": [
+          0.7687,
+          0.0141
+        ],
+        "logical": [
+          0.5959,
+          0.0172
+        ],
+        "cardinality": [
+          0.5552,
+          0.0263
+        ],
+        "per_layer": {
+          "L17": {
+            "structural": [
+              0.7568,
+              0.018
+            ],
+            "logical": [
+              0.5262,
+              0.0167
+            ],
+            "cardinality": [
+              0.4936,
+              0.0207
+            ]
+          },
+          "L23": {
+            "structural": [
+              0.7687,
+              0.0141
+            ],
+            "logical": [
+              0.5959,
+              0.0172
+            ],
+            "cardinality": [
+              0.5552,
+              0.0263
+            ]
+          },
+          "L8": {
+            "structural": [
+              0.7024,
+              0.0302
+            ],
+            "logical": [
+              0.5227,
+              0.0164
+            ],
+            "cardinality": [
+              0.4742,
+              0.0104
+            ]
+          }
+        }
+      }
+    },
+    "screw_bag": {
+      "DINOv3-S/16": {
+        "params_M": 22,
+        "best_struct_layer": "L3",
+        "structural": [
+          0.8601,
+          0.0142
+        ],
+        "logical": [
+          0.5794,
+          0.0132
+        ],
+        "cardinality": [
+          0.5763,
+          0.0372
+        ],
+        "per_layer": {
+          "L11": {
+            "structural": [
+              0.782,
+              0.0035
+            ],
+            "logical": [
+              0.4976,
+              0.0049
+            ],
+            "cardinality": [
+              0.5338,
+              0.0093
+            ]
+          },
+          "L3": {
+            "structural": [
+              0.8601,
+              0.0142
+            ],
+            "logical": [
+              0.5794,
+              0.0132
+            ],
+            "cardinality": [
+              0.5763,
+              0.0372
+            ]
+          },
+          "L6": {
+            "structural": [
+              0.8368,
+              0.0167
+            ],
+            "logical": [
+              0.5381,
+              0.0194
+            ],
+            "cardinality": [
+              0.5606,
+              0.0217
+            ]
+          },
+          "L9": {
+            "structural": [
+              0.7344,
+              0.0171
+            ],
+            "logical": [
+              0.4788,
+              0.0189
+            ],
+            "cardinality": [
+              0.5078,
+              0.0184
+            ]
+          }
+        }
+      },
+      "DINOv3-B/16": {
+        "params_M": 86,
+        "best_struct_layer": "L3",
+        "structural": [
+          0.8843,
+          0.0139
+        ],
+        "logical": [
+          0.5786,
+          0.0287
+        ],
+        "cardinality": [
+          0.5798,
+          0.0452
+        ],
+        "per_layer": {
+          "L11": {
+            "structural": [
+              0.8565,
+              0.0041
+            ],
+            "logical": [
+              0.4983,
+              0.0043
+            ],
+            "cardinality": [
+              0.5405,
+              0.0147
+            ]
+          },
+          "L3": {
+            "structural": [
+              0.8843,
+              0.0139
+            ],
+            "logical": [
+              0.5786,
+              0.0287
+            ],
+            "cardinality": [
+              0.5798,
+              0.0452
+            ]
+          },
+          "L6": {
+            "structural": [
+              0.8384,
+              0.0157
+            ],
+            "logical": [
+              0.514,
+              0.0175
+            ],
+            "cardinality": [
+              0.5417,
+              0.0219
+            ]
+          },
+          "L9": {
+            "structural": [
+              0.8323,
+              0.0055
+            ],
+            "logical": [
+              0.4585,
+              0.0034
+            ],
+            "cardinality": [
+              0.5028,
+              0.006
+            ]
+          }
+        }
+      },
+      "DINOv3-L/16": {
+        "params_M": 303,
+        "best_struct_layer": "L8",
+        "structural": [
+          0.9067,
+          0.0088
+        ],
+        "logical": [
+          0.562,
+          0.02
+        ],
+        "cardinality": [
+          0.5767,
+          0.0229
+        ],
+        "per_layer": {
+          "L17": {
+            "structural": [
+              0.899,
+              0.0063
+            ],
+            "logical": [
+              0.4852,
+              0.0115
+            ],
+            "cardinality": [
+              0.5064,
+              0.0212
+            ]
+          },
+          "L23": {
+            "structural": [
+              0.8731,
+              0.0085
+            ],
+            "logical": [
+              0.563,
+              0.0262
+            ],
+            "cardinality": [
+              0.5857,
+              0.0348
+            ]
+          },
+          "L8": {
+            "structural": [
+              0.9067,
+              0.0088
+            ],
+            "logical": [
+              0.562,
+              0.02
+            ],
+            "cardinality": [
+              0.5767,
+              0.0229
+            ]
+          }
+        }
+      },
+      "DINOv2-B/14": {
+        "params_M": 87,
+        "best_struct_layer": "L11",
+        "structural": [
+          0.8695,
+          0.0109
+        ],
+        "logical": [
+          0.4714,
+          0.0108
+        ],
+        "cardinality": [
+          0.5367,
+          0.0282
+        ],
+        "per_layer": {
+          "L11": {
+            "structural": [
+              0.8695,
+              0.0109
+            ],
+            "logical": [
+              0.4714,
+              0.0108
+            ],
+            "cardinality": [
+              0.5367,
+              0.0282
+            ]
+          },
+          "L3": {
+            "structural": [
+              0.8469,
+              0.0142
+            ],
+            "logical": [
+              0.5426,
+              0.0084
+            ],
+            "cardinality": [
+              0.5926,
+              0.02
+            ]
+          },
+          "L6": {
+            "structural": [
+              0.8689,
+              0.0075
+            ],
+            "logical": [
+              0.581,
+              0.0316
+            ],
+            "cardinality": [
+              0.5905,
+              0.0389
+            ]
+          },
+          "L9": {
+            "structural": [
+              0.8536,
+              0.0185
+            ],
+            "logical": [
+              0.4759,
+              0.0205
+            ],
+            "cardinality": [
+              0.5111,
+              0.0251
+            ]
+          }
+        }
+      },
+      "DINOv2-L/14": {
+        "params_M": 304,
+        "best_struct_layer": "L17",
+        "structural": [
+          0.8879,
+          0.0128
+        ],
+        "logical": [
+          0.5082,
+          0.0318
+        ],
+        "cardinality": [
+          0.554,
+          0.0404
+        ],
+        "per_layer": {
+          "L17": {
+            "structural": [
+              0.8879,
+              0.0128
+            ],
+            "logical": [
+              0.5082,
+              0.0318
+            ],
+            "cardinality": [
+              0.554,
+              0.0404
+            ]
+          },
+          "L23": {
+            "structural": [
+              0.8587,
+              0.0079
+            ],
+            "logical": [
+              0.4915,
+              0.014
+            ],
+            "cardinality": [
+              0.526,
+              0.0184
+            ]
+          },
+          "L8": {
+            "structural": [
+              0.8643,
+              0.0171
+            ],
+            "logical": [
+              0.5695,
+              0.0207
+            ],
+            "cardinality": [
+              0.6298,
+              0.0134
+            ]
+          }
+        }
+      }
+    },
+    "splicing_connectors": {
+      "DINOv3-S/16": {
+        "params_M": 22,
+        "best_struct_layer": "L9",
+        "structural": [
+          0.8829,
+          0.0051
+        ],
+        "logical": [
+          0.6898,
+          0.0154
+        ],
+        "cardinality": [
+          0.8576,
+          0.0232
+        ],
+        "per_layer": {
+          "L11": {
+            "structural": [
+              0.8594,
+              0.0017
+            ],
+            "logical": [
+              0.8152,
+              0.0097
+            ],
+            "cardinality": [
+              0.9118,
+              0.0166
+            ]
+          },
+          "L3": {
+            "structural": [
+              0.8104,
+              0.0063
+            ],
+            "logical": [
+              0.5615,
+              0.0219
+            ],
+            "cardinality": [
+              0.7055,
+              0.0627
+            ]
+          },
+          "L6": {
+            "structural": [
+              0.856,
+              0.0149
+            ],
+            "logical": [
+              0.5964,
+              0.0248
+            ],
+            "cardinality": [
+              0.6541,
+              0.0293
+            ]
+          },
+          "L9": {
+            "structural": [
+              0.8829,
+              0.0051
+            ],
+            "logical": [
+              0.6898,
+              0.0154
+            ],
+            "cardinality": [
+              0.8576,
+              0.0232
+            ]
+          }
+        }
+      },
+      "DINOv3-B/16": {
+        "params_M": 86,
+        "best_struct_layer": "L6",
+        "structural": [
+          0.9169,
+          0.0136
+        ],
+        "logical": [
+          0.6234,
+          0.0172
+        ],
+        "cardinality": [
+          0.7398,
+          0.0217
+        ],
+        "per_layer": {
+          "L11": {
+            "structural": [
+              0.8797,
+              0.0045
+            ],
+            "logical": [
+              0.8397,
+              0.0088
+            ],
+            "cardinality": [
+              0.9419,
+              0.0102
+            ]
+          },
+          "L3": {
+            "structural": [
+              0.8354,
+              0.0109
+            ],
+            "logical": [
+              0.5386,
+              0.0202
+            ],
+            "cardinality": [
+              0.6898,
+              0.0429
+            ]
+          },
+          "L6": {
+            "structural": [
+              0.9169,
+              0.0136
+            ],
+            "logical": [
+              0.6234,
+              0.0172
+            ],
+            "cardinality": [
+              0.7398,
+              0.0217
+            ]
+          },
+          "L9": {
+            "structural": [
+              0.8773,
+              0.0051
+            ],
+            "logical": [
+              0.7122,
+              0.0134
+            ],
+            "cardinality": [
+              0.8066,
+              0.0223
+            ]
+          }
+        }
+      },
+      "DINOv3-L/16": {
+        "params_M": 303,
+        "best_struct_layer": "L17",
+        "structural": [
+          0.9657,
+          0.0029
+        ],
+        "logical": [
+          0.6785,
+          0.015
+        ],
+        "cardinality": [
+          0.8735,
+          0.0139
+        ],
+        "per_layer": {
+          "L17": {
+            "structural": [
+              0.9657,
+              0.0029
+            ],
+            "logical": [
+              0.6785,
+              0.015
+            ],
+            "cardinality": [
+              0.8735,
+              0.0139
+            ]
+          },
+          "L23": {
+            "structural": [
+              0.927,
+              0.0093
+            ],
+            "logical": [
+              0.8171,
+              0.0116
+            ],
+            "cardinality": [
+              0.9952,
+              0.002
+            ]
+          },
+          "L8": {
+            "structural": [
+              0.8783,
+              0.0079
+            ],
+            "logical": [
+              0.5539,
+              0.0088
+            ],
+            "cardinality": [
+              0.6741,
+              0.0283
+            ]
+          }
+        }
+      },
+      "DINOv2-B/14": {
+        "params_M": 87,
+        "best_struct_layer": "L9",
+        "structural": [
+          0.9172,
+          0.008
+        ],
+        "logical": [
+          0.7409,
+          0.0059
+        ],
+        "cardinality": [
+          0.8724,
+          0.0115
+        ],
+        "per_layer": {
+          "L11": {
+            "structural": [
+              0.8609,
+              0.0063
+            ],
+            "logical": [
+              0.8008,
+              0.0097
+            ],
+            "cardinality": [
+              0.9871,
+              0.0018
+            ]
+          },
+          "L3": {
+            "structural": [
+              0.8028,
+              0.0081
+            ],
+            "logical": [
+              0.6685,
+              0.0167
+            ],
+            "cardinality": [
+              0.6429,
+              0.0461
+            ]
+          },
+          "L6": {
+            "structural": [
+              0.9094,
+              0.0116
+            ],
+            "logical": [
+              0.6648,
+              0.026
+            ],
+            "cardinality": [
+              0.6095,
+              0.0594
+            ]
+          },
+          "L9": {
+            "structural": [
+              0.9172,
+              0.008
+            ],
+            "logical": [
+              0.7409,
+              0.0059
+            ],
+            "cardinality": [
+              0.8724,
+              0.0115
+            ]
+          }
+        }
+      },
+      "DINOv2-L/14": {
+        "params_M": 304,
+        "best_struct_layer": "L17",
+        "structural": [
+          0.9638,
+          0.0055
+        ],
+        "logical": [
+          0.6929,
+          0.0247
+        ],
+        "cardinality": [
+          0.727,
+          0.0393
+        ],
+        "per_layer": {
+          "L17": {
+            "structural": [
+              0.9638,
+              0.0055
+            ],
+            "logical": [
+              0.6929,
+              0.0247
+            ],
+            "cardinality": [
+              0.727,
+              0.0393
+            ]
+          },
+          "L23": {
+            "structural": [
+              0.8918,
+              0.013
+            ],
+            "logical": [
+              0.7965,
+              0.0165
+            ],
+            "cardinality": [
+              0.9965,
+              0.005
+            ]
+          },
+          "L8": {
+            "structural": [
+              0.8786,
+              0.0133
+            ],
+            "logical": [
+              0.6444,
+              0.0221
+            ],
+            "cardinality": [
+              0.602,
+              0.0449
+            ]
+          }
+        }
+      }
+    }
+  },
+  "axis_image_counts": {
+    "breakfast_box": {
+      "good": 102,
+      "structural": 90,
+      "logical": 83,
+      "cardinality": 31
+    },
+    "juice_bottle": {
+      "good": 94,
+      "structural": 94,
+      "logical": 142,
+      "cardinality": 0
+    },
+    "pushpins": {
+      "good": 138,
+      "structural": 81,
+      "logical": 91,
+      "cardinality": 67
+    },
+    "screw_bag": {
+      "good": 122,
+      "structural": 82,
+      "logical": 137,
+      "cardinality": 48
+    },
+    "splicing_connectors": {
+      "good": 119,
+      "structural": 85,
+      "logical": 108,
+      "cardinality": 12
+    }
+  },
+  "protocol": "patch-memory readout (coreset 50000, 1-NN, patch max), 뱅크 추첨 5회, 구조 AUROC 최대 계층 선택. d2d3_multidraw_tables67.py 와 동일.",
+  "column_note": "기존 표 C1 은 screw_bag 블록에서 'cardinality' 열을 logical 로 계산했고 pushpins 블록만 진짜 개수축이었다. 여기서는 두 열을 분리하고 cardinality 를 부록 C 의 사전등록 STRAND 로 통일했다. juice_bottle 은 개수축 하위유형이 0개라 그 칸이 원리적으로 빈다.",
+  "params_note": "파라미터는 260821 실측값(param_counts_measured.json)."
+}

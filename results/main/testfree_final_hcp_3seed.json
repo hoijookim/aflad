@@ -1,0 +1,90 @@
+{
+  "config": {
+    "branches": [
+      "ead",
+      "pcL17",
+      "psad_hcp"
+    ],
+    "scale": "raw",
+    "norm": "z",
+    "clip": null,
+    "agg": "sum",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "decision_rule": "D2: min mean abs-skew of val ; D3: T>4 -> robust, no clip ; D4: sum",
+    "psad_variant": "_tta_merge_k5",
+    "psad_kind": "hcp",
+    "branch_avg": false
+  },
+  "val_tail_stat": {
+    "breakfast_box|ead": 3.0172072183332554,
+    "breakfast_box|pcL17": 2.1009793340757303,
+    "breakfast_box|psad_hc": 3.8567417810101663,
+    "juice_bottle|ead": 3.660291674348638,
+    "juice_bottle|pcL17": 2.482589852550046,
+    "juice_bottle|psad_hc": 2.0544082551384824,
+    "pushpins|ead": 5.1632819759325885,
+    "pushpins|pcL17": 1.9248067839943985,
+    "pushpins|psad_hc": 2.944026254867573,
+    "screw_bag|ead": 4.567361221935829,
+    "screw_bag|pcL17": 3.57670709817022,
+    "screw_bag|psad_hc": 2.342967684503734,
+    "splicing_connectors|ead": 4.0184853606006445,
+    "splicing_connectors|pcL17": 1.6544501471565083,
+    "splicing_connectors|psad_hc": 23.394127593173984
+  },
+  "per_seed": {
+    "42": {
+      "logical": 0.9599256239865739,
+      "structural": 0.9783558386335451,
+      "LS": 0.9691407313100594
+    },
+    "43": {
+      "logical": 0.9691340284275037,
+      "structural": 0.9754084870244821,
+      "LS": 0.9722712577259929
+    },
+    "44": {
+      "logical": 0.9653203951995796,
+      "structural": 0.9750498560881139,
+      "LS": 0.9701851256438468
+    }
+  },
+  "per_cat": {
+    "breakfast_box": {
+      "mean": 0.9761619462599856,
+      "std": 0.005910293828031767
+    },
+    "juice_bottle": {
+      "mean": 0.9774939056399662,
+      "std": 0.0005746633368609113
+    },
+    "pushpins": {
+      "mean": 0.9811378905581805,
+      "std": 0.00519463010561979
+    },
+    "screw_bag": {
+      "mean": 0.9565698051679572,
+      "std": 0.012900308442723676
+    },
+    "splicing_connectors": {
+      "mean": 0.9612983101737426,
+      "std": 0.006245579471410367
+    }
+  },
+  "logical": {
+    "mean": 0.9647933492045523,
+    "std": 0.004626771141691557
+  },
+  "structural": {
+    "mean": 0.9762713939153804,
+    "std": 0.0018140662541494402
+  },
+  "LS": {
+    "mean": 0.9705323715599663,
+    "std": 0.001593889489553963
+  }
+}

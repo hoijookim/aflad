@@ -1,0 +1,272 @@
+{
+  "Q1_pseudo_label_provenance": {
+    "masks_is_symlink": false,
+    "masks_target": null,
+    "symlink_mtime": "2026-08-15 15:21:11",
+    "mask_dirs": {
+      "masks_orig": {
+        "exists": false,
+        "n_png": 0,
+        "mtime": null
+      },
+      "masks_author": {
+        "exists": true,
+        "n_png": 23884,
+        "mtime": "2026-08-16 21:52:30"
+      },
+      "masks_regen": {
+        "exists": true,
+        "n_png": 1080,
+        "mtime": "2026-08-16 22:49:04"
+      }
+    },
+    "csad_pseudo_seg_created": {
+      "breakfast_box": {
+        "n": 351,
+        "first": "2026-08-15 16:21:57"
+      },
+      "juice_bottle": {
+        "n": 335,
+        "first": "2026-08-15 16:23:28"
+      },
+      "pushpins": {
+        "n": 372,
+        "first": "2026-08-16 10:33:07"
+      },
+      "screw_bag": {
+        "n": 360,
+        "first": "2026-08-15 16:27:42"
+      },
+      "splicing_connectors": {
+        "n": 360,
+        "first": "2026-08-15 16:29:38"
+      }
+    },
+    "latest_pseudo_seg": "2026-08-16 10:33:07",
+    "verdict": "저자 배포본. csad_pseudo_seg 는 전부 심볼릭 링크 생성 이전에 만들어졌다 (마지막 2026-08-16 10:33:07 < 링크 2026-08-15 15:21:11). 재생성본(masks_regen)은 1080장뿐이라 저자 배포본 0장을 대체하지도 못한다.",
+    "hazard": "현재 masks -> masks_regen 링크가 남아 있어(--restore 미실행) 지금 build_inputs.py 를 다시 돌리면 부분 재생성본을 조용히 쓰게 된다.",
+    "code_note": "csad_regen.py 독스트링: '지금까지는 저자가 배포한 마스크를 그대로 썼다'",
+    "regeneration_proof": {
+      "method": "링크 복원 후 저자 마스크로 build_inputs.py 재실행 → 보고본과 픽셀 대조",
+      "result": {
+        "breakfast_box": "bit-identical",
+        "juice_bottle": "bit-identical",
+        "pushpins": "bit-identical",
+        "screw_bag": "bit-identical",
+        "splicing_connectors": "bit-identical"
+      },
+      "verdict": "5범주 전부 전 장 비트 동일. 보고 수치의 의사 레이블이 저자 배포본임이 타임스탬프가 아니라 **재생성으로 확정**된다."
+    },
+    "restored": "260822 에 csad_regen.py --restore 실행. masks 가 다시 저자본 23,884장이고 masks_regen(1,080장)·masks_author 는 보존됐다."
+  },
+  "Q1b_rejected_E10_was_default": {
+    "what": "build_inputs.py 가 splicing_connectors 에 좌/우 분리(E10)를 **무조건** 적용했다.",
+    "status_of_E10": "기각 (PREREG_branch_improvement.md:545) — val 정상 점수 꼬리 max|z_robust| 6.29 -> 54.60, CV 0.133 -> 0.960",
+    "evidence": "보고본은 3클래스(0,1,2)인데 그 코드로 재생성하면 4클래스(0,1,2,3)가 되고 360장 중 359장이 달랐다. splicing_split_connectors 는 8/17 20:57 커밋으로 보고 점수(8/17 16:44)와 의사레이블(8/15 16:29)보다 나중이다.",
+    "fix": "PSAD_SPLICING_SPLIT 환경변수로 게이팅하고 기본을 끔. 고친 뒤 재생성하면 보고본과 전 장 비트 동일하다.",
+    "paper_note": "요청서가 개선 4건 중 ②로 든 '좌/우 분리(클래스 3 추가)' 는 **보고 수치에 들어 있지 않다.** 방법으로 서술하면 안 된다."
+  },
+  "Q2_class_counts": {
+    "per_category": {
+      "breakfast_box": {
+        "used_classes": 7,
+        "labels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "declared_NUM_CLS": 7,
+        "segmenter_out_channels": [
+          7,
+          7,
+          7
+        ]
+      },
+      "juice_bottle": {
+        "used_classes": 6,
+        "labels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "declared_NUM_CLS": 9,
+        "segmenter_out_channels": [
+          9,
+          9,
+          9
+        ]
+      },
+      "pushpins": {
+        "used_classes": 16,
+        "labels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "declared_NUM_CLS": 26,
+        "segmenter_out_channels": [
+          26,
+          26,
+          26
+        ]
+      },
+      "screw_bag": {
+        "used_classes": 6,
+        "labels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "declared_NUM_CLS": 7,
+        "segmenter_out_channels": [
+          7,
+          7,
+          7
+        ]
+      },
+      "splicing_connectors": {
+        "used_classes": 3,
+        "labels": [
+          0,
+          1,
+          2
+        ],
+        "declared_NUM_CLS": 10,
+        "segmenter_out_channels": [
+          10,
+          10,
+          10
+        ]
+      }
+    },
+    "pushpins_grid5x5_old_used_classes": 26,
+    "verdict": "표 A1 의 K 는 **사용 클래스 수**여야 한다: 7 / 6 / 16 / 6 / 3. NUM_CLS(7/9/26/7/10)는 PSAD 가 하드코딩한 분할기 출력 채널 수이고 5범주 중 4곳에서 실제와 다르다(남는 채널은 활성화되지 않는다). pushpins 의 26 은 5x5 시절 값이며 pushpins_grid5x5_old 가 정확히 26 클래스로 이를 확인해 준다."
+  },
+  "Q3_improvement_scope": {
+    "artifact_configs": {
+      "testfree_ablation_hcp_merge_3seed.json": {
+        "psad_variant": "_merge",
+        "branches": [
+          "ead",
+          "pcL17",
+          "psad_hc"
+        ]
+      },
+      "testfree_corrected_3seed.json": {
+        "psad_variant": "_tta_merge",
+        "branches": [
+          "ead",
+          "pcL17",
+          "psad_hc"
+        ]
+      },
+      "testfree_corrected_origproto_3seed.json": {
+        "psad_variant": "_tta_merge",
+        "branches": [
+          "ead",
+          "pcL17",
+          "psad_hc"
+        ]
+      },
+      "testfree_final_3seed.json": {
+        "psad_variant": "_tta_merge_k5",
+        "branches": [
+          "ead",
+          "pcL17",
+          "psad_hc"
+        ]
+      },
+      "testfree_final_eadfix_3seed.json": {
+        "psad_kind": "hc",
+        "psad_variant": "_tta_merge",
+        "branches": [
+          "ead",
+          "pcL17",
+          "psad_hc"
+        ]
+      },
+      "testfree_final_eadfix_origproto_3seed.json": {
+        "psad_kind": "hc",
+        "psad_variant": "_tta_merge",
+        "branches": [
+          "ead",
+          "pcL17",
+          "psad_hc"
+        ]
+      },
+      "testfree_final_hcp_3seed.json": {
+        "psad_kind": "hcp",
+        "psad_variant": "_tta_merge_k5",
+        "branches": [
+          "ead",
+          "pcL17",
+          "psad_hcp"
+        ]
+      },
+      "testfree_origproto_hc_merge_3seed.json": {
+        "psad_variant": "_merge",
+        "branches": [
+          "ead",
+          "pcL17",
+          "psad_hc"
+        ]
+      },
+      "testfree_pairwise_percat_3seed.json": {},
+      "testfree_primary_merge_3seed.json": {
+        "psad_variant": "_merge",
+        "branches": [
+          "ead",
+          "pcL17",
+          "psad_hc"
+        ]
+      },
+      "testfree_supplements2_3seed.json": {},
+      "testfree_supplements_3seed.json": {
+        "psad": "hc + 혼동쌍 병합 + 회전 TTA(screw_bag)"
+      }
+    },
+    "tta_adopted": [
+      "screw_bag"
+    ],
+    "tta_gate_code": "score_psad.py:227  `if tta and cat in TTA_ADOPTED`",
+    "verdict": "융합·분기 산출물은 전부 hc_tta_merge 다. 다만 파일명의 `tta` 는 플래그이고 실제 TTA 는 **screw_bag 에만** 걸린다(TTA_ADOPTED). 병합도 screw_bag c4<->c5 하나뿐이다. 부록 C1/C2 는 **구성 분기를 쓰지 않는다** — frozen DINOv3-L 캐시 위의 patch-memory/KMeans readout 이라 ①~④ 가 닿지 않는다."
+  },
+  "Q4_tta_latency": {
+    "paper_value_ms": 11.2,
+    "paper_scope": "resnet101 + segCNN forward, TTA 미포함 (fps_comparison_260621.json 의 src)",
+    "measured_segmenter_forward_1x_ms": 6.87,
+    "measured_segmenter_forward_4x_ms": 27.48,
+    "tta_added_ms": 20.61,
+    "screw_bag_composition_ms": 31.8,
+    "three_branch_total_ms": {
+      "other_4_categories": 29.0,
+      "screw_bag": 49.6
+    },
+    "hardware": "**RTX 4090 24GB** (torch 2.6.0+cu124), batch 1, FP32, 512x512 입력, warmup 20 / 반복 100. 초판에 RTX 5090 이라 적었으나 오기다 — nvidia-smi 확인. 논문 표 5 는 5090 기준이므로 이 값을 그대로 더하면 하드웨어가 섞인다.",
+    "verdict": "29 ms 에 회전 TTA 가 **반영돼 있지 않다.** screw_bag 은 분할기를 4회 통과하므로 구성 분기가 11.2 -> 31.8 ms, 3분기 합이 29 -> 약 49.6 ms 다.",
+    "implication": "§4.5 의 'SALAD(약 57 ms)보다 두 배 가까이 빠르다' 가 screw_bag 에서는 1.15배로 줄어든다. 범위 각주가 필요하다."
+  }
+}

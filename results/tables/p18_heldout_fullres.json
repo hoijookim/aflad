@@ -1,0 +1,28 @@
+{
+  "L17hi_PC_hyb_val": {
+    "mean": 0.5322,
+    "per_cat": {
+      "breakfast_box": 0.5705,
+      "juice_bottle": 0.6679,
+      "pushpins": 0.3946,
+      "screw_bag": 0.3653,
+      "splicing_connectors": 0.6629
+    }
+  },
+  "L17hi_PC_hyb_test": {
+    "mean": 0.5291,
+    "per_cat": {
+      "breakfast_box": 0.5609,
+      "juice_bottle": 0.6405,
+      "pushpins": 0.4669,
+      "screw_bag": 0.3344,
+      "splicing_connectors": 0.6428
+    }
+  },
+  "_heldout": {
+    "selected_by_val": "L17hi_PC_hyb",
+    "val": 0.5322,
+    "heldout_test": 0.5291,
+    "full_test_ref_L17hi": 0.5287
+  }
+}

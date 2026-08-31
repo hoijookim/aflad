@@ -1,0 +1,50 @@
+{
+  "segmenter": {
+    "fired": {
+      "enc.layer1": true,
+      "enc.layer2": true,
+      "enc.layer3": true,
+      "enc.layer4": false,
+      "enc.fc": false,
+      "conv1": true,
+      "conv2": true,
+      "conv3": true
+    },
+    "out_shapes": {
+      "enc.layer1": "(1, 256, 64, 64)",
+      "enc.layer2": "(1, 512, 32, 32)",
+      "enc.layer3": "(1, 1024, 16, 16)",
+      "conv1": "(1, 512, 32, 32)",
+      "conv2": "(1, 256, 64, 64)",
+      "conv3": "(1, 7, 256, 256)"
+    },
+    "params_executed": 88776007,
+    "params_not_executed": 44020712
+  },
+  "embedding": {
+    "fired": {
+      "model.layer1": true,
+      "model.layer2": true,
+      "model.layer3": true,
+      "model.layer4": true,
+      "model.fc": true,
+      "model.avgpool": true
+    },
+    "out_shapes": {
+      "model.layer1": "(1, 256, 64, 64)",
+      "model.layer2": "(1, 512, 32, 32)",
+      "model.layer3": "(1, 1024, 16, 16)",
+      "model.layer4": "(1, 2048, 8, 8)",
+      "model.avgpool": "(1, 2048, 1, 1)",
+      "model.fc": "(1, 1000)"
+    },
+    "params_executed": 44549160,
+    "params_effective": 27535424,
+    "params_executed_but_discarded": 17013736
+  },
+  "verdict": {
+    "segmenter_layer4_fc_not_executed": true,
+    "embedding_full_forward_executed": true,
+    "both": true
+  }
+}

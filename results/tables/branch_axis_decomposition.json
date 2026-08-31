@@ -1,0 +1,1242 @@
+{
+  "per_category": {
+    "breakfast_box": {
+      "EAD": {
+        "logical": {
+          "mean": 0.801913536498937,
+          "std": 0.006617857230253484
+        },
+        "strand_cardinality": {
+          "mean": 0.8808770820156019,
+          "std": 0.00707404557023297
+        },
+        "strand_presence": {
+          "mean": 0.6902598437749083,
+          "std": 0.009769841189889722
+        },
+        "strand_quantity": {
+          "mean": 0.9938725490196078,
+          "std": 0.0
+        },
+        "structural": {
+          "mean": 0.8414306463326072,
+          "std": 0.014019880101114537
+        }
+      },
+      "PC": {
+        "logical": {
+          "mean": 0.8053783762500984,
+          "std": 0.015529612362018762
+        },
+        "strand_cardinality": {
+          "mean": 0.782943284840818,
+          "std": 0.004736799902732686
+        },
+        "strand_presence": {
+          "mean": 0.8311015463095807,
+          "std": 0.032353156201166126
+        },
+        "strand_quantity": {
+          "mean": 0.7066993464052288,
+          "std": 0.018558524005883245
+        },
+        "structural": {
+          "mean": 0.9173202614379085,
+          "std": 0.0038157472523174256
+        }
+      },
+      "Comp": {
+        "logical": {
+          "mean": 0.9974801165446099,
+          "std": 0.004159977134487018
+        },
+        "strand_cardinality": {
+          "mean": 0.9937803078220536,
+          "std": 0.01050012827094737
+        },
+        "strand_presence": {
+          "mean": 0.9998405866411605,
+          "std": 0.0002761120369151778
+        },
+        "strand_quantity": {
+          "mean": 0.9987745098039215,
+          "std": 0.001225490196078427
+        },
+        "structural": {
+          "mean": 0.7442628903413219,
+          "std": 0.01769954181393314
+        }
+      },
+      "AFLAD": {
+        "logical": {
+          "mean": 0.9934246791085912,
+          "std": 0.01026779737577812
+        },
+        "strand_cardinality": {
+          "mean": 0.9849251528568418,
+          "std": 0.024469133041629867
+        },
+        "strand_presence": {
+          "mean": 0.9982464530527658,
+          "std": 0.002442460297472415
+        },
+        "strand_quantity": {
+          "mean": 0.9991830065359477,
+          "std": 0.000707537094595127
+        },
+        "structural": {
+          "mean": 0.9567538126361655,
+          "std": 0.004156597827524846
+        }
+      }
+    },
+    "juice_bottle": {
+      "EAD": {
+        "logical": {
+          "mean": 0.9657626610728198,
+          "std": 0.002019998316259129
+        },
+        "strand_config": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "strand_presence": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "strand_quantity": {
+          "mean": 0.9989657210401891,
+          "std": 0.0008957118537959492
+        },
+        "strand_relational": {
+          "mean": 0.7815925209542232,
+          "std": 0.011538059424998887
+        },
+        "strand_spatial": {
+          "mean": 0.9996267263904443,
+          "std": 0.0006465288568752446
+        },
+        "structural": {
+          "mean": 0.9982646748151501,
+          "std": 0.00036380152259663277
+        }
+      },
+      "PC": {
+        "logical": {
+          "mean": 0.8068125062431326,
+          "std": 0.010587086440423728
+        },
+        "strand_config": {
+          "mean": 0.7302009456264775,
+          "std": 0.041404916993231636
+        },
+        "strand_presence": {
+          "mean": 0.8365125947664467,
+          "std": 0.012333246623870512
+        },
+        "strand_quantity": {
+          "mean": 0.9167405437352246,
+          "std": 0.0039168782924974875
+        },
+        "strand_relational": {
+          "mean": 0.538039974210187,
+          "std": 0.022287471326874406
+        },
+        "strand_spatial": {
+          "mean": 0.7353490108249346,
+          "std": 0.013764385268751232
+        },
+        "structural": {
+          "mean": 0.9285498717368341,
+          "std": 0.00869914935687351
+        }
+      },
+      "Comp": {
+        "logical": {
+          "mean": 0.9086504844670863,
+          "std": 0.00429999125495005
+        },
+        "strand_config": {
+          "mean": 0.9893617021276596,
+          "std": 0.0
+        },
+        "strand_presence": {
+          "mean": 0.9900953778429934,
+          "std": 0.001906145422856453
+        },
+        "strand_quantity": {
+          "mean": 0.9878841607565011,
+          "std": 0.0029513865773401504
+        },
+        "strand_relational": {
+          "mean": 0.6165377176015473,
+          "std": 0.0449657866006487
+        },
+        "strand_spatial": {
+          "mean": 0.8189622993654347,
+          "std": 0.017215158727286677
+        },
+        "structural": {
+          "mean": 0.8755092802172927,
+          "std": 0.005835841142758588
+        }
+      },
+      "AFLAD": {
+        "logical": {
+          "mean": 0.9626660673259414,
+          "std": 0.001913456473328356
+        },
+        "strand_config": {
+          "mean": 0.9893617021276596,
+          "std": 0.0
+        },
+        "strand_presence": {
+          "mean": 0.9903399364147715,
+          "std": 0.0016943514869834637
+        },
+        "strand_quantity": {
+          "mean": 0.9894355791962175,
+          "std": 0.0003385472587881645
+        },
+        "strand_relational": {
+          "mean": 0.8147969052224372,
+          "std": 0.011247295309103542
+        },
+        "strand_spatial": {
+          "mean": 0.9888017917133259,
+          "std": 0.0005599104143336753
+        },
+        "structural": {
+          "mean": 0.9893994265881997,
+          "std": 0.000623310383350586
+        }
+      }
+    },
+    "pushpins": {
+      "EAD": {
+        "logical": {
+          "mean": 0.9801985454159367,
+          "std": 0.01019467568028243
+        },
+        "strand_cardinality": {
+          "mean": 0.9784050760689307,
+          "std": 0.011872102030612355
+        },
+        "strand_presence": {
+          "mean": 0.9866220735785953,
+          "std": 0.0031035475824024495
+        },
+        "structural": {
+          "mean": 0.9766207431263791,
+          "std": 0.009307573482604478
+        }
+      },
+      "PC": {
+        "logical": {
+          "mean": 0.5678717417847853,
+          "std": 0.01349903595324654
+        },
+        "strand_cardinality": {
+          "mean": 0.5264258418054654,
+          "std": 0.013616494370426805
+        },
+        "strand_presence": {
+          "mean": 0.8853586027499071,
+          "std": 0.017805271435239883
+        },
+        "structural": {
+          "mean": 0.851285262718435,
+          "std": 0.0016552381566622351
+        }
+      },
+      "Comp": {
+        "logical": {
+          "mean": 0.9206614641397249,
+          "std": 0.014515123326227862
+        },
+        "strand_cardinality": {
+          "mean": 0.9928617780661909,
+          "std": 1.3597399555105182e-16
+        },
+        "strand_presence": {
+          "mean": 0.4875510962467484,
+          "std": 0.10160586328359492
+        },
+        "structural": {
+          "mean": 0.9068408182739905,
+          "std": 0.01689005807714192
+        }
+      },
+      "AFLAD": {
+        "logical": {
+          "mean": 0.9866220735785953,
+          "std": 0.002352808839416196
+        },
+        "strand_cardinality": {
+          "mean": 0.9927896748143342,
+          "std": 0.00012488649560666177
+        },
+        "strand_presence": {
+          "mean": 0.9496469713861019,
+          "std": 0.016651030622991114
+        },
+        "structural": {
+          "mean": 0.9729528239995228,
+          "std": 0.008557646689382928
+        }
+      }
+    },
+    "screw_bag": {
+      "EAD": {
+        "logical": {
+          "mean": 0.5775996170874717,
+          "std": 0.008621969527899504
+        },
+        "strand_cardinality": {
+          "mean": 0.5808857012750455,
+          "std": 0.008086284525479888
+        },
+        "strand_quantity": {
+          "mean": 0.5864228667507357,
+          "std": 0.012742269111808995
+        },
+        "structural": {
+          "mean": 0.8869452219112355,
+          "std": 0.007296396477766807
+        }
+      },
+      "PC": {
+        "logical": {
+          "mean": 0.4873957959395317,
+          "std": 0.02772718222811293
+        },
+        "strand_cardinality": {
+          "mean": 0.5258993624772313,
+          "std": 0.03984403459211503
+        },
+        "strand_quantity": {
+          "mean": 0.48289197141656165,
+          "std": 0.01932401816149323
+        },
+        "structural": {
+          "mean": 0.9015727042516327,
+          "std": 0.011736401356505924
+        }
+      },
+      "Comp": {
+        "logical": {
+          "mean": 0.9895895656336006,
+          "std": 0.0028005336217466156
+        },
+        "strand_cardinality": {
+          "mean": 0.983606557377049,
+          "std": 0.009396732576637682
+        },
+        "strand_quantity": {
+          "mean": 0.9901639344262296,
+          "std": 0.009059281238669283
+        },
+        "structural": {
+          "mean": 0.8888111422097827,
+          "std": 0.01705199901107807
+        }
+      },
+      "AFLAD": {
+        "logical": {
+          "mean": 0.9621475010968847,
+          "std": 0.0038521157764509163
+        },
+        "strand_cardinality": {
+          "mean": 0.9522996357012751,
+          "std": 0.025995762267762616
+        },
+        "strand_quantity": {
+          "mean": 0.957040773434216,
+          "std": 0.01273977291175019
+        },
+        "structural": {
+          "mean": 0.9662135145941623,
+          "std": 0.003449706902586404
+        }
+      }
+    },
+    "splicing_connectors": {
+      "EAD": {
+        "logical": {
+          "mean": 0.9352111214856312,
+          "std": 0.015729013754339313
+        },
+        "strand_appearance": {
+          "mean": 0.9781245831666,
+          "std": 0.004550812887616971
+        },
+        "strand_cardinality": {
+          "mean": 0.9974323062558357,
+          "std": 0.00444737602316937
+        },
+        "strand_damage": {
+          "mean": 0.9995331465919701,
+          "std": 0.0008086138223944951
+        },
+        "strand_presence": {
+          "mean": 0.9316957552251669,
+          "std": 0.03268113948692321
+        },
+        "strand_quantity": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "strand_spatial": {
+          "mean": 0.8109803921568628,
+          "std": 0.06659309076960039
+        },
+        "structural": {
+          "mean": 0.9813478332509474,
+          "std": 0.0005621592390585283
+        }
+      },
+      "PC": {
+        "logical": {
+          "mean": 0.6614015976761075,
+          "std": 0.007440554592278535
+        },
+        "strand_appearance": {
+          "mean": 0.524609843937575,
+          "std": 0.03202030724419736
+        },
+        "strand_cardinality": {
+          "mean": 0.8627450980392157,
+          "std": 0.023932783600329185
+        },
+        "strand_damage": {
+          "mean": 0.9995331465919701,
+          "std": 0.0008086138223944951
+        },
+        "strand_presence": {
+          "mean": 0.6758241758241758,
+          "std": 0.007962950869266242
+        },
+        "strand_quantity": {
+          "mean": 0.8741830065359477,
+          "std": 0.03453689882415711
+        },
+        "strand_spatial": {
+          "mean": 0.40022408963585443,
+          "std": 0.016233356995395975
+        },
+        "structural": {
+          "mean": 0.9623661229197561,
+          "std": 0.0040814208795709
+        }
+      },
+      "Comp": {
+        "logical": {
+          "mean": 0.9361188920012449,
+          "std": 0.000841631950388355
+        },
+        "strand_appearance": {
+          "mean": 0.9813258636788049,
+          "std": 0.0004620650413682371
+        },
+        "strand_cardinality": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "strand_damage": {
+          "mean": 0.8671802054154996,
+          "std": 0.0017623329680837355
+        },
+        "strand_presence": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "strand_quantity": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "strand_spatial": {
+          "mean": 0.8034733893557423,
+          "std": 0.003031428405259035
+        },
+        "structural": {
+          "mean": 0.7797330696984677,
+          "std": 0.005658561748395112
+        }
+      },
+      "AFLAD": {
+        "logical": {
+          "mean": 0.9373897707231041,
+          "std": 0.010411672247169887
+        },
+        "strand_appearance": {
+          "mean": 0.9851940776310525,
+          "std": 0.0034654878102618747
+        },
+        "strand_cardinality": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "strand_damage": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "strand_presence": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "strand_quantity": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "strand_spatial": {
+          "mean": 0.7419607843137254,
+          "std": 0.04726286298108926
+        },
+        "structural": {
+          "mean": 0.9954852529246994,
+          "std": 0.002487999484353476
+        }
+      }
+    }
+  },
+  "overall_mean_over_categories": {
+    "EAD": {
+      "logical": {
+        "mean": 0.8521370963121594,
+        "std": 0.0062635529078108355
+      },
+      "strand_appearance": {
+        "mean": 0.9781245831666,
+        "std": 0.004550812887616971
+      },
+      "strand_cardinality": {
+        "mean": 0.8594000414038533,
+        "std": 0.004581718377064835
+      },
+      "strand_config": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "strand_damage": {
+        "mean": 0.9995331465919701,
+        "std": 0.0008086138223944951
+      },
+      "strand_presence": {
+        "mean": 0.9021444181446677,
+        "std": 0.010758922274078327
+      },
+      "strand_quantity": {
+        "mean": 0.894815284202633,
+        "std": 0.0033989557460375143
+      },
+      "strand_relational": {
+        "mean": 0.7815925209542232,
+        "std": 0.011538059424998887
+      },
+      "strand_spatial": {
+        "mean": 0.9053035592736535,
+        "std": 0.0330437392435724
+      },
+      "structural": {
+        "mean": 0.936921823887264,
+        "std": 0.004409836830951169
+      }
+    },
+    "PC": {
+      "logical": {
+        "mean": 0.6657720035787311,
+        "std": 0.003278880522516136
+      },
+      "strand_appearance": {
+        "mean": 0.524609843937575,
+        "std": 0.03202030724419736
+      },
+      "strand_cardinality": {
+        "mean": 0.6745033967906826,
+        "std": 0.004509676871059175
+      },
+      "strand_config": {
+        "mean": 0.7302009456264775,
+        "std": 0.041404916993231636
+      },
+      "strand_damage": {
+        "mean": 0.9995331465919701,
+        "std": 0.0008086138223944951
+      },
+      "strand_presence": {
+        "mean": 0.8071992299125276,
+        "std": 0.011835765955773174
+      },
+      "strand_quantity": {
+        "mean": 0.7451287170232406,
+        "std": 0.007552664454493698
+      },
+      "strand_relational": {
+        "mean": 0.538039974210187,
+        "std": 0.022287471326874406
+      },
+      "strand_spatial": {
+        "mean": 0.5677865502303946,
+        "std": 0.005251696894823636
+      },
+      "structural": {
+        "mean": 0.9122188446129132,
+        "std": 0.0008053067787624258
+      }
+    },
+    "Comp": {
+      "logical": {
+        "mean": 0.9505001045572534,
+        "std": 0.0031783061995460057
+      },
+      "strand_appearance": {
+        "mean": 0.9813258636788049,
+        "std": 0.0004620650413682371
+      },
+      "strand_cardinality": {
+        "mean": 0.9925621608163233,
+        "std": 0.0035513342556204026
+      },
+      "strand_config": {
+        "mean": 0.9893617021276596,
+        "std": 0.0
+      },
+      "strand_damage": {
+        "mean": 0.8671802054154996,
+        "std": 0.0017623329680837355
+      },
+      "strand_presence": {
+        "mean": 0.8693717651827256,
+        "std": 0.025903746464096954
+      },
+      "strand_quantity": {
+        "mean": 0.9942056512466632,
+        "std": 0.0015546249339112373
+      },
+      "strand_relational": {
+        "mean": 0.6165377176015473,
+        "std": 0.0449657866006487
+      },
+      "strand_spatial": {
+        "mean": 0.8112178443605886,
+        "std": 0.008689621464681796
+      },
+      "structural": {
+        "mean": 0.839031440148171,
+        "std": 0.01167952262784735
+      }
+    },
+    "AFLAD": {
+      "logical": {
+        "mean": 0.9684500183666235,
+        "std": 0.0024168488958393286
+      },
+      "strand_appearance": {
+        "mean": 0.9851940776310525,
+        "std": 0.0034654878102618747
+      },
+      "strand_cardinality": {
+        "mean": 0.9825036158431127,
+        "std": 0.010457829270521236
+      },
+      "strand_config": {
+        "mean": 0.9893617021276596,
+        "std": 0.0
+      },
+      "strand_damage": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "strand_presence": {
+        "mean": 0.9845583402134098,
+        "std": 0.003431759604647432
+      },
+      "strand_quantity": {
+        "mean": 0.9864148397915953,
+        "std": 0.003185106915723736
+      },
+      "strand_relational": {
+        "mean": 0.8147969052224372,
+        "std": 0.011247295309103542
+      },
+      "strand_spatial": {
+        "mean": 0.8653812880135257,
+        "std": 0.02346325231091289
+      },
+      "structural": {
+        "mean": 0.9761609661485501,
+        "std": 0.0017544551826440778
+      }
+    }
+  },
+  "per_seed_raw": {
+    "breakfast_box": {
+      "42": {
+        "EAD": {
+          "logical": 0.8084101110323648,
+          "structural": 0.830718954248366,
+          "strand_presence": 0.697274031563845,
+          "strand_quantity": 0.9938725490196078,
+          "strand_cardinality": 0.8889943074003794
+        },
+        "PC": {
+          "logical": 0.8193952279707064,
+          "structural": 0.9214596949891067,
+          "strand_presence": 0.8524629363940699,
+          "strand_quantity": 0.7279411764705882,
+          "strand_cardinality": 0.784313725490196
+        },
+        "Comp": {
+          "logical": 0.9926765887077723,
+          "structural": 0.7599128540305011,
+          "strand_presence": 0.9995217599234816,
+          "strand_quantity": 0.9975490196078431,
+          "strand_cardinality": 0.9816571790006325
+        },
+        "AFLAD": {
+          "logical": 0.9815733522324592,
+          "structural": 0.9563180827886709,
+          "strand_presence": 0.9954567192730751,
+          "strand_quantity": 1.0,
+          "strand_cardinality": 0.9566729917773561
+        }
+      },
+      "43": {
+        "EAD": {
+          "logical": 0.8021497755728797,
+          "structural": 0.8572984749455338,
+          "strand_presence": 0.6944045911047345,
+          "strand_quantity": 0.9938725490196078,
+          "strand_cardinality": 0.8760278304870336
+        },
+        "PC": {
+          "logical": 0.8080557524214506,
+          "structural": 0.9139433551198257,
+          "strand_presence": 0.846963175514108,
+          "strand_quantity": 0.6936274509803921,
+          "strand_cardinality": 0.7776723592662871
+        },
+        "Comp": {
+          "logical": 0.9998818804630286,
+          "structural": 0.7478213507625272,
+          "strand_presence": 1.0,
+          "strand_quantity": 1.0,
+          "strand_cardinality": 0.9996837444655282
+        },
+        "AFLAD": {
+          "logical": 0.9990550437042287,
+          "structural": 0.9528322440087146,
+          "strand_presence": 0.9992826398852224,
+          "strand_quantity": 0.9987745098039216,
+          "strand_cardinality": 0.9987349778621126
+        }
+      },
+      "44": {
+        "EAD": {
+          "logical": 0.7951807228915663,
+          "structural": 0.8362745098039216,
+          "strand_presence": 0.6791009086561454,
+          "strand_quantity": 0.9938725490196078,
+          "strand_cardinality": 0.8776091081593927
+        },
+        "PC": {
+          "logical": 0.7886841483581384,
+          "structural": 0.9165577342047929,
+          "strand_presence": 0.7938785270205644,
+          "strand_quantity": 0.6985294117647058,
+          "strand_cardinality": 0.7868437697659709
+        },
+        "Comp": {
+          "logical": 0.9998818804630286,
+          "structural": 0.7250544662309368,
+          "strand_presence": 1.0,
+          "strand_quantity": 0.9987745098039216,
+          "strand_cardinality": 1.0
+        },
+        "AFLAD": {
+          "logical": 0.9996456413890857,
+          "structural": 0.9611111111111111,
+          "strand_presence": 1.0,
+          "strand_quantity": 0.9987745098039216,
+          "strand_cardinality": 0.9993674889310562
+        }
+      }
+    },
+    "juice_bottle": {
+      "42": {
+        "EAD": {
+          "logical": 0.9680851063829788,
+          "structural": 0.998415572657311,
+          "strand_presence": 1.0,
+          "strand_quantity": 0.9997783687943262,
+          "strand_spatial": 1.0,
+          "strand_config": 1.0,
+          "strand_relational": 0.7944874274661509
+        },
+        "PC": {
+          "logical": 0.8157027270002998,
+          "structural": 0.9385468537799909,
+          "strand_presence": 0.850696991929567,
+          "strand_quantity": 0.9186613475177304,
+          "strand_spatial": 0.7306830907054871,
+          "strand_config": 0.7668439716312057,
+          "strand_relational": 0.5594777562862668
+        },
+        "Comp": {
+          "logical": 0.9133203476176206,
+          "structural": 0.8758488003621547,
+          "strand_presence": 0.9889948642699926,
+          "strand_quantity": 0.9844858156028369,
+          "strand_spatial": 0.8107502799552071,
+          "strand_config": 0.9893617021276596,
+          "strand_relational": 0.6639264990328819
+        },
+        "AFLAD": {
+          "logical": 0.9641893916691638,
+          "structural": 0.9900407424173834,
+          "strand_presence": 0.9893617021276596,
+          "strand_quantity": 0.9893617021276595,
+          "strand_spatial": 0.9893617021276595,
+          "strand_config": 0.9893617021276596,
+          "strand_relational": 0.8268858800773695
+        }
+      },
+      "43": {
+        "EAD": {
+          "logical": 0.9644141444411147,
+          "structural": 0.9985287460389316,
+          "strand_presence": 1.0,
+          "strand_quantity": 0.999113475177305,
+          "strand_spatial": 1.0,
+          "strand_config": 1.0,
+          "strand_relational": 0.7722437137330754
+        },
+        "PC": {
+          "logical": 0.8096344021576267,
+          "structural": 0.9244001810774107,
+          "strand_presence": 0.8283198826118856,
+          "strand_quantity": 0.9193262411347518,
+          "strand_spatial": 0.7508398656215005,
+          "strand_config": 0.7384751773049645,
+          "strand_relational": 0.539651837524178
+        },
+        "Comp": {
+          "logical": 0.9077764459094996,
+          "structural": 0.881167949298325,
+          "strand_presence": 0.9922964049889949,
+          "strand_quantity": 0.9898049645390071,
+          "strand_spatial": 0.8073908174692048,
+          "strand_config": 0.9893617021276596,
+          "strand_relational": 0.6112185686653772
+        },
+        "AFLAD": {
+          "logical": 0.9632903805813604,
+          "structural": 0.9893617021276595,
+          "strand_presence": 0.9922964049889949,
+          "strand_quantity": 0.9898049645390071,
+          "strand_spatial": 0.9888017917133258,
+          "strand_config": 0.9893617021276596,
+          "strand_relational": 0.812862669245648
+        }
+      },
+      "44": {
+        "EAD": {
+          "logical": 0.9647887323943661,
+          "structural": 0.9978497057492078,
+          "strand_presence": 1.0,
+          "strand_quantity": 0.9980053191489362,
+          "strand_spatial": 0.9988801791713326,
+          "strand_config": 1.0,
+          "strand_relational": 0.778046421663443
+        },
+        "PC": {
+          "logical": 0.7951003895714714,
+          "structural": 0.9227025803531009,
+          "strand_presence": 0.8305209097578872,
+          "strand_quantity": 0.9122340425531915,
+          "strand_spatial": 0.7245240761478163,
+          "strand_config": 0.6852836879432624,
+          "strand_relational": 0.5149903288201161
+        },
+        "Comp": {
+          "logical": 0.9048546598741385,
+          "structural": 0.8695110909913988,
+          "strand_presence": 0.9889948642699926,
+          "strand_quantity": 0.9893617021276595,
+          "strand_spatial": 0.8387458006718925,
+          "strand_config": 0.9893617021276596,
+          "strand_relational": 0.5744680851063829
+        },
+        "AFLAD": {
+          "logical": 0.9605184297273,
+          "structural": 0.9887958352195564,
+          "strand_presence": 0.9893617021276596,
+          "strand_quantity": 0.9891400709219857,
+          "strand_spatial": 0.9882418812989922,
+          "strand_config": 0.9893617021276596,
+          "strand_relational": 0.804642166344294
+        }
+      }
+    },
+    "pushpins": {
+      "42": {
+        "EAD": {
+          "logical": 0.9895684026118808,
+          "structural": 0.9857756307031669,
+          "strand_cardinality": 0.9888600475881462,
+          "strand_presence": 0.9899665551839465
+        },
+        "PC": {
+          "logical": 0.5747730530339225,
+          "structural": 0.8502415458937199,
+          "strand_cardinality": 0.5346095608911962,
+          "strand_presence": 0.8985507246376812
+        },
+        "Comp": {
+          "logical": 0.9138397834050006,
+          "structural": 0.9156378600823045,
+          "strand_cardinality": 0.9928617780661908,
+          "strand_presence": 0.4397993311036789
+        },
+        "AFLAD": {
+          "logical": 0.9885332059245102,
+          "structural": 0.9828234031132582,
+          "strand_cardinality": 0.9928617780661908,
+          "strand_presence": 0.9626532887402452
+        }
+      },
+      "43": {
+        "EAD": {
+          "logical": 0.9816849816849818,
+          "structural": 0.9769189479334407,
+          "strand_cardinality": 0.9808565866320571,
+          "strand_presence": 0.9838350055741361
+        },
+        "PC": {
+          "logical": 0.5523172479694218,
+          "structural": 0.8531937734836286,
+          "strand_cardinality": 0.5107073329007138,
+          "strand_presence": 0.8651059085841695
+        },
+        "Comp": {
+          "logical": 0.9373307851568721,
+          "structural": 0.9175165503667918,
+          "strand_cardinality": 0.9928617780661908,
+          "strand_presence": 0.6042363433667781
+        },
+        "AFLAD": {
+          "logical": 0.9839942666029622,
+          "structural": 0.9676149579531221,
+          "strand_cardinality": 0.9928617780661908,
+          "strand_presence": 0.9308807134894092
+        }
+      },
+      "44": {
+        "EAD": {
+          "logical": 0.9693422519509476,
+          "structural": 0.96716765074253,
+          "strand_cardinality": 0.9654985939865888,
+          "strand_presence": 0.9860646599777034
+        },
+        "PC": {
+          "logical": 0.5765249243510113,
+          "structural": 0.8504204687779566,
+          "strand_cardinality": 0.5339606316244863,
+          "strand_presence": 0.8924191750278707
+        },
+        "Comp": {
+          "logical": 0.9108138238573021,
+          "structural": 0.8873680443728751,
+          "strand_cardinality": 0.9928617780661908,
+          "strand_presence": 0.4186176142697882
+        },
+        "AFLAD": {
+          "logical": 0.9873387482083135,
+          "structural": 0.9684201109321882,
+          "strand_cardinality": 0.9926454683106208,
+          "strand_presence": 0.9554069119286511
+        }
+      }
+    },
+    "screw_bag": {
+      "42": {
+        "EAD": {
+          "logical": 0.5848988871604643,
+          "structural": 0.8905437824870052,
+          "strand_quantity": 0.6002522068095839,
+          "strand_cardinality": 0.5797472677595628
+        },
+        "PC": {
+          "logical": 0.45572573890151963,
+          "structural": 0.8880447820871651,
+          "strand_quantity": 0.4614123581336696,
+          "strand_cardinality": 0.48138661202185795
+        },
+        "Comp": {
+          "logical": 0.9928203900921383,
+          "structural": 0.8894442223110757,
+          "strand_quantity": 0.9972257250945775,
+          "strand_cardinality": 0.9832650273224044
+        },
+        "AFLAD": {
+          "logical": 0.9612301064975469,
+          "structural": 0.9628148740503799,
+          "strand_quantity": 0.9634300126103406,
+          "strand_cardinality": 0.9407445355191256
+        }
+      },
+      "43": {
+        "EAD": {
+          "logical": 0.5798133301423956,
+          "structural": 0.8917433026789285,
+          "strand_quantity": 0.5838587641866331,
+          "strand_cardinality": 0.5894808743169399
+        },
+        "PC": {
+          "logical": 0.5072992700729927,
+          "structural": 0.9090363854458217,
+          "strand_quantity": 0.48839848675914255,
+          "strand_cardinality": 0.5582308743169399
+        },
+        "Comp": {
+          "logical": 0.9880938135694628,
+          "structural": 0.9055377848860455,
+          "strand_quantity": 0.9799495586380832,
+          "strand_cardinality": 0.9931693989071038
+        },
+        "AFLAD": {
+          "logical": 0.9663754935981812,
+          "structural": 0.9697121151539384,
+          "strand_quantity": 0.9423707440100882,
+          "strand_cardinality": 0.9820696721311475
+        }
+      },
+      "44": {
+        "EAD": {
+          "logical": 0.5680866339595549,
+          "structural": 0.8785485805677729,
+          "strand_quantity": 0.5751576292559901,
+          "strand_cardinality": 0.5734289617486339
+        },
+        "PC": {
+          "logical": 0.4991623788440828,
+          "structural": 0.9076369452219112,
+          "strand_quantity": 0.4988650693568727,
+          "strand_cardinality": 0.5380806010928961
+        },
+        "Comp": {
+          "logical": 0.9878544932392007,
+          "structural": 0.871451419432227,
+          "strand_quantity": 0.9933165195460278,
+          "strand_cardinality": 0.9743852459016393
+        },
+        "AFLAD": {
+          "logical": 0.9588369031949264,
+          "structural": 0.9661135545781687,
+          "strand_quantity": 0.9653215636822194,
+          "strand_cardinality": 0.9340846994535519
+        }
+      }
+    },
+    "splicing_connectors": {
+      "42": {
+        "EAD": {
+          "logical": 0.9457671957671957,
+          "structural": 0.9818091942659417,
+          "strand_damage": 0.9985994397759103,
+          "strand_appearance": 0.9767907162865146,
+          "strand_presence": 0.9686489980607629,
+          "strand_cardinality": 0.992296918767507,
+          "strand_quantity": 1.0,
+          "strand_spatial": 0.8221848739495798
+        },
+        "PC": {
+          "logical": 0.6618425147836913,
+          "structural": 0.9670785961443401,
+          "strand_damage": 1.0,
+          "strand_appearance": 0.5238095238095238,
+          "strand_presence": 0.6767937944408533,
+          "strand_cardinality": 0.8879551820728291,
+          "strand_quantity": 0.8669467787114845,
+          "strand_spatial": 0.3929411764705883
+        },
+        "Comp": {
+          "logical": 0.9354186118892002,
+          "structural": 0.7856648541769649,
+          "strand_damage": 0.8669467787114846,
+          "strand_appearance": 0.9815926370548219,
+          "strand_presence": 1.0,
+          "strand_cardinality": 1.0,
+          "strand_quantity": 1.0,
+          "strand_spatial": 0.8003361344537816
+        },
+        "AFLAD": {
+          "logical": 0.9354186118892002,
+          "structural": 0.9981216015818092,
+          "strand_damage": 1.0,
+          "strand_appearance": 0.9831932773109244,
+          "strand_presence": 1.0,
+          "strand_cardinality": 1.0,
+          "strand_quantity": 1.0,
+          "strand_spatial": 0.7351260504201681
+        }
+      },
+      "43": {
+        "EAD": {
+          "logical": 0.9171335200746965,
+          "structural": 0.9807217004448839,
+          "strand_damage": 1.0,
+          "strand_appearance": 0.9831932773109244,
+          "strand_presence": 0.9198448610213316,
+          "strand_cardinality": 1.0,
+          "strand_quantity": 1.0,
+          "strand_spatial": 0.7394957983193278
+        },
+        "PC": {
+          "logical": 0.6686118892001245,
+          "structural": 0.9599604547701435,
+          "strand_damage": 1.0,
+          "strand_appearance": 0.5570228091236494,
+          "strand_presence": 0.6832579185520362,
+          "strand_cardinality": 0.8403361344537815,
+          "strand_quantity": 0.9117647058823529,
+          "strand_spatial": 0.3889075630252101
+        },
+        "Comp": {
+          "logical": 0.9370525988173046,
+          "structural": 0.7791398912506179,
+          "strand_damage": 0.8690476190476191,
+          "strand_appearance": 0.9815926370548219,
+          "strand_presence": 1.0,
+          "strand_cardinality": 1.0,
+          "strand_quantity": 1.0,
+          "strand_spatial": 0.8063865546218487
+        },
+        "AFLAD": {
+          "logical": 0.9281045751633987,
+          "structural": 0.9931784478497282,
+          "strand_damage": 1.0,
+          "strand_appearance": 0.9891956782713086,
+          "strand_presence": 1.0,
+          "strand_cardinality": 1.0,
+          "strand_quantity": 1.0,
+          "strand_spatial": 0.6984873949579832
+        }
+      },
+      "44": {
+        "EAD": {
+          "logical": 0.9427326486150016,
+          "structural": 0.9815126050420169,
+          "strand_damage": 1.0,
+          "strand_appearance": 0.9743897559023609,
+          "strand_presence": 0.9065934065934066,
+          "strand_cardinality": 1.0,
+          "strand_quantity": 1.0,
+          "strand_spatial": 0.8712605042016807
+        },
+        "PC": {
+          "logical": 0.6537503890445067,
+          "structural": 0.9600593178447849,
+          "strand_damage": 0.9985994397759103,
+          "strand_appearance": 0.4929971988795518,
+          "strand_presence": 0.6674208144796381,
+          "strand_cardinality": 0.8599439775910365,
+          "strand_quantity": 0.8438375350140056,
+          "strand_spatial": 0.41882352941176476
+        },
+        "Comp": {
+          "logical": 0.93588546529723,
+          "structural": 0.77439446366782,
+          "strand_damage": 0.865546218487395,
+          "strand_appearance": 0.9807923169267707,
+          "strand_presence": 1.0,
+          "strand_cardinality": 1.0,
+          "strand_quantity": 1.0,
+          "strand_spatial": 0.8036974789915967
+        },
+        "AFLAD": {
+          "logical": 0.9486461251167133,
+          "structural": 0.9951557093425606,
+          "strand_damage": 1.0,
+          "strand_appearance": 0.9831932773109244,
+          "strand_presence": 1.0,
+          "strand_cardinality": 1.0,
+          "strand_quantity": 1.0,
+          "strand_spatial": 0.7922689075630251
+        }
+      }
+    }
+  },
+  "provenance": {
+    "breakfast_box": {
+      "n_good": 102,
+      "n_logical": 83,
+      "n_structural": 90,
+      "n_mixed": 0,
+      "strand_image_counts": {
+        "config": 3,
+        "presence": 41,
+        "quantity": 8,
+        "cardinality": 31
+      }
+    },
+    "juice_bottle": {
+      "n_good": 94,
+      "n_logical": 142,
+      "n_structural": 94,
+      "n_mixed": 12,
+      "strand_image_counts": {
+        "presence": 29,
+        "quantity": 48,
+        "spatial": 19,
+        "config": 12,
+        "relational": 22
+      }
+    },
+    "pushpins": {
+      "n_good": 138,
+      "n_logical": 91,
+      "n_structural": 81,
+      "n_mixed": 11,
+      "strand_image_counts": {
+        "cardinality": 67,
+        "presence": 13
+      }
+    },
+    "screw_bag": {
+      "n_good": 122,
+      "n_logical": 137,
+      "n_structural": 82,
+      "n_mixed": 24,
+      "strand_image_counts": {
+        "quantity": 65,
+        "cardinality": 48
+      }
+    },
+    "splicing_connectors": {
+      "n_good": 119,
+      "n_logical": 108,
+      "n_structural": 85,
+      "n_mixed": 0,
+      "strand_image_counts": {
+        "damage": 12,
+        "appearance": 21,
+        "presence": 26,
+        "cardinality": 12,
+        "quantity": 12,
+        "spatial": 25
+      }
+    }
+  },
+  "strand_expect": {
+    "cardinality": "free",
+    "relational": "free",
+    "spatial": "free",
+    "config": "free",
+    "quantity": "rich",
+    "appearance": "rich",
+    "damage": "rich",
+    "presence": "ambig"
+  },
+  "note": "축 라벨은 LOCO defects_config.json + 이미지별 GT 마스크에서 유도했고 subtype→strand 는 scripts/countgd/footprint_resolved_allcat.py 의 사전등록 STRAND 를 import 해 그대로 썼다. MIXED 와 strand 이미지 수 <4 는 제외. AUROC 는 순위 통계라 z-정규화 여부가 결과를 바꾸지 않는다."
+}

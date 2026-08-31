@@ -1,0 +1,66 @@
+{
+  "Ours (L17hi_PC_hyb)": {
+    "per_cat": {
+      "breakfast_box": {
+        "all": 0.8596,
+        "logical": 0.8295,
+        "structural": 0.9241
+      },
+      "juice_bottle": {
+        "all": 0.8895,
+        "logical": 0.8816,
+        "structural": 0.8201
+      },
+      "pushpins": {
+        "all": 0.6769,
+        "logical": 0.6543,
+        "structural": 0.9137
+      },
+      "screw_bag": {
+        "all": 0.6233,
+        "logical": 0.5979,
+        "structural": 0.9484
+      },
+      "splicing_connectors": {
+        "all": 0.7267,
+        "logical": 0.6821,
+        "structural": 0.95
+      }
+    },
+    "mean_all": 0.7552,
+    "mean_logical": 0.7291,
+    "mean_structural": 0.9113
+  },
+  "Hybrid (DINOv2-B Maha)": {
+    "per_cat": {
+      "breakfast_box": {
+        "all": 0.7823,
+        "logical": 0.787,
+        "structural": 0.7618
+      },
+      "juice_bottle": {
+        "all": 0.7468,
+        "logical": 0.733,
+        "structural": 0.7401
+      },
+      "pushpins": {
+        "all": 0.5714,
+        "logical": 0.562,
+        "structural": 0.8275
+      },
+      "screw_bag": {
+        "all": 0.5782,
+        "logical": 0.5586,
+        "structural": 0.9264
+      },
+      "splicing_connectors": {
+        "all": 0.5514,
+        "logical": 0.5185,
+        "structural": 0.8199
+      }
+    },
+    "mean_all": 0.646,
+    "mean_logical": 0.6318,
+    "mean_structural": 0.8151
+  }
+}

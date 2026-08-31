@@ -1,0 +1,12 @@
+{
+  "hybrid_maps_baseline": {
+    "per_cat": {
+      "breakfast_box": 0.4508,
+      "juice_bottle": 0.4888,
+      "pushpins": 0.2495,
+      "screw_bag": 0.305,
+      "splicing_connectors": 0.4779
+    },
+    "mean": 0.3944
+  }
+}

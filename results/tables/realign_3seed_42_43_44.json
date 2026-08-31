@@ -1,0 +1,81 @@
+{
+  "target_seeds": [
+    42,
+    43,
+    44
+  ],
+  "methods": {
+    "PUAD (pooled, L+S 아님)": {
+      "per_seed": {
+        "42": 0.916851069579713,
+        "43": 0.9123667677273435,
+        "44": 0.9135333951778323
+      },
+      "mean": 0.9142504108282963,
+      "std": 0.00232654773388572,
+      "n": 3,
+      "metric": "pooled AUROC",
+      "source": "reports/path_y/puad_5seed_allcats/puad_5seed_all_cats.json"
+    },
+    "AFLAD_hc": {
+      "per_seed": {
+        "42": 0.9818,
+        "43": 0.98018,
+        "44": 0.98018
+      },
+      "mean": 0.9807200000000001,
+      "std": 0.0009353074360871676,
+      "n": 3,
+      "source": "reports/countgd/fusion_hc_percat_perseed.json"
+    },
+    "AFLAD_hc_CV": {
+      "per_seed": {
+        "42": 0.9818,
+        "43": 0.9802,
+        "44": 0.9802
+      },
+      "mean": 0.9807333333333332,
+      "std": 0.0009237604307034277,
+      "n": 3,
+      "source": "reports/countgd/ablation_psad_hc_vs_hcp.json"
+    },
+    "AFLAD_hcp_CV": {
+      "per_seed": {
+        "42": 0.98,
+        "43": 0.9788,
+        "44": 0.9796
+      },
+      "mean": 0.9794666666666667,
+      "std": 0.000611010092660772,
+      "n": 3,
+      "source": "reports/countgd/ablation_psad_hc_vs_hcp.json"
+    },
+    "ComAD (pooled, L+S 아님)": {
+      "per_seed": {
+        "42": 0.7995221168404318,
+        "43": 0.8072752419891831,
+        "44": 0.8132068629660182
+      },
+      "mean": 0.8066680739318777,
+      "std": 0.006862547553044468,
+      "n": 3,
+      "source": "reports/path_y/comad/comad_3seed.json",
+      "metric": "pooled AUROC",
+      "note": "표 5 가 쓰는 L+S 는 0.7987(log 0.8691 / str 0.7282, ls_canonical_scores.json). 이 값은 pooled 이므로 L+S 자리에 쓰면 안 된다."
+    },
+    "ComAD (L+S, 표 5용)": {
+      "mean": 0.7987,
+      "std": null,
+      "n": 3,
+      "logical": 0.8691,
+      "structural": 0.7282,
+      "source": "reports/path_y/metric_unify/ls_canonical_scores.json",
+      "note": "시드별 L+S std 는 ComAD per-image 점수 부재로 산출 불가"
+    }
+  },
+  "unavailable": {
+    "PUAD (L+S)": "시드별 pooled 만 있고 논리/구조 분리값이 없다 — 표 5 의 L+S 를 42/43/44 로 재집계하려면 시드별 재채점이 필요하다.",
+    "EAD-M": "보유 시드 [42] — 43/44 학습 필요 (약 6시간)",
+    "SALAD": "저자 사전학습 가중치 추론이라 시드 변동이 없다. 3시드화하려면 SALAD 자체 학습이 필요하다(수일). 표기 'n_seed 3' 자체를 재검토해야 한다."
+  }
+}

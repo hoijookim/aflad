@@ -1,0 +1,142 @@
+{
+  "note": "요청 ⑩. '추론 파라미터' 가 한 가지가 아니라 셋이다 — loaded(메모리) / executed(연산) / effective(출력 기여). 분할기 인코더는 layer4·fc 가 loaded 이나 executed 가 아니고(forward 가 직접 호출하지 않는다), 임베딩은 layer4·fc 가 executed 이나 effective 가 아니다(계산하고 버린다). 요청서 §2.2 의 '실제 forward 를 타는 부분만' 은 임베딩에서는 effective 를 가리킨다 — 임베딩은 전체가 forward 를 탄다.",
+  "composition": {
+    "segmenter_encoder_WRN101_2": {
+      "loaded": 126886696,
+      "executed": 82865984,
+      "effective": 82865984,
+      "dead_layer4_fc": 44020712,
+      "evidence": "train_normal_unet.py:113-119 가 layer1~3 만 직접 호출"
+    },
+    "segmenter_decoder": {
+      "per_category": {
+        "breakfast_box": {
+          "conv1": 4728320,
+          "conv2": 1179904,
+          "conv3": 1799,
+          "sum": 5910023
+        },
+        "juice_bottle": {
+          "conv1": 4728320,
+          "conv2": 1179904,
+          "conv3": 2313,
+          "sum": 5910537
+        },
+        "pushpins": {
+          "conv1": 4728320,
+          "conv2": 1179904,
+          "conv3": 6682,
+          "sum": 5914906
+        },
+        "screw_bag": {
+          "conv1": 4728320,
+          "conv2": 1179904,
+          "conv3": 1799,
+          "sum": 5910023
+        },
+        "splicing_connectors": {
+          "conv1": 4728320,
+          "conv2": 1179904,
+          "conv3": 2570,
+          "sum": 5910794
+        }
+      },
+      "mean": 5911256.6,
+      "min": 5910023,
+      "max": 5914906,
+      "coord_channel_contribution": 9216,
+      "note": "좌표는 파라미터가 없다(2채널 concat). 기여는 conv1 입력 2채널분뿐."
+    },
+    "segmenter_checkpoint_crosscheck": {
+      "checkpoint_total": 132796719,
+      "checkpoint_layer4_fc": 44020712,
+      "checkpoint_buffers_excluded": 137960,
+      "expected_total": 132796719,
+      "match": true,
+      "note": "state_dict 는 BN 버퍼를 포함하므로 파라미터만 비교한다"
+    },
+    "embedding_ResNet101": {
+      "loaded": 44549160,
+      "executed": 44549160,
+      "effective": 27535424,
+      "computed_but_discarded_layer4_fc": 17013736,
+      "evidence": "psad.py:58 `_ = self.model(x_t)` 전체 forward · psad.py 의 ft = cat([f0,f1,f2]) 에서 layer4 출력 제외"
+    }
+  },
+  "reconstruction_EAD_S": {
+    "teacher_PDN": 2694144,
+    "student_PDN": 4267392,
+    "autoencoder": 1096320,
+    "sum": 8057856
+  },
+  "patch_memory_DINOv3_L16": 303129600,
+  "per_branch": {
+    "reconstruction": {
+      "trained": 5363712,
+      "frozen": 2694144,
+      "sum": 8057856
+    },
+    "patch_memory": {
+      "trained": 0,
+      "frozen": 303129600,
+      "sum": 303129600
+    },
+    "composition": {
+      "loaded": {
+        "trained": 88777240.6,
+        "frozen": 44549160,
+        "dead_never_trained": 44020712,
+        "sum": 177347112.6
+      },
+      "executed": {
+        "trained": 88777240.6,
+        "frozen": 44549160,
+        "sum": 133326400.6
+      },
+      "effective": {
+        "trained": 88777240.6,
+        "frozen": 27535424,
+        "sum": 116312664.6
+      }
+    }
+  },
+  "totals": {
+    "loaded": {
+      "trained": 94140952.6,
+      "frozen": 350372904,
+      "dead_never_trained": 44020712,
+      "not_trained": 394393616,
+      "sum": 488534568.6
+    },
+    "executed": {
+      "trained": 94140952.6,
+      "frozen": 350372904,
+      "dead_never_trained": 0,
+      "not_trained": 350372904,
+      "sum": 444513856.6
+    },
+    "effective": {
+      "trained": 94140952.6,
+      "frozen": 333359168,
+      "dead_never_trained": 0,
+      "not_trained": 333359168,
+      "sum": 427500120.6
+    }
+  },
+  "frozen_trained_basis": {
+    "frozen": [
+      "DINOv3-L/16 (미세조정 없음)",
+      "EAD teacher PDN (공개 가중치)",
+      "ResNet-101 임베딩 (requires_grad=False, 갱신 없음)"
+    ],
+    "trained": [
+      "EAD student PDN (70k steps)",
+      "EAD autoencoder (70k steps)",
+      "분할기 전체 (pretrained=False, 300 epochs)"
+    ]
+  },
+  "prior_260821_backbone_sum": {
+    "composition": 171440000.0,
+    "note": "정의가 다르다"
+  }
+}

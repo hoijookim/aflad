@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# 재현 실행이 만드는 산출물 — 패키지 내용이 아니다.
+results/main/reproduced_from_package.json

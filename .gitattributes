@@ -1,0 +1,9 @@
+# MANIFEST 의 SHA-256 은 **LF 줄바꿈 기준**으로 계산된다.
+# Windows 의 core.autocrlf=true 로 clone 하면 텍스트 파일이 CRLF 로 내려와
+# 해시가 전부 어긋난다(실측 137건). 그것을 막는다.
+* text=auto eol=lf
+
+# 이진 산출물은 손대지 않는다.
+*.npz binary
+*.png binary
+*.pth binary

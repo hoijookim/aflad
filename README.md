@@ -19,6 +19,12 @@ checkpoints, no GPU — `numpy` and `scikit-learn` suffice.
 python3 code/analysis/reproduce_from_package.py --pkg .
 ```
 
+> **Windows**: the JSON artifacts contain Korean text, so run under UTF-8 —
+> `set PYTHONUTF8=1` (or `python -X utf8 ...`). The scripts pass
+> `encoding="utf-8"` explicitly, so this is a safety net rather than a requirement.
+> File hashes in `MANIFEST.md` are computed on **LF** line endings; `.gitattributes`
+> pins that, so a Windows clone with `core.autocrlf=true` still matches.
+
 ```
   seed 42: L+S 0.9721 (logical 0.9662 / structural 0.9780)
   seed 43: L+S 0.9714 (logical 0.9682 / structural 0.9745)

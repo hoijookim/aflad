@@ -16,6 +16,15 @@
 
 사용: python3 scripts/audit_submission_package.py [--pkg submission]
 """
+import sys as _sys
+# 260904: 로캘 독립 출력. Windows 기본 로캘(cp949)이나 LC_ALL=C 에서 ± · 한국어를
+# 찍다가 UnicodeEncodeError 로 죽는다 — open() 인코딩만 고쳐서는 안 닫힌다.
+for _s in (_sys.stdout, _sys.stderr):
+    try:
+        _s.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 import argparse
 import ast
 import hashlib
@@ -71,7 +80,7 @@ def c2_manifest(P, A):
     m = P / "MANIFEST.md"
     if not A.check("MANIFEST 존재", m.exists()):
         return
-    rows = re.findall(r"\| `([^`]+)` \| `[^`]+` \| [\d,]+ \| `([0-9a-f]+)` \|", m.read_text())
+    rows = re.findall(r"\| `([^`]+)` \| `[^`]+` \| [\d,]+ \| `([0-9a-f]+)` \|", m.read_text(encoding="utf-8"))
     bad = [d for d, h in rows if not (P / d).exists() or sha(P / d) != h]
     A.check("MANIFEST 해시 무결성", not bad, f"{len(rows)-len(bad)}/{len(rows)} 일치")
 
@@ -80,7 +89,7 @@ def c3_readme_paths(P, A):
     rp = P / "README.md"
     if not A.check("README 존재", rp.exists()):
         return
-    refs = {r for r in re.findall(r"`((?:code|results|docs)/[^`]+)`", rp.read_text())}
+    refs = {r for r in re.findall(r"`((?:code|results|docs)/[^`]+)`", rp.read_text(encoding="utf-8"))}
     miss = []
     for r in refs:
         r = r.split()[0]                      # 명령줄 인자 제거
@@ -99,7 +108,7 @@ def c4_code_runs(P, A):
     bad = []
     for p in py:
         try:
-            ast.parse(p.read_text())
+            ast.parse(p.read_text(encoding="utf-8"))
         except SyntaxError as e:
             bad.append(f"{p.name}:{e.lineno}")
     A.check("파이썬 구문", not bad, f"{len(py)-len(bad)}/{len(py)}" + (f" · {bad}" if bad else ""))
@@ -129,7 +138,7 @@ def c6_git_tracked(P, A):
     if not A.check("점수 파일 존재", bool(npz)):
         return
     out = subprocess.run(["git", "-C", str(R), "check-ignore"] + [str(p) for p in npz[:50]],
-                         capture_output=True, text=True)
+                         capture_output=True, text=True, encoding="utf-8", errors="replace")
     ignored = [l for l in out.stdout.split("\n") if l.strip()]
     A.check("git 이 점수 파일을 추적", not ignored,
             f"{len(ignored)}개가 .gitignore 에 걸림" if ignored else f"표본 {min(50,len(npz))}개 통과")
@@ -139,7 +148,7 @@ def c7_status_flags(P, A):
     f = P / "results/tables/table5_3seed_42_43_44.json"
     if not A.check("기준선 표 존재", f.exists()):
         return
-    m = json.load(open(f))["methods"]
+    m = json.load(open(f, encoding="utf-8"))["methods"]
     # 철회된 수치(0.98xx 대)가 상태 표시 없이 있으면 현행과 구분되지 않는다
     unflagged = [k for k, v in m.items() if v["LS"] > 0.975 and "status" not in v
                  and "주 설정" not in k]
@@ -150,7 +159,7 @@ def c8_reproduce(P, A):
     sc = P / "code/analysis/reproduce_from_package.py"
     if not A.check("재현 스크립트 존재", sc.exists()):
         return
-    r = subprocess.run([sys.executable, str(sc), "--pkg", str(P)], capture_output=True, text=True)
+    r = subprocess.run([sys.executable, str(sc), "--pkg", str(P)], capture_output=True, text=True, encoding="utf-8", errors="replace")
     tail = [l for l in r.stdout.split("\n") if "PASS" in l or "FAIL" in l or "재현" in l]
     A.check("헤드라인·기준선 재현", r.returncode == 0, f"{len(tail)}행 검증")
     for l in tail:

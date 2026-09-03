@@ -20,6 +20,15 @@
 - 못 찾은 값은 **원고 문맥과 함께** 출력한다 — 사람이 판단할 몫이다.
   자동 판정으로 끝내면 오탐을 걸러낼 수 없다.
 """
+import sys as _sys
+# 260904: 로캘 독립 출력. Windows 기본 로캘(cp949)이나 LC_ALL=C 에서 ± · 한국어를
+# 찍다가 UnicodeEncodeError 로 죽는다 — open() 인코딩만 고쳐서는 안 닫힌다.
+for _s in (_sys.stdout, _sys.stderr):
+    try:
+        _s.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 import json
 import re
 import sys
@@ -36,7 +45,7 @@ def pkg_values():
     files = 0
     for f in PKG.rglob("*.json"):
         try:
-            txt = f.read_text()
+            txt = f.read_text(encoding="utf-8")
         except Exception:
             continue
         files += 1
@@ -104,7 +113,7 @@ def main():
 
     OUT.write_text(json.dumps({
         "docx": docx_path.name, "pkg_json_files": nf,
-        "paper_unique_values": len(uniq), "missing": len(miss),
+        "paper_unique_values": len(uniq, encoding="utf-8"), "missing": len(miss),
         "coverage": 1 - len(miss) / len(uniq),
         "missing_detail": {v: it for v, it in miss.items()}}, ensure_ascii=False, indent=2))
     print(f"  [saved] {OUT}")

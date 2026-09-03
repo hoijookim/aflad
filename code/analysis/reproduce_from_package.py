@@ -12,6 +12,15 @@
 사용:
   python3 reproduce_from_package.py --pkg /path/to/submission
 """
+import sys as _sys
+# 260904: 로캘 독립 출력. Windows 기본 로캘(cp949)이나 LC_ALL=C 에서 ± · 한국어를
+# 찍다가 UnicodeEncodeError 로 죽는다 — open() 인코딩만 고쳐서는 안 닫힌다.
+for _s in (_sys.stdout, _sys.stderr):
+    try:
+        _s.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 import argparse
 import json
 from pathlib import Path
@@ -32,7 +41,7 @@ def expected(pkg):
     if not f.exists():
         print("  (주 산출물 JSON 이 없어 문서값으로 대조한다)")
         return FALLBACK, "README 문서값"
-    d = json.load(open(f))
+    d = json.load(open(f, encoding="utf-8"))
     return ({k: d[k]["mean"] for k in ("LS", "logical", "structural")},
             f.name)
 
@@ -77,7 +86,7 @@ def verify_baselines(pkg):
     tab_p = pkg / "results/tables/table5_3seed_42_43_44.json"
     if not tab_p.exists():
         print("  (표 JSON 이 없어 기준선 검증 생략)"); return True
-    tab = json.load(open(tab_p))["methods"]
+    tab = json.load(open(tab_p, encoding="utf-8"))["methods"]
     S = pkg / "results/per_image_scores"
     allok = True
     for name, (d, fmt, sk, lk, tk) in BASELINES.items():
@@ -170,7 +179,7 @@ def main():
                             for k, v in per_seed.items()},
                "aggregate": {k: {"mean": v[0], "std": v[1]} for k, v in agg.items()},
                "expected": exp_vals, "expected_source": exp_src, "match": ok},
-              open(out, "w"), indent=2, ensure_ascii=False)
+              open(out, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
     print(f"  [saved] {out.relative_to(pkg)}")
     return 0 if ok else 1
 

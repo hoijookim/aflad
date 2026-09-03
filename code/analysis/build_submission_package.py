@@ -267,10 +267,13 @@ def main():
     for f in DOCS:
         put(f, f"docs/{Path(f).name}")
     # README 는 손으로 쓰지 않는다 — 저장소 소스에서 복사한다. rmtree 후 재빌드에도 남는다.
-    put("docs/submission_README.md", "README.md")
-    # 260901: 공개 저장소용 — 영문 README 와 라이선스. 한국어 README 는 README.ko.md 로 둔다.
-    put("submission_extra/README_en.md", "README.en.md")
+    # 260904 요청 15: 배치를 빌드에서 확정한다. 이전에는 빌드 뒤 손으로 rename 해서
+    # MANIFEST 의 README.md 해시가 한국어판 것이었고 README.en.md 는 유령 행이 됐다.
+    put("submission_extra/README_en.md", "README.md")        # 공개 저장소 기본
+    put("docs/submission_README.md", "README.ko.md")         # 한국어 원본 보존
     put("submission_extra/LICENSE", "LICENSE")
+    put("submission_extra/.gitattributes", ".gitattributes")  # CRLF 로 해시가 깨지는 것을 막는다
+    put("submission_extra/gitignore", ".gitignore")
 
     n_scores = 0
     for src, dst, pat in SCORE_DIRS:
@@ -288,6 +291,12 @@ def main():
 
     write_scores_readme(OUT)
     write_retarget(OUT)
+    # 260904 요청 15: 빌드가 생성하는 파일은 put() 을 안 거쳐 MANIFEST 에서 빠져 있었다.
+    # 원본이 저장소에 없으므로 출처를 "(생성)" 으로 적고 해시는 쓴 결과에서 계산한다.
+    for rel in ("code/RETARGET.md", "results/per_image_scores/README.md"):
+        f = OUT / rel
+        if f.exists():
+            rows.append((rel, "(빌드가 생성)", f.stat().st_size, sha(f)))
     total = sum(r[2] for r in rows)
     (OUT / "MANIFEST.md").write_text(manifest(rows, missing, total, n_scores))
     print(f"파일 {len(rows)}개 · {total/1024/1024:.1f}MB · per-image 점수 {n_scores}개")
@@ -371,6 +380,10 @@ python3 code/analysis/reproduce_from_package.py --pkg .
 
 def manifest(rows, missing, total, n_scores):
     L = ["# MANIFEST — 파일 출처와 무결성",
+         "",
+         "> `MANIFEST.md` 자신은 목록에 없다 — 자기 해시를 담을 수 없기 때문이다.",
+         "> **해시는 LF 줄바꿈 기준**이다. 저장소에 `.gitattributes`(`* text=auto eol=lf`)가",
+         "> 있어 `core.autocrlf=true` 인 Windows clone 에서도 그대로 일치한다.",
          "",
          f"총 {len(rows)}개 파일 · {total/1024/1024:.1f} MB · per-image 점수 {n_scores}개",
          "",

@@ -1,24 +1,31 @@
 # MANIFEST — 파일 출처와 무결성
 
-총 384개 파일 · 8.0 MB · per-image 점수 245개
+> `MANIFEST.md` 자신은 목록에 없다 — 자기 해시를 담을 수 없기 때문이다.
+> **해시는 LF 줄바꿈 기준**이다. 저장소에 `.gitattributes`(`* text=auto eol=lf`)가
+> 있어 `core.autocrlf=true` 인 Windows clone 에서도 그대로 일치한다.
+
+총 388개 파일 · 8.0 MB · per-image 점수 245개
 
 각 행은 `패키지 경로 | 원본 저장소 경로 | 크기 | SHA-256(앞 16자리)` 이다.
 원본 저장소에서 같은 경로의 파일과 해시를 대조하면 출처를 확인할 수 있다.
 
 | 패키지 경로 | 원본 경로 | 크기 | SHA-256 |
 |---|---|--:|---|
+| `.gitattributes` | `submission_extra/.gitattributes` | 331 | `fff835880c53def7` |
+| `.gitignore` | `submission_extra/gitignore` | 146 | `efe7e1bf820f4f5a` |
 | `LICENSE` | `submission_extra/LICENSE` | 1,856 | `ce5f6db02f5d81cd` |
-| `README.en.md` | `submission_extra/README_en.md` | 9,660 | `40cc2f9469b7b211` |
-| `README.md` | `docs/submission_README.md` | 12,502 | `bbfbd78d6fd35ca1` |
-| `code/analysis/audit_package_coverage.py` | `scripts/psad_rebuild/audit_package_coverage.py` | 4,312 | `7ede479087bcd6e1` |
-| `code/analysis/audit_submission_package.py` | `scripts/audit_submission_package.py` | 7,302 | `1341d22713f56731` |
-| `code/analysis/build_submission_package.py` | `scripts/build_submission_package.py` | 19,905 | `455e6c33de875e20` |
+| `README.ko.md` | `docs/submission_README.md` | 12,895 | `9e96b0de3c1a2763` |
+| `README.md` | `submission_extra/README_en.md` | 10,046 | `be11d8a3da07d363` |
+| `code/RETARGET.md` | `(빌드가 생성)` | 684 | `77bcd18471646c3b` |
+| `code/analysis/audit_package_coverage.py` | `scripts/psad_rebuild/audit_package_coverage.py` | 4,706 | `919086f04eb6482a` |
+| `code/analysis/audit_submission_package.py` | `scripts/audit_submission_package.py` | 7,800 | `e37ebd566bb22cd1` |
+| `code/analysis/build_submission_package.py` | `scripts/build_submission_package.py` | 20,985 | `041506ae8322ebb2` |
 | `code/analysis/comad_axis_perseed.py` | `scripts/psad_rebuild/comad_axis_perseed.py` | 6,162 | `a0716cccfc20d8d1` |
 | `code/analysis/deployment_operating_point.py` | `scripts/countgd/deployment_operating_point.py` | 9,998 | `0cdcf94933e56a54` |
 | `code/analysis/diagnose_rebuild_gap.py` | `scripts/psad_rebuild/diagnose_rebuild_gap.py` | 7,375 | `eec69029928db938` |
 | `code/analysis/measure_param_inference.py` | `scripts/psad_rebuild/measure_param_inference.py` | 13,789 | `a174614611e9bc68` |
 | `code/analysis/profile_forward_modules.py` | `scripts/psad_rebuild/profile_forward_modules.py` | 6,611 | `386dfbd92bc7bdf4` |
-| `code/analysis/reproduce_from_package.py` | `scripts/psad_rebuild/reproduce_from_package.py` | 8,919 | `e781fe1166161075` |
+| `code/analysis/reproduce_from_package.py` | `scripts/psad_rebuild/reproduce_from_package.py` | 9,333 | `8bf28c49d297b720` |
 | `code/analysis/requirement_cost_curve.py` | `scripts/countgd/requirement_cost_curve.py` | 5,705 | `6094a59052be19f2` |
 | `code/analysis/subtype_branch_auroc.py` | `scripts/countgd/subtype_branch_auroc.py` | 8,532 | `36a209a8fe8726af` |
 | `code/analysis/testfree_supplements.py` | `scripts/psad_rebuild/testfree_supplements.py` | 7,949 | `18b22d12f52b7b04` |
@@ -107,6 +114,7 @@
 | `results/main/testfree_final_eadfix_3seed.json` | `reports/countgd/testfree_final_eadfix_3seed.json` | 2,257 | `5535956be422c901` |
 | `results/main/testfree_final_eadfix_origproto_3seed.json` | `reports/countgd/testfree_final_eadfix_origproto_3seed.json` | 2,253 | `ccd0757016fd3374` |
 | `results/main/testfree_final_hcp_3seed.json` | `reports/countgd/testfree_final_hcp_3seed.json` | 2,260 | `3f38077791f1a901` |
+| `results/per_image_scores/README.md` | `(빌드가 생성)` | 2,551 | `7515f3e5b8210478` |
 | `results/per_image_scores/comad/comad_breakfast_box_seed42.npz` | `reports/countgd/comad_per_image/comad_breakfast_box_seed42.npz` | 3,911 | `218e9a0e93ca5c12` |
 | `results/per_image_scores/comad/comad_breakfast_box_seed43.npz` | `reports/countgd/comad_per_image/comad_breakfast_box_seed43.npz` | 3,914 | `abb1461e1e2d5a7a` |
 | `results/per_image_scores/comad/comad_breakfast_box_seed44.npz` | `reports/countgd/comad_per_image/comad_breakfast_box_seed44.npz` | 3,911 | `0b92479152e478b0` |

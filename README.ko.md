@@ -17,6 +17,11 @@ per-image 점수만으로 헤드라인이 재계산된다. 18GB 특징 캐시도
 python3 code/analysis/reproduce_from_package.py --pkg .
 ```
 
+> **Windows**: JSON 산출물에 한국어가 들어 있어 UTF-8 로 돌려야 한다 —
+> `set PYTHONUTF8=1`(또는 `python -X utf8 ...`). 스크립트가 `encoding="utf-8"` 를
+> 명시하므로 필수는 아니고 안전망이다. `MANIFEST.md` 의 해시는 **LF** 줄바꿈 기준이며
+> `.gitattributes` 가 그것을 고정하므로 `core.autocrlf=true` 인 clone 도 일치한다.
+
 ```
   seed 42: L+S 0.9721 (logical 0.9662 / structural 0.9780)
   seed 43: L+S 0.9714 (logical 0.9682 / structural 0.9745)

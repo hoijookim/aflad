@@ -4,7 +4,7 @@
 > **해시는 LF 줄바꿈 기준**이다. 저장소에 `.gitattributes`(`* text=auto eol=lf`)가
 > 있어 `core.autocrlf=true` 인 Windows clone 에서도 그대로 일치한다.
 
-총 388개 파일 · 8.0 MB · per-image 점수 245개
+총 407개 파일 · 8.4 MB · per-image 점수 245개
 
 각 행은 `패키지 경로 | 원본 저장소 경로 | 크기 | SHA-256(앞 16자리)` 이다.
 원본 저장소에서 같은 경로의 파일과 해시를 대조하면 출처를 확인할 수 있다.
@@ -16,15 +16,20 @@
 | `LICENSE` | `submission_extra/LICENSE` | 1,856 | `ce5f6db02f5d81cd` |
 | `README.ko.md` | `docs/submission_README.md` | 12,895 | `9e96b0de3c1a2763` |
 | `README.md` | `submission_extra/README_en.md` | 10,046 | `be11d8a3da07d363` |
-| `code/RETARGET.md` | `(빌드가 생성)` | 684 | `77bcd18471646c3b` |
+| `code/RETARGET.md` | `(빌드가 생성)` | 684 | `7a23fba3428114d2` |
+| `code/analysis/audit_evidence_files.py` | `scripts/psad_rebuild/audit_evidence_files.py` | 5,582 | `b8dbf12c446bdc18` |
 | `code/analysis/audit_package_coverage.py` | `scripts/psad_rebuild/audit_package_coverage.py` | 4,706 | `919086f04eb6482a` |
 | `code/analysis/audit_submission_package.py` | `scripts/audit_submission_package.py` | 7,800 | `e37ebd566bb22cd1` |
-| `code/analysis/build_submission_package.py` | `scripts/build_submission_package.py` | 20,985 | `041506ae8322ebb2` |
+| `code/analysis/build_submission_package.py` | `scripts/build_submission_package.py` | 23,034 | `a9fd8256e5d19b51` |
 | `code/analysis/comad_axis_perseed.py` | `scripts/psad_rebuild/comad_axis_perseed.py` | 6,162 | `a0716cccfc20d8d1` |
 | `code/analysis/deployment_operating_point.py` | `scripts/countgd/deployment_operating_point.py` | 9,998 | `0cdcf94933e56a54` |
 | `code/analysis/diagnose_rebuild_gap.py` | `scripts/psad_rebuild/diagnose_rebuild_gap.py` | 7,375 | `eec69029928db938` |
+| `code/analysis/layer_full_sweep.py` | `scripts/psad_rebuild/layer_full_sweep.py` | 10,671 | `4a5273aa015d9f7a` |
+| `code/analysis/layer_prereg_trainonly.py` | `scripts/psad_rebuild/layer_prereg_trainonly.py` | 8,202 | `2a21161092d01f64` |
+| `code/analysis/layer_prereg_v2.py` | `scripts/psad_rebuild/layer_prereg_v2.py` | 10,966 | `4053cef23884dada` |
 | `code/analysis/measure_param_inference.py` | `scripts/psad_rebuild/measure_param_inference.py` | 13,789 | `a174614611e9bc68` |
 | `code/analysis/profile_forward_modules.py` | `scripts/psad_rebuild/profile_forward_modules.py` | 6,611 | `386dfbd92bc7bdf4` |
+| `code/analysis/psad_variance_decomp.py` | `scripts/psad_rebuild/psad_variance_decomp.py` | 10,112 | `2e94c6af101eec5e` |
 | `code/analysis/reproduce_from_package.py` | `scripts/psad_rebuild/reproduce_from_package.py` | 9,333 | `8bf28c49d297b720` |
 | `code/analysis/requirement_cost_curve.py` | `scripts/countgd/requirement_cost_curve.py` | 5,705 | `6094a59052be19f2` |
 | `code/analysis/subtype_branch_auroc.py` | `scripts/countgd/subtype_branch_auroc.py` | 8,532 | `36a209a8fe8726af` |
@@ -98,8 +103,19 @@
 | `docs/260822_branch_swap_results.md` | `docs/260822_branch_swap_results.md` | 7,708 | `7802fa6fcd22e757` |
 | `docs/260822_combination_history.md` | `docs/260822_combination_history.md` | 6,133 | `bf6b55ffafadfac2` |
 | `docs/260822_composition_provenance_results.md` | `docs/260822_composition_provenance_results.md` | 11,328 | `b51a7cbbc3ccc254` |
+| `docs/260822_l17_basis_audit.md` | `docs/260822_l17_basis_audit.md` | 10,140 | `b6d261d18ef5cb8d` |
 | `docs/260822_l17_coreset_provenance_results.md` | `docs/260822_l17_coreset_provenance_results.md` | 8,268 | `55ae7964f864570a` |
+| `docs/260822_layer_full_sweep_result.md` | `docs/260822_layer_full_sweep_result.md` | 5,151 | `4539fdf5e124c48a` |
+| `docs/260822_layer_prereg_result.md` | `docs/260822_layer_prereg_result.md` | 4,538 | `e60893d83dc6b599` |
+| `docs/260822_layer_prereg_v2_result.md` | `docs/260822_layer_prereg_v2_result.md` | 5,030 | `08d5d808f3d1ae9c` |
+| `docs/260823_psad_3way_compare.md` | `docs/260823_psad_3way_compare.md` | 6,593 | `974a7163f81f220c` |
+| `docs/260823_psad_variance_decomp.md` | `docs/260823_psad_variance_decomp.md` | 6,712 | `516b5ec8c1e5bb55` |
 | `results/diagnostics/PREREG_branch_improvement.md` | `reports/countgd/PREREG_branch_improvement.md` | 35,332 | `031e6011cb2f03c9` |
+| `results/diagnostics/PREREG_layer_full_sweep_260822.md` | `reports/countgd/PREREG_layer_full_sweep_260822.md` | 4,964 | `12aaada3879bed09` |
+| `results/diagnostics/PREREG_layer_selection_260822.md` | `reports/countgd/PREREG_layer_selection_260822.md` | 6,696 | `fb0566a200bb00fc` |
+| `results/diagnostics/PREREG_layer_selection_v2_260822.md` | `reports/countgd/PREREG_layer_selection_v2_260822.md` | 6,770 | `1f6e0ac9f64e8a87` |
+| `results/diagnostics/PREREG_psad_replicate_260823.md` | `docs/PREREG_psad_replicate_260823.md` | 5,505 | `105887df91240009` |
+| `results/diagnostics/PREREG_salad_branch_260822.md` | `reports/countgd/PREREG_salad_branch_260822.md` | 11,103 | `97eda75bfc6d7424` |
 | `results/diagnostics/criterion_appearance.json` | `reports/countgd/criterion_appearance.json` | 828 | `4ff62a9f8a5829d6` |
 | `results/diagnostics/criterion_v2_csad_pseudo_seg.json` | `reports/countgd/criterion_v2_csad_pseudo_seg.json` | 2,344 | `2f346314861bfa0b` |
 | `results/diagnostics/ead_seed42_crosscheck.json` | `_logs/ead_seed42_crosscheck.json` | 778 | `a805bdc0d0f6bad0` |
@@ -375,6 +391,9 @@
 | `results/tables/fps_comparison_260621.json` | `reports/path_y/fps_comparison_260621.json` | 2,103 | `48ed8ae06667c9aa` |
 | `results/tables/homogeneous_ensemble_control.json` | `reports/countgd/homogeneous_ensemble_control.json` | 4,596 | `5071cca4500ec881` |
 | `results/tables/layer_choice_testfree_check.json` | `reports/countgd/layer_choice_testfree_check.json` | 4,156 | `82ea348381a5f67d` |
+| `results/tables/layer_full_sweep.json` | `reports/countgd/layer_full_sweep.json` | 268,986 | `314fee38ca5ef9ee` |
+| `results/tables/layer_prereg_trainonly.json` | `reports/countgd/layer_prereg_trainonly.json` | 8,172 | `b01088c7bd94acf7` |
+| `results/tables/layer_prereg_v2.json` | `reports/countgd/layer_prereg_v2.json` | 33,528 | `a38d05c99dbfa6ed` |
 | `results/tables/ls_canonical_scores.json` | `reports/path_y/metric_unify/ls_canonical_scores.json` | 12,423 | `b246a8990ea44fe5` |
 | `results/tables/ls_patchcore_family_5seed.json` | `reports/path_y/metric_unify/ls_patchcore_family_5seed.json` | 6,761 | `ddba92e792dc8128` |
 | `results/tables/p18_heldout_fullres.json` | `reports/salad_free/p18_heldout_fullres.json` | 588 | `59e87604d7ed43c3` |

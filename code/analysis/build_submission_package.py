@@ -101,6 +101,13 @@ CODE = {
         "scripts/psad_rebuild/measure_param_inference.py",    # §3.1 파라미터 3분할
         "scripts/psad_rebuild/profile_forward_modules.py",    # 위의 forward hook 실측
         "scripts/psad_rebuild/audit_package_coverage.py",     # 이 패키지의 커버리지 감사
+        "scripts/psad_rebuild/audit_evidence_files.py",       # 근거 파일 감사(2축)
+        # 요청 16: 사전등록서가 "이 스크립트로 잰다"고 지목한 실행 코드.
+        # 기준서만 있고 그 기준을 재는 코드가 없으면 독자가 판정을 재현할 수 없다.
+        "scripts/psad_rebuild/layer_prereg_trainonly.py",     # 1단 기준(train/val)
+        "scripts/psad_rebuild/layer_prereg_v2.py",            # v2 기준(warp 포함)
+        "scripts/psad_rebuild/layer_full_sweep.py",           # L1~L24 전수
+        "scripts/psad_rebuild/psad_variance_decomp.py",       # 3-f 원인 분해
     ],
     "audit": [
         "scripts/phase0/audit_ead_repro.py",
@@ -136,6 +143,10 @@ RESULTS = {
         "reports/countgd/pc_backbone_swap.json",
         "reports/countgd/composition_provenance_audit.json",
         "reports/countgd/layer_choice_testfree_check.json",
+        # 요청 16: §3.1.2 "미리 정한 기준으로 24계층 전부 비교" 의 근거. 결과 JSON.
+        "reports/countgd/layer_full_sweep.json",
+        "reports/countgd/layer_prereg_v2.json",
+        "reports/countgd/layer_prereg_trainonly.json",
         # 260901 커버리지 감사로 발견 — 원고가 인용하는데 패키지에 없던 것들.
         # §4.5 배포 구성 비교(표 8)·요건 곡선(표 9)은 260828~30 신설이라 이전 빌드에 없었다.
         "reports/countgd/deployment_operating_point.json",
@@ -213,6 +224,17 @@ SCORE_DIRS = [
     ("reports/countgd/comad_per_image", "per_image_scores/comad", "*.npz"),
 ]
 
+# 사전등록 문서 — 결과를 보기 전에 커밋한 기준서. 설계 선택을 "미리 정한 기준으로
+# 했다"고 쓰는 이상 이것이 없으면 독자가 확인할 방법이 없다(요청 16).
+# 계층 선택은 v1(NO_SINGLE_WINNER) -> v2(3계층) -> 전수(24계층)가 한 사슬이라 셋 다 담는다.
+PREREGS = [
+    "reports/countgd/PREREG_layer_selection_260822.md",
+    "reports/countgd/PREREG_layer_selection_v2_260822.md",
+    "reports/countgd/PREREG_layer_full_sweep_260822.md",
+    "docs/PREREG_psad_replicate_260823.md",     # README 가 인용하는 3-f 복제 실행
+    "reports/countgd/PREREG_salad_branch_260822.md",       # 기각된 분기 — "무엇을 안 넣었나"의 근거
+]
+
 DOCS = [
     "docs/260820_paper_corrections.md",
     "docs/260821_puad_s_3seed.md",
@@ -227,6 +249,13 @@ DOCS = [
     "docs/260817_baseline_seed_audit.md",
     "docs/260817_testfree_pending_requests.md",
     "docs/260716_v25_numbers_canonical.md",
+    # 요청 16: 사전등록의 **판정 결과**. 기준서와 짝을 이뤄야 사슬이 닫힌다.
+    "docs/260822_layer_prereg_result.md",
+    "docs/260822_layer_prereg_v2_result.md",
+    "docs/260822_layer_full_sweep_result.md",
+    "docs/260823_psad_3way_compare.md",
+    "docs/260823_psad_variance_decomp.md",
+    "docs/260822_l17_basis_audit.md",
 ]
 
 
@@ -266,6 +295,8 @@ def main():
             put(f, f"results/{grp}/{Path(f).name}")
     for f in DOCS:
         put(f, f"docs/{Path(f).name}")
+    for f in PREREGS:
+        put(f, f"results/diagnostics/{Path(f).name}")
     # README 는 손으로 쓰지 않는다 — 저장소 소스에서 복사한다. rmtree 후 재빌드에도 남는다.
     # 260904 요청 15: 배치를 빌드에서 확정한다. 이전에는 빌드 뒤 손으로 rename 해서
     # MANIFEST 의 README.md 해시가 한국어판 것이었고 README.en.md 는 유령 행이 됐다.

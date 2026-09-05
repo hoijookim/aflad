@@ -147,7 +147,7 @@ in `results/diagnostics/PREREG_branch_improvement.md`.
 
 | Item | Size | How to regenerate |
 |---|--:|---|
-| DINOv3-L feature cache | ~18 GB | `code/branches/composition_psad/build_patchcore_pt.py` |
+| DINOv3-L feature cache | ~18 GB | `code/branches/patch_memory_pc_extra/I_dinov3_sl_cache.py` |
 | U-Net segmenter checkpoints | ~9 GB | `code/branches/composition_psad/train_unet_seeds.sh` |
 | EfficientAD training weights | ~2 GB | `code/branches/reconstruction_ead/train_ead_seeds.sh` |
 | MVTec LOCO AD dataset | ~6 GB | from MVTec Software GmbH |
@@ -186,3 +186,17 @@ numeric value from the manuscript and confirms it is backed by an artifact here.
 
 MIT for our code and derived artifacts — see `LICENSE`. Third-party components (dataset, model
 weights, upstream implementations) remain under their own licenses and are not redistributed.
+
+## 8. Upstream implementations
+
+Two branches follow official implementations, and the composition branch uses
+CSAD's released pseudo-labels. Pinned commits:
+
+| Component | Repository | Commit |
+|---|---|---|
+| `efficient_ad_official` | https://github.com/nelson1425/EfficientAD.git | `fcab514` |
+| `PSAD_official` | https://github.com/oopil/PSAD_logical_anomaly_detection.git | `1ae3146` |
+| `CSAD_official` | https://github.com/Tokichan/CSAD.git | `d46cf85` |
+
+Only derived artifacts are redistributed here; the upstream code and any model
+weights must be obtained from those repositories.

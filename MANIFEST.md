@@ -4,7 +4,7 @@
 > **해시는 LF 줄바꿈 기준**이다. 저장소에 `.gitattributes`(`* text=auto eol=lf`)가
 > 있어 `core.autocrlf=true` 인 Windows clone 에서도 그대로 일치한다.
 
-총 407개 파일 · 8.4 MB · per-image 점수 245개
+총 408개 파일 · 8.4 MB · per-image 점수 245개
 
 각 행은 `패키지 경로 | 원본 저장소 경로 | 크기 | SHA-256(앞 16자리)` 이다.
 원본 저장소에서 같은 경로의 파일과 해시를 대조하면 출처를 확인할 수 있다.
@@ -14,13 +14,13 @@
 | `.gitattributes` | `submission_extra/.gitattributes` | 331 | `fff835880c53def7` |
 | `.gitignore` | `submission_extra/gitignore` | 146 | `efe7e1bf820f4f5a` |
 | `LICENSE` | `submission_extra/LICENSE` | 1,856 | `ce5f6db02f5d81cd` |
-| `README.ko.md` | `docs/submission_README.md` | 12,895 | `9e96b0de3c1a2763` |
-| `README.md` | `submission_extra/README_en.md` | 10,046 | `be11d8a3da07d363` |
-| `code/RETARGET.md` | `(빌드가 생성)` | 684 | `7a23fba3428114d2` |
+| `README.ko.md` | `docs/submission_README.md` | 13,469 | `216113dae8ed71cb` |
+| `README.md` | `submission_extra/README_en.md` | 10,642 | `141aa97126d9622f` |
+| `code/RETARGET.md` | `(빌드가 생성)` | 684 | `67b7d8d1e8257957` |
 | `code/analysis/audit_evidence_files.py` | `scripts/psad_rebuild/audit_evidence_files.py` | 5,582 | `b8dbf12c446bdc18` |
 | `code/analysis/audit_package_coverage.py` | `scripts/psad_rebuild/audit_package_coverage.py` | 4,706 | `919086f04eb6482a` |
 | `code/analysis/audit_submission_package.py` | `scripts/audit_submission_package.py` | 7,800 | `e37ebd566bb22cd1` |
-| `code/analysis/build_submission_package.py` | `scripts/build_submission_package.py` | 23,034 | `a9fd8256e5d19b51` |
+| `code/analysis/build_submission_package.py` | `scripts/build_submission_package.py` | 23,443 | `da36b586b61a9f3d` |
 | `code/analysis/comad_axis_perseed.py` | `scripts/psad_rebuild/comad_axis_perseed.py` | 6,162 | `a0716cccfc20d8d1` |
 | `code/analysis/deployment_operating_point.py` | `scripts/countgd/deployment_operating_point.py` | 9,998 | `0cdcf94933e56a54` |
 | `code/analysis/diagnose_rebuild_gap.py` | `scripts/psad_rebuild/diagnose_rebuild_gap.py` | 7,375 | `eec69029928db938` |
@@ -69,6 +69,7 @@
 | `code/branches/composition_psad/train_unet_seed.py` | `scripts/psad_rebuild/train_unet_seed.py` | 1,036 | `7cfa30f96b688696` |
 | `code/branches/composition_psad/train_unet_seeds.sh` | `scripts/psad_rebuild/train_unet_seeds.sh` | 2,002 | `d62b09b3cb69b31c` |
 | `code/branches/patch_memory_pc/patchcore_family_trainonly.py` | `scripts/psad_rebuild/patchcore_family_trainonly.py` | 6,602 | `4377f03f89d41b9d` |
+| `code/branches/patch_memory_pc_extra/I_dinov3_sl_cache.py` | `scripts/direction_I/I_dinov3_sl_cache.py` | 6,508 | `2a853f4c41602463` |
 | `code/branches/reconstruction_ead/ead_infer_seeds.py` | `scripts/phase0/ead_infer_seeds.py` | 11,041 | `3a641ae37a4454da` |
 | `code/branches/reconstruction_ead/run_ead_m_loco.py` | `scripts/phase0/run_ead_m_loco.py` | 11,003 | `f1b4c173f909a9e6` |
 | `code/branches/reconstruction_ead/run_eads_seed.py` | `scripts/phase0/run_eads_seed.py` | 950 | `5e8b898092036f5f` |

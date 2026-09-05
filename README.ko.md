@@ -130,7 +130,7 @@ z-점수가 통째로 줄어 사실상 꺼진다. 그래서 변별력만 봐서�
 
 | 항목 | 크기 | 재생성 |
 |---|--:|---|
-| DINOv3-L 특징 캐시 | ~18 GB | `code/branches/composition_psad/build_patchcore_pt.py` |
+| DINOv3-L 특징 캐시 | ~18 GB | `code/branches/patch_memory_pc_extra/I_dinov3_sl_cache.py` |
 | UNet 분할 체크포인트 | ~9 GB | `code/branches/composition_psad/train_unet_seeds.sh` |
 | EfficientAD 학습 가중치 | ~2 GB | `code/branches/reconstruction_ead/train_ead_seeds.sh` |
 | MVTec LOCO AD 데이터셋 | ~6 GB | 원저작권자 배포 (MVTec) |
@@ -199,3 +199,15 @@ z-점수가 통째로 줄어 사실상 꺼진다. 그래서 변별력만 봐서�
 
 MVTec LOCO AD (Bergmann et al., IJCV 2022). 학술 목적 무상 배포이며 재배포는 하지 않는다.
 분할은 공식 train / validation / test 를 그대로 쓴다 — 재분할이나 test 유입이 없다.
+
+## 8. 상류 구현
+
+두 분기가 공식 구현을 따르고, 구성 분기는 CSAD 가 공개한 의사 레이블을 쓴다. 고정 커밋:
+
+| 구성 요소 | 저장소 | 커밋 |
+|---|---|---|
+| `efficient_ad_official` | https://github.com/nelson1425/EfficientAD.git | `fcab514` |
+| `PSAD_official` | https://github.com/oopil/PSAD_logical_anomaly_detection.git | `1ae3146` |
+| `CSAD_official` | https://github.com/Tokichan/CSAD.git | `d46cf85` |
+
+여기에는 파생 산출물만 담는다. 상류 코드와 모델 가중치는 위 저장소에서 받아야 한다.

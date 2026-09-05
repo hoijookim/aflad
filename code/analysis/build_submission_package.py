@@ -83,6 +83,12 @@ CODE = {
         "scripts/path_X/salad_multiseed_train.sh",
     ],
     # 패키지 코드가 import 하는 우리 모듈. 빠지면 해당 스크립트가 import 단계에서 죽는다.
+    "branches/patch_memory_pc_extra": [
+        # 요청 17-A: §3.1.2·표 1 의 "입력 해상도 336 · L17 · 21x21x1024" 를 만든 캐시 생성기.
+        # RESOLUTION=336, L 계열 layers [8,17,23]. 24층 전수는 이것이 아니라
+        # analysis/layer_full_sweep.py 가 전 계층을 다시 인코딩한다(캐시에 3층뿐이라).
+        "scripts/direction_I/I_dinov3_sl_cache.py",
+    ],
     "shared_modules": [
         "scripts/phase0/eval_loco_unified.py",      # L+S 지표 정의 자체
         "scripts/psad_rebuild/psad_scoring_search.py",

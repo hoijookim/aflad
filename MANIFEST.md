@@ -4,7 +4,7 @@
 > **해시는 LF 줄바꿈 기준**이다. 저장소에 `.gitattributes`(`* text=auto eol=lf`)가
 > 있어 `core.autocrlf=true` 인 Windows clone 에서도 그대로 일치한다.
 
-총 408개 파일 · 8.4 MB · per-image 점수 245개
+총 410개 파일 · 8.4 MB · per-image 점수 245개
 
 각 행은 `패키지 경로 | 원본 저장소 경로 | 크기 | SHA-256(앞 16자리)` 이다.
 원본 저장소에서 같은 경로의 파일과 해시를 대조하면 출처를 확인할 수 있다.
@@ -13,9 +13,11 @@
 |---|---|--:|---|
 | `.gitattributes` | `submission_extra/.gitattributes` | 331 | `fff835880c53def7` |
 | `.gitignore` | `submission_extra/gitignore` | 146 | `efe7e1bf820f4f5a` |
-| `LICENSE` | `submission_extra/LICENSE` | 1,856 | `ce5f6db02f5d81cd` |
+| `LICENSE` | `submission_extra/LICENSE` | 1,102 | `663d39d80cffdc52` |
+| `THIRD_PARTY_NOTICES.md` | `—` | 750 | `2d1835fccc7bb299` |
+| `requirements-verify.txt` | `—` | 19 | `95000871ea7c39c6` |
 | `README.ko.md` | `docs/submission_README.md` | 13,469 | `216113dae8ed71cb` |
-| `README.md` | `submission_extra/README_en.md` | 10,642 | `141aa97126d9622f` |
+| `README.md` | `submission_extra/README_en.md` | 12,303 | `175081a66c5f4a0d` |
 | `code/RETARGET.md` | `(빌드가 생성)` | 684 | `67b7d8d1e8257957` |
 | `code/analysis/audit_evidence_files.py` | `scripts/psad_rebuild/audit_evidence_files.py` | 5,582 | `b8dbf12c446bdc18` |
 | `code/analysis/audit_package_coverage.py` | `scripts/psad_rebuild/audit_package_coverage.py` | 4,706 | `919086f04eb6482a` |

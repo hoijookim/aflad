@@ -68,6 +68,15 @@ Evidence: `results/tables/psad_variance_decomp.json`, `results/tables/psad_3way_
 
 ---
 
+## Environment
+
+The verification in §1 needs only Python 3 with `numpy` and `scikit-learn` (`requirements-verify.txt`).
+The shipped scores were produced in a GPU container with PyTorch 2.11.0 (CUDA 12.8), timm 1.0.22 and
+OpenCV 4.13.0; the branch scripts under `code/` assume that environment plus the upstream
+implementations pinned in §8.
+
+---
+
 ## 2. Method
 
 A sum of three branch scores. Each catches a different failure mode.
@@ -86,7 +95,8 @@ pseudo-labels, with **two improvements**, both adopted on train/val evidence onl
   predictions are merged. Across all five categories only `screw_bag c4↔c5` qualifies
   (0.168 / 0.261 / 0.142 over three seeds; the runner-up is ≤ 0.012 everywhere — a **10×**
   margin, so a single threshold isolates that pair without per-category hand-tuning).
-- **Rotation TTA** — inference at the same angles used for training augmentation, averaged.
+- **Rotation TTA** — inference at four 90-degree rotations, which lie within the rotation range of the
+  training augmentation, averaged.
   The rule "must reduce both the mean and the maximum of the validation-normal score tail"
   was applied identically to all five categories; only `screw_bag` passed.
 
@@ -114,6 +124,19 @@ pseudo-labels, with **two improvements**, both adopted on train/val evidence onl
 | Accept / reject evidence | `results/diagnostics/criterion_*.json`, `sweep_*.json` | `code/selection_criteria/` |
 
 Directory roles and seed coverage for the per-image scores: `results/per_image_scores/README.md`.
+
+File names keep their internal numbering; the paper's tables map to them as follows.
+
+| Paper | Artifact |
+|---|---|
+| Table 2 (same-harness baselines) | `results/tables/realign_3seed_42_43_44.json`, `results/tables/realign_eadm_fullimagenet_3seed.json` |
+| Table 3 (branch alone / fusion per category) | `results/tables/testfree_supplements_3seed.json`, `results/figures/testfree_pairwise_percat_3seed.json` |
+| Table 4 (axis decomposition) | `results/tables/branch_axis_decomposition.json` |
+| Table 5 (deployment arrangements) | `results/tables/requirement_cost_curve.json`, `results/tables/deployment_operating_point.json` |
+| Tables C1–C2 (per seed) | `results/main/testfree_final_eadfix_3seed.json`, `results/tables/table5_3seed_42_43_44.json` |
+| Table A1 (localization) | `results/tables/p18_heldout_fullres.json`, `results/tables/p21_pixel_auroc.json` |
+| Tables D1–D2 and Figure 8 (double dissociation) | `results/tables/tableC1_full_grid.json`, `results/tables/tableC2_true_cardinality.json` |
+| Appendix D subtype table | `results/tables/subtype_branch_auroc.json` |
 
 ---
 
@@ -151,6 +174,7 @@ in `results/diagnostics/PREREG_branch_improvement.md`.
 | U-Net segmenter checkpoints | ~9 GB | `code/branches/composition_psad/train_unet_seeds.sh` |
 | EfficientAD training weights | ~2 GB | `code/branches/reconstruction_ead/train_ead_seeds.sh` |
 | MVTec LOCO AD dataset | ~6 GB | from MVTec Software GmbH |
+| DINOv3-L/16 weights | — | Hugging Face `facebook/dinov3-vitl16-pretrain-lvd1689m` (gated license; accept the terms, then download) |
 | Rejected exploratory PSAD variants | — | flags in `score_psad.py` |
 
 **Per-image scores are included**, because they are sufficient for the verification in §1.
@@ -185,7 +209,8 @@ numeric value from the manuscript and confirms it is backed by an artifact here.
 ## License
 
 MIT for our code and derived artifacts — see `LICENSE`. Third-party components (dataset, model
-weights, upstream implementations) remain under their own licenses and are not redistributed.
+weights, upstream implementations) remain under their own licenses and are not redistributed;
+they are listed in `THIRD_PARTY_NOTICES.md`.
 
 ## 8. Upstream implementations
 
